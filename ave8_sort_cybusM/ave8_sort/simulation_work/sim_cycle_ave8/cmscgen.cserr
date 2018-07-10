@@ -1,0 +1,12 @@
+Copyright (C) 1988-2015 NEC Corporation. All rights reserved.
+cmscgen version : 6.74 (Windows 32-bit) Jul 27 2015 18:39:05
+         (BIF version : 3.30X)
+         (LICflex version : 1.52 cylmd)
+         (GEN COMMON version : 3.02)
+Option: -EE -input=random:cycle -b10 -file_out=cycle -dump=VCD -dump_signal=PORT:BDL -org_type=pin -enum_int=NO -out_dir=. -file cmscgen_file.ave8_MA.txt 
+[Information]
+     input  file : ../../ave8.c.dir/ave8_MA/ave8_C.IFF
+     input  file : ../../ave8.c.dir/ave8_MA\ave8.IFF
+     output file : ./ave8_C.cpp
+     output file : ./ave8_C.xml
+cmscgen finished successfully.

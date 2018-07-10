@@ -1,0 +1,55 @@
+#@VERSION{3.00}
+#@CNT{dfc_SA_IF_bus1}
+#@KIND{BASIC_OPERATOR}
+#@CLK 100000
+#@UNIT 1/10ps
+@PROCESS{
+	NAME	dfc_SA_IF_bus1
+#	KIND
+#	LIMIT
+#	BITWIDTH
+#	DELAY
+	AREA	3694
+	AREA_REG	1539
+	AREA_COMB	2155
+	AREA_FU	0
+	AREA_MUX	871
+	AREA_DEC	0
+	AREA_MISC	1284
+	AREA_MEM	0
+	NET	620
+	PIN_PAIR	1195
+#	SPECULATION
+#	COMMENT
+	DEFMOD {
+		clock                    bus1_HCLK        /* c, bus1_HCLK, @clock_period = 10ns, clock_edge = pos */;
+		reset                    bus1_HRESETn     /* r, bus1_HRESETn, reset_mode = async, reset_active = low */;
+		in    unsigned ter(0..0) dfc_SA_bus1_HSEL /* glo, dfc_SA_bus1_HSEL */;
+		in    unsigned ter(31..0) dfc_SA_bus1_HADDR /* glo, dfc_SA_bus1_HADDR */;
+		in    unsigned ter(0..0) dfc_SA_bus1_HWRITE /* glo, dfc_SA_bus1_HWRITE */;
+		in    unsigned ter(1..0) dfc_SA_bus1_HTRANS /* glo, dfc_SA_bus1_HTRANS */;
+		in    unsigned ter(2..0) dfc_SA_bus1_HSIZE /* glo, dfc_SA_bus1_HSIZE */;
+		in    unsigned ter(2..0) dfc_SA_bus1_HBURST /* glo, dfc_SA_bus1_HBURST */;
+		in    unsigned ter(31..0) dfc_SA_bus1_HWDATA /* glo, dfc_SA_bus1_HWDATA */;
+		in    unsigned ter(3..0) dfc_SA_bus1_HMASTER /* glo, dfc_SA_bus1_HMASTER */;
+		in    unsigned ter(0..0) dfc_SA_bus1_HMASTLOCK /* glo, dfc_SA_bus1_HMASTLOCK */;
+		in    unsigned ter(3..0) dfc_SA_bus1_HPROT /* glo, dfc_SA_bus1_HPROT */;
+		in    unsigned ter(0..0) dfc_SA_bus1_HREADY /* glo, dfc_SA_bus1_HREADY */;
+		out   unsigned ter(0..0) dfc_SA_bus1_HREADYOUT /* glo, dfc_SA_bus1_HREADYOUT */;
+		out   unsigned ter(1..0) dfc_SA_bus1_HRESP /* glo, dfc_SA_bus1_HRESP */;
+		out   unsigned ter(31..0) dfc_SA_bus1_HRDATA /* glo, dfc_SA_bus1_HRDATA */;
+		out   unsigned ter(15..0) dfc_SA_bus1_HSPLIT /* glo, dfc_SA_bus1_HSPLIT */;
+		in    unsigned ter(0..0) dfc_SA_bus1_CBM_busy /* glo, dfc_SA_bus1_CBM_busy */;
+		in    unsigned ter(0..0) dfc_SA_bus1_CBM_error /* glo, dfc_SA_bus1_CBM_error */;
+		in    unsigned ter(0..0) dfc_SA_bus1_CBM_retry /* glo, dfc_SA_bus1_CBM_retry */;
+		in    unsigned ter(0..0) dfc_SA_bus1_CBM_split /* glo, dfc_SA_bus1_CBM_split */;
+		in    unsigned ter(31..0) dfc_SA_bus1_CBM_read_data /* glo, dfc_SA_bus1_CBM_read_data */;
+		out   unsigned ter(0..0) dfc_SA_bus1_CBM_read_req /* glo, dfc_SA_bus1_CBM_read_req */;
+		out   unsigned ter(0..0) dfc_SA_bus1_CBM_write_req /* glo, dfc_SA_bus1_CBM_write_req */;
+		out   unsigned ter(31..0) dfc_SA_bus1_CBM_addr /* glo, dfc_SA_bus1_CBM_addr */;
+		out   unsigned ter(2..0) dfc_SA_bus1_CBM_size /* glo, dfc_SA_bus1_CBM_size */;
+		out   unsigned ter(31..0) dfc_SA_bus1_CBM_write_data /* glo, dfc_SA_bus1_CBM_write_data */;
+	}
+}
+#@HASH{d024873d04fd23b27174e3d16b5c8c58}
+#@END{dfc_SA_IF_bus1}

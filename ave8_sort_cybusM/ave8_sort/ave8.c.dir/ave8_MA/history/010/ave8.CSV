@@ -1,0 +1,2 @@
+AREA,state,FU,REG,MUX,DEC,pin_pair,net,max,min,ave,MISC,MEM,CP_delay,sim,Pmax,Pmin,Pave,Latency
+892,4,354,396,136,0,1564,682,4,4,4.00,6,0,1.05ns,-,-,-,-,4

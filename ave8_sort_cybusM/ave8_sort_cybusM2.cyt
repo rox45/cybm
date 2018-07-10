@@ -1,0 +1,44 @@
+<!DOCTYPE AQUARIUM [
+<!ELEMENT root (object , (backup , trash)?)>
+<!ELEMENT object (properties, objects)?>
+<!ELEMENT backup EMPTY>
+<!ELEMENT trash (properties)?>
+<!ATTLIST root
+   version CDATA #REQUIRED
+>
+<!ATTLIST object
+   type CDATA #REQUIRED
+   name CDATA #REQUIRED
+   path CDATA #IMPLIED
+   ref (true|false) "false"
+>
+<!ELEMENT objects (object)*>
+<!ELEMENT properties (property)*>
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+   name CDATA #REQUIRED
+   type CDATA #REQUIRED
+   value CDATA #REQUIRED
+>
+]>
+<root version="1.8.0" >
+  <object type="Root" name="ave8_sort_cybusM2" >
+    <properties>
+      <property type="string" value="2011/11/11 09:16:44.000" name="created" />
+      <property type="string" value="2017/03/16 15:23:31.000" name="lastModified" />
+      <property type="string" value="Verilog" name="toolbarJump" />
+      <property type="string" value="Verilog" name="toolbarRTL" />
+    </properties>
+    <objects>
+      <object path="ave8_sort/ave8_sort.cyp" type="Project" name="ave8_sort" />
+    </objects>
+  </object>
+  <backup/>
+  <trash>
+    <properties>
+      <properties>
+        <property type="int" value="27" name="index" />
+      </properties>
+    </properties>
+  </trash>
+</root>

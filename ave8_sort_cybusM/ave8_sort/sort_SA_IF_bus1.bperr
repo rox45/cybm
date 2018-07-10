@@ -1,0 +1,11 @@
+Copyright (C) 1988-2017 NEC Corporation. All rights reserved.
+bdlpars version : 6.76 (Windows 32-bit) Tue Nov  7 13:19:52 JST 2017
+         (BIF version : 3.41m)
+         (LICflex version : 1.53 cylmd)
+         (PARSE COMMON version : 2.89)
+"../../sort_SA_IF_bus1.bdl", line 2: Warning: global variable 'sort_SA_bus1_HBURST' unused <W2600>
+"../../sort_SA_IF_bus1.bdl", line 2: Warning: global variable 'sort_SA_bus1_HMASTLOCK' unused <W2600>
+"../../sort_SA_IF_bus1.bdl", line 2: Warning: global variable 'sort_SA_bus1_HPROT' unused <W2600>
+Create: sort_SA_IF_bus1.IFF
+Token count: 981
+bdlpars finished successfully.

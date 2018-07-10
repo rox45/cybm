@@ -1,0 +1,21 @@
+LSInfo_version: 1.06
+
+iff_filename: "ave8_MA_IF_bus1_E.IFF"
+rtl_filename: "ave8_MA_IF_bus1_E.v"
+
+timestamp_0: 20170316152301_09012_07433
+timestamp_5: 20170316152304_15536_18004
+timestamp_9: 20170316152304_15536_01879
+timestamp_C: 20170316152304_15536_09233
+timestamp_E: 20170316152304_15536_00732
+timestamp_V: 20170316152306_15244_17051
+
+lang: verilog
+
+gated_clock_register: EXIST
+
+stall_register: NONE
+
+module_name: ave8_MA_IF_bus1
+
+syn_tool: DC

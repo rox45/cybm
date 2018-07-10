@@ -1,0 +1,11 @@
+# cmscgen version : 5.43
+# options : -EE -input=random:cycle -b10 -dump=VCD -dump_signal=PORT soc_C.IFF sort_SA_IF_bus1_C.IFF bus1_C.IFF bsort_C.IFF ave8_MA_IF_bus1_C.IFF ave8_C.IFF 
+# checksum : 0000022a3f498209cf59cd56b1e9e5c9f462004b19a362dc
+# timestamp_C : 20111111113641_05204_07450
+Option  	-EE -input=random:cycle -b10 -dump=VCD -dump_signal=PORT soc_C.IFF sort_SA_IF_bus1_C.IFF bus1_C.IFF bsort_C.IFF ave8_MA_IF_bus1_C.IFF ave8_C.IFF 
+signed_flag	mixsigned
+random_flag	YES
+macro	NO
+src_file	soc_C.cpp
+header_file	soc_C.h
+carry_flag	ON

@@ -1,0 +1,514 @@
+
+Cyber Synthesis Report
+
+===========
+; Summary ;
+===========
+
+  Module Name         : ave8_MA_IF_bus1
+  Basic Library Name  : CWBSTDBLIB
+
+  Total Area          :     12,166
+    Sequential        :      4,320
+    Combinational     :      7,846
+
+  Latency Index       :          5
+  Total States        :         15
+
+  Clock Period        :       10ns
+  Critical Path Delay :   4.0285ns
+
+  Net                 :      1,793
+  Pin Pair            :      3,920
+
+  Port                :        247
+    In                :        122
+    Out               :        125
+
+========
+; Area ;
+========
+
+  Total :
+    Total           :     12,166
+      Sequential    : 
+        REG         :      4,320 (35%)
+      Combinational :      7,846 (64%)
+        FU          :      1,912 (15%)
+        MUX         :      2,797 (22%)
+        DEC         :          0 ( 0%)
+        MISC        :      3,137 (25%)
+      Memory        :          -
+
+===================
+; Functional Unit ;
+===================
+
+    FU Name                Area  Reg  Delay  Pipeline  Count
+                                       (ns)    Stage
+    --------------------------------------------------------
+    addsub32u             1,908     0   2.39         -      1
+    addsub32u_12          1,908     0   2.39         -      1
+    decr12u_11              248     0   0.37         -      1
+    incr12u                 270     0   0.47         -      1
+
+  Unused Functional Units :
+    ---------------------------------------------------
+    None
+
+============
+; Register ;
+============
+
+     Used      Declared                 Used
+      Bit           Bit      Count       Bit  * Count
+    -------------------------------------------------
+        1             1         21                 21
+    -------------------------------------------------
+        3             3          2                  6
+    -------------------------------------------------
+        4             4          1                  4
+    -------------------------------------------------
+       11            11          3                 33
+    -------------------------------------------------
+       32            32          3                 96
+    -------------------------------------------------
+    Total                                         160
+
+===============
+; Multiplexer ;
+===============
+
+   1 bit: (1way:15),  2way:15 ,  3way: 5 ,  4way: 1 
+   2 bit: (1way: 1),  2way: 2 ,  3way: 1 
+   3 bit:  2way: 2 
+   4 bit:  2way: 1 
+  11 bit:  2way: 2 ,  3way: 1 ,  4way: 2 
+  32 bit:  2way: 1 ,  3way: 2 ,  4way: 1 
+   Total : 632 (# of Fanins)
+
+===========
+; Decoder ;
+===========
+
+    None
+
+==========
+; Memory ;
+==========
+
+    None
+
+===========
+; Latency ;
+===========
+
+    Total:
+        Type          : S
+        Latency       : 1 + {{{{0, L1}, L4}, L8}, L11}
+        Latency Index : 5
+        State No.     : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : L1, L4, L8, L11
+        Line          : -
+    L1:
+        Type          : S
+        Latency       : (1 + {{0, L2}, L2 + L3}) * N1 + (1 + L2 + {0, L3})
+        Latency Index : 3
+        State No.     : 2, 3, 4
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : L2, L3
+        Line          : -
+    L2:
+        Type          : S
+        Latency       : 1 * N2    [N2 >= 1]
+        Latency Index : 1
+        State No.     : 3
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L3:
+        Type          : S
+        Latency       : 1 * N3    [N3 >= 1]
+        Latency Index : 1
+        State No.     : 4
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L4:
+        Type          : S
+        Latency       : (1 + {{{0, L5}, L5 + L6}, L5 + {0, L6} + L7}) * N4 + (1 + L5 + {0, L6} + {0, L7})
+        Latency Index : 4
+        State No.     : 5, 6, 7, 8
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : L5, L6, L7
+        Line          : -
+    L5:
+        Type          : S
+        Latency       : 1 * N5    [N5 >= 1]
+        Latency Index : 1
+        State No.     : 6
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L6:
+        Type          : S
+        Latency       : 1 * N6    [N6 >= 1]
+        Latency Index : 1
+        State No.     : 7
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L7:
+        Type          : S
+        Latency       : 1 * N7    [N7 >= 1]
+        Latency Index : 1
+        State No.     : 8
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L8:
+        Type          : S
+        Latency       : (1 + {{0, L9}, L9 + L10}) * N8 + (1 + L9 + {0, L10})
+        Latency Index : 3
+        State No.     : 9, 10, 11
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : L9, L10
+        Line          : -
+    L9:
+        Type          : S
+        Latency       : 1 * N9    [N9 >= 1]
+        Latency Index : 1
+        State No.     : 10
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L10:
+        Type          : S
+        Latency       : 1 * N10    [N10 >= 1]
+        Latency Index : 1
+        State No.     : 11
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L11:
+        Type          : S
+        Latency       : (1 + {{{0, L12}, L12 + L13}, L12 + {0, L13} + L14}) * N11 + (1 + L12 + {0, L13} + {0, L14})
+        Latency Index : 4
+        State No.     : 12, 13, 14, 15
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : L12, L13, L14
+        Line          : -
+    L12:
+        Type          : S
+        Latency       : 1 * N12    [N12 >= 1]
+        Latency Index : 1
+        State No.     : 13
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L13:
+        Type          : S
+        Latency       : 1 * N13    [N13 >= 1]
+        Latency Index : 1
+        State No.     : 14
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+    L14:
+        Type          : S
+        Latency       : 1 * N14    [N14 >= 1]
+        Latency Index : 1
+        State No.     : 15
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+
+=======
+; FSM ;
+=======
+
+  Total States      :         15
+  #FSM              :         15
+  States/FSM        :          1
+  FSM Decoder Delay :        0ns
+
+=========
+; Delay ;
+=========
+
+  Clock Period        :       10ns
+  Critical Path Delay :   4.0285ns
+
+              Subtotal
+      Class       (ns)    Ratio
+      -------------------------
+      IN           0.00      0%
+      FU           2.60     64%
+      MUX          0.34      8%
+      DEC          0.00      0%
+      MISC         1.09     27%
+      MEM          0.00      0%
+      -------------------------
+      Total        4.03
+
+    Path: #1
+                                                                Arrival
+                                                          Delay    Time Logic
+      Name                 / Port [Signal              ]   (ns)   (ns)  Stage
+      -----------------------------------------------------------------------
+      cnt                  / dout [                    ]      -    0.00     0
+      _XOR_2181            / o1   [                    ]   0.10    0.10     2
+      _RNOR_2180           / o1   [C_65                ]   0.28    0.38     5
+      _LOGIC_2926          / o1   [                    ]   0.14    0.52     7
+      _NMUX_1025           / o1   [incr12u1i1          ]   0.18    0.70     9
+      incr12u@1            / o1   [incr12u1ot          ]   0.45    1.15    14
+      _XOR_4924            / o1   [                    ]   0.10    1.25    16
+      _RNOR_2228           / o1   [C_69                ]   0.28    1.53    19
+      _LOGIC_1949          / o1   [U_82                ]   0.04    1.57    19
+      _AND_1958            / o1   [U_84                ]   0.00    1.57    19
+      _OR_4869             / o1   [M_39                ]   0.05    1.62    20
+      _OR_2916             / o1   [                    ]   0.10    1.72    21
+      _NMUX_1024           / o1   [addsub32u1_f        ]   0.00    1.72    21
+      addsub32u@1          / o1   [addsub32u1ot        ]   2.15    3.87    44
+      _NMUX_1008           / o1   [addr                ]   0.16    4.03    46
+      addr                 / din  [                    ]      -    4.03    46
+
+  False Path                    :  Unchecked
+  Multi Cycle Path              :  Unchecked
+  False Loop/Combinational Loop :          0
+  Latch (bit)                   :          0
+
+========
+; Wire ;
+========
+
+  Total Net Count      :    1,793
+  Total Pin Pair Count :    3,920
+  Const Fanout         :      284
+
+  Net Count :
+         Bit       Net    Bit*Net
+     ----------------------------
+           1       331        331
+           2        16         32
+           3         6         18
+           4         2          8
+           5        30        150
+          11        15        165
+          12         3         36
+          32        11        352
+     ----------------------------
+       Total                1,092
+
+  Pin Pair Count :
+      Fanout    Bit    Count   Subtotal
+    -----------------------------------
+          30      1        2         60
+          25      1        1         25
+          24      1        2         48
+          21      1        1         21
+          20      3        1         60
+          20      1        2         40
+          13      1        1         13
+          12      1        1         12
+          10      1        1         10
+           9      1        5         45
+           8      1        4         32
+           7      1        2         14
+           6     11        3        198
+           6      1        6         36
+           5      1       13         65
+           4     11        1         44
+           4      2        1          8
+           4      1       15         60
+           3     32        1         96
+           3      1       34        102
+           2     32        3        192
+           2     11        1         22
+           2      4        1          8
+           2      3        2         12
+           2      1       83        166
+           1     32        7        224
+           1     12        2         24
+           1     11       11        121
+           1      5       30        150
+           1      4        1          4
+           1      3        3          9
+           1      2       15         30
+           1      1      159        159
+    -----------------------------------
+       Total                      2,110
+
+  Fanout for Consts:
+      Value    Fanout
+          0       180
+          1       104
+    ------------------
+      Total       284
+
+  Clock Fanout:
+      Name                         Count
+      ----------------------------------
+      bus1_HCLK(0..0)                 30
+
+  Reset Fanout:
+      Name                         Count
+      ----------------------------------
+      bus1_HRESETn(0..0)              30
+
+  Register Fanin/Fanout Cone Size:
+
+    Fanin: (Top 10 Registers)
+      Register Name                              Cone Size
+      ----------------------------------------------------
+      ave8_MA_bus1_HBUSREQ_r(0..0)                      30
+      ave8_MA_bus1_HLOCK_r(0..0)                        30
+      addr(31..0)                                       20
+      ebt_flag(0..0)                                    19
+      lock(0..0)                                        19
+      ave8_MA_bus1_CBM_command_busy_r(0..0)             19
+      B00_streg(0..0)                                   18
+      cnt(10..0)                                        17
+      icnt(10..0)                                       17
+      ave8_MA_bus1_HBURST_r(2..0)                       15
+
+    Fanout: (Top 10 Registers)
+      Register Name                              Cone Size
+      ----------------------------------------------------
+      B00_streg(0..0)                                   22
+      B13_streg(0..0)                                   20
+      B06_streg(0..0)                                   19
+      B07_streg(0..0)                                   18
+      B14_streg(0..0)                                   18
+      B12_streg(0..0)                                   18
+      B05_streg(0..0)                                   17
+      ebt_flag(0..0)                                    15
+      cnt(10..0)                                        12
+      icnt(10..0)                                       11
+
+  Routability:
+
+    Top 25 Nets
+    sorted by "Total" (Total Pin Pair)
+      Net Name                                    Total      Max
+      -----------------------------------------------------------------
+      addr(31..0)                                    96        3 (32bit)
+      len(10..0)                                     66        6 (11bit)
+      cnt(10..0)                                     66        6 (11bit)
+      icnt(10..0)                                    66        6 (11bit)
+      ave8_MA_bus1_CBM_write_data(31..0)             64        2 (32bit)
+      rdata(31..0)                                   64        2 (32bit)
+      wdata(31..0)                                   64        2 (32bit)
+      ave8_MA_bus1_CBM_burst(2..0)                   60       20 ( 3bit)
+      incr12u1ot(11..0)                              46        4 (11bit)
+      ave8_MA_bus1_HRDATA(31..0)                     32        1 (32bit)
+      ave8_MA_bus1_CBM_addr(31..0)                   32        1 (32bit)
+      addsub32u1ot(31..0)                            32        1 (32bit)
+      _NMUX_1000(31..0)                              32        1 (32bit)
+      _NMUX_1008(31..0)                              32        1 (32bit)
+      _NMUX_1014(31..0)                              32        1 (32bit)
+      _NMUX_5(31..0)                                 32        1 (32bit)
+      bus1_HCLK(0..0)                                30       30 ( 1bit)
+      bus1_HRESETn(0..0)                             30       30 ( 1bit)
+      ave8_MA_bus1_CBM_write_req(0..0)               25       25 ( 1bit)
+      ave8_MA_bus1_HREADY(0..0)                      24       24 ( 1bit)
+      C_59(0..0)                                     24       24 ( 1bit)
+      ave8_MA_bus1_CBM_length(10..0)                 22        2 (11bit)
+      lock(0..0)                                     21       21 ( 1bit)
+      ave8_MA_bus1_CBM_read_req(0..0)                20       20 ( 1bit)
+      C_77(0..0)                                     20       20 ( 1bit)
+
+    Top 25 Nets
+    sorted by "Max" (Maximum Fanout)
+      Net Name                                    Total      Max
+      -----------------------------------------------------------------
+      bus1_HCLK(0..0)                                30       30 ( 1bit)
+      bus1_HRESETn(0..0)                             30       30 ( 1bit)
+      ave8_MA_bus1_CBM_write_req(0..0)               25       25 ( 1bit)
+      ave8_MA_bus1_HREADY(0..0)                      24       24 ( 1bit)
+      C_59(0..0)                                     24       24 ( 1bit)
+      lock(0..0)                                     21       21 ( 1bit)
+      ave8_MA_bus1_CBM_burst(2..0)                   60       20 ( 3bit)
+      ave8_MA_bus1_CBM_read_req(0..0)                20       20 ( 1bit)
+      C_77(0..0)                                     20       20 ( 1bit)
+      ave8_MA_bus1_HGRANT(0..0)                      13       13 ( 1bit)
+      ST1_01d(0..0)                                  12       12 ( 1bit)
+      C_76(0..0)                                     10       10 ( 1bit)
+      ST1_14d(0..0)                                   9        9 ( 1bit)
+      U_03(0..0)                                      9        9 ( 1bit)
+      U_04(0..0)                                      9        9 ( 1bit)
+      U_05(0..0)                                      9        9 ( 1bit)
+      M_17(0..0)                                      9        9 ( 1bit)
+      U_02(0..0)                                      8        8 ( 1bit)
+      U_08(0..0)                                      8        8 ( 1bit)
+      U_09(0..0)                                      8        8 ( 1bit)
+      U_10(0..0)                                      8        8 ( 1bit)
+      ebt_flag(0..0)                                  7        7 ( 1bit)
+      U_07(0..0)                                      7        7 ( 1bit)
+      len(10..0)                                     66        6 (11bit)
+      cnt(10..0)                                     66        6 (11bit)
+
+================
+; Primary Port ;
+================
+
+    Name               Type   Bitw
+    ------------------------------
+      ave8_MA_bus1_HGRANT  in      1
+      ave8_MA_bus1_HTRANS  out     2
+      ave8_MA_bus1_HWRITE  out     1
+      ave8_MA_bus1_HREADY  in      1
+      ave8_MA_bus1_HRESP  in      2
+      ave8_MA_bus1_HADDR  out    32
+      ave8_MA_bus1_HRDATA  in     32
+      ave8_MA_bus1_HWDATA  out    32
+      ave8_MA_bus1_CBM_read_req  in      1
+      ave8_MA_bus1_CBM_write_req  in      1
+      ave8_MA_bus1_CBM_burst  in      3
+      ave8_MA_bus1_CBM_addr  in     32
+      ave8_MA_bus1_CBM_length  in     11
+      ave8_MA_bus1_CBM_size  in      3
+      ave8_MA_bus1_CBM_lock  in      1
+      ave8_MA_bus1_CBM_write_data  in     32
+      ave8_MA_bus1_CBM_read_data  out    32
+      ave8_MA_bus1_CBM_error  out     1
+      ave8_MA_bus1_CBM_count  out    11
+      ave8_MA_bus1_HBUSREQ  out     1
+      ave8_MA_bus1_HBURST  out     3
+      ave8_MA_bus1_HLOCK  out     1
+      ave8_MA_bus1_HSIZE  out     3
+      ave8_MA_bus1_HPROT  out     4
+      ave8_MA_bus1_CBM_command_busy  out     1
+      ave8_MA_bus1_CBM_data_ready  out     1
+

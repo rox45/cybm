@@ -1,0 +1,13 @@
+Copyright (C) 1988-2017 NEC Corporation. All rights reserved.
+bdlpars version : 6.76 (Windows 32-bit) Tue Nov  7 13:19:52 JST 2017
+         (BIF version : 3.41m)
+         (LICflex version : 1.53 cylmd)
+         (PARSE COMMON version : 2.89)
+"../../CybusM_IF.bdl", line 645: Warning: global variable 'dfc_SA_bus1_CBM_size' unused <W2600>
+"../../dynamic_frequency_controller.c", line 24: Warning: variable 'clocks' unused in process dfc_SA <W2601>
+"../../dynamic_frequency_controller.c", line 27: Warning: variable 'm' unused in process dfc_SA <W2601>
+"../../dynamic_frequency_controller.c", line 27: Warning: variable 'n' unused in process dfc_SA <W2601>
+"../../dynamic_frequency_controller.c", line 27: Warning: variable 'temp' unused in process dfc_SA <W2601>
+Create: dynamic_frequency_controller.IFF
+Token count: 193
+bdlpars finished successfully.

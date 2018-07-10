@@ -1,0 +1,47 @@
+Copyright (C) 1988-2011 NEC Corporation. All rights reserved.
+cmscgen version : 5.43  Oct  7 2011 20:26:30
+         (BIF version : 3.12C)
+         (GEN COMMON version : 1.97)
+Option: -EE -input=random:cycle -b10 -dump=VCD -dump_signal=PORT soc_C.IFF sort_SA_IF_bus1_C.IFF bus1_C.IFF bsort_C.IFF ave8_MA_IF_bus1_C.IFF ave8_C.IFF 
+I_SC61002: sort_SA_IF_bus1_C.h is up-to-date.
+I_SC61002: sort_SA_IF_bus1_C.cpp is up-to-date.
+I_SC61002: sort_SA_IF_bus1_C.MakeInfo is up-to-date.
+I_SC61002: sort_SA_IF_bus1_C.xml is up-to-date.
+[Information]
+     input  file : sort_SA_IF_bus1_C.IFF
+cmscgen finished successfully.
+I_SC61002: bus1_C.h is up-to-date.
+I_SC61002: bus1_C.cpp is up-to-date.
+I_SC61002: bus1_C.MakeInfo is up-to-date.
+I_SC61002: bus1_C.xml is up-to-date.
+[Information]
+     input  file : bus1_C.IFF
+cmscgen finished successfully.
+I_SC61002: bsort_C.h is up-to-date.
+I_SC61002: bsort_C.cpp is up-to-date.
+I_SC61002: bsort_C.MakeInfo is up-to-date.
+I_SC61002: bsort_C.xml is up-to-date.
+[Information]
+     input  file : bsort_C.IFF
+cmscgen finished successfully.
+I_SC61002: ave8_MA_IF_bus1_C.h is up-to-date.
+I_SC61002: ave8_MA_IF_bus1_C.cpp is up-to-date.
+I_SC61002: ave8_MA_IF_bus1_C.MakeInfo is up-to-date.
+I_SC61002: ave8_MA_IF_bus1_C.xml is up-to-date.
+[Information]
+     input  file : ave8_MA_IF_bus1_C.IFF
+cmscgen finished successfully.
+I_SC61002: ave8_C.h is up-to-date.
+I_SC61002: ave8_C.cpp is up-to-date.
+I_SC61002: ave8_C.MakeInfo is up-to-date.
+I_SC61002: ave8_C.xml is up-to-date.
+[Information]
+     input  file : ave8_C.IFF
+cmscgen finished successfully.
+I_SC61002: soc_C.h is up-to-date.
+I_SC61002: soc_C.cpp is up-to-date.
+I_SC61002: soc_C.MakeInfo is up-to-date.
+I_SC61002: soc_C.xml is up-to-date.
+[Information]
+     input  file : soc_C.IFF
+cmscgen finished successfully.

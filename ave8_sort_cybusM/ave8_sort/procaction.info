@@ -1,0 +1,24 @@
+#------------------------------
+bus1.bdl
+bus1
+bdlpars : -DBDL -I"../.."
+bdltran : -sN -c1000 -cu1/100ns -Af -Zfsm_st=1 -ou -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB" -lfc bus1-auto.FCNT
+veriloggen : 
+#------------------------------
+ave8_MA_IF_bus1.bdl
+ave8_MA_IF_bus1
+bdlpars : -DBDL -I"../.."
+bdltran : -sN -c1000 -cu1/100ns -Af -Zfsm_st=1 -ou -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB" -lfc ave8_MA_IF_bus1-auto.FCNT
+veriloggen : 
+#------------------------------
+sort_SA_IF_bus1.bdl
+sort_SA_IF_bus1
+bdlpars : -DBDL -I"../.."
+bdltran : -sN -c1000 -cu1/100ns -Af -Zfsm_st=1 -ou -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB" -lfc sort_SA_IF_bus1-auto.FCNT
+veriloggen : 
+#------------------------------
+dfc_SA_IF_bus1.bdl
+dfc_SA_IF_bus1
+bdlpars : -DBDL -I"../.."
+bdltran : -sN -c1000 -cu1/100ns -Af -Zfsm_st=1 -ou -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB" -lfc dfc_SA_IF_bus1-auto.FCNT
+veriloggen : 

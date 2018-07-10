@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<!-- cmscgen version : 5.43 -->
+<!-- options : -EE -input=random:cycle -b10 -dump=VCD -dump_signal=PORT soc_C.IFF sort_SA_IF_bus1_C.IFF bus1_C.IFF bsort_C.IFF ave8_MA_IF_bus1_C.IFF ave8_C.IFF  -->
+<!-- checksum : 00000af35ff7d289cd450708b074740fc6f09c39ce0576d8 -->
+<!-- timestamp_C : 20111111094856_14996_05029 -->
+<debugInfo version="3.20">
+    <cycleModelSymbolInfo>
+        <registers>
+        </registers>
+        <terminals>
+        </terminals>
+        <ports>
+        </ports>
+        <memories>
+        </memories>
+        <fsmStates>
+        </fsmStates>
+    </cycleModelSymbolInfo>
+    <langSymbolInfo>
+        <structs>
+            <struct structID="1">
+                <name>CBM_Req_Stat</name>
+                <line fileName="../../CybusM_IF.bdl" start="630" end="632"/>
+                <members>
+                    <member id="1">
+                        <name>req</name>
+                        <direction></direction>
+                        <sign>unsigned</sign>
+                        <physic>ter</physic>
+                        <org_type>unsigned ter(0:2)</org_type>
+                        <bitwidth>2</bitwidth>
+                        <bitstart>0</bitstart>
+                        <is_down>0</is_down>
+                        <line fileName="../../CybusM_IF.bdl" start="631" end="631"/>
+                    </member>
+                    <member id="2">
+                        <name>addr</name>
+                        <direction></direction>
+                        <sign>unsigned</sign>
+                        <physic>ter</physic>
+                        <org_type>unsigned ter(0:32)</org_type>
+                        <bitwidth>32</bitwidth>
+                        <bitstart>0</bitstart>
+                        <is_down>0</is_down>
+                        <line fileName="../../CybusM_IF.bdl" start="632" end="632"/>
+                    </member>
+                </members>
+            </struct>
+        </structs>
+        <bdlVars>
+        </bdlVars>
+        <pointers>
+        </pointers>
+    </langSymbolInfo>
+    <relations>
+        <variable_relations>
+        </variable_relations>
+        <pointer_relations>
+        </pointer_relations>
+    </relations>
+    <structureInfo>
+        <loops>
+        </loops>
+        <functions>
+        </functions>
+    </structureInfo>
+    <state_line_relation>
+    </state_line_relation>
+    <stage_line_relation>
+    </stage_line_relation>
+    <codeInfo></codeInfo>
+    <processInfo>
+        <name>sort_SA</name>
+        <modelInfo>
+            <name>sort_SA</name>
+            <file>bsort_C.cpp</file>
+        </modelInfo>
+    </processInfo>
+    <childProcessInfo>
+    </childProcessInfo>
+</debugInfo>

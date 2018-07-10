@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<sourceInfo version="1.00">
+    <hierInfo>
+        <processes>
+            <process name="sort_SA_IF_bus1" type="process" file="sort_SA_IF_bus1.IFF">
+            </process>
+        </processes>
+    </hierInfo>
+    <fileInfo>
+        <sourcefiles>
+            <sourcefile name="../../sort_SA_IF_bus1.bdl" timestamp="20170316202300"/>
+            <sourcefile name="../../AMBA_AHB.h" timestamp="20170316202300"/>
+        </sourcefiles>
+    </fileInfo>
+</sourceInfo>

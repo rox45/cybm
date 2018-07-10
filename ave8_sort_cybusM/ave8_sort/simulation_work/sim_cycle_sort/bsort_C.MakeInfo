@@ -1,0 +1,11 @@
+# cmscgen version : 5.43
+# options : -EE -input=random:cycle -file_out=inout:cycle -b10 -dump=VCD -dump_signal=PORT bsort_C.IFF 
+# checksum : 000001c2751db1666e2c0ac24f9a91556c01be892d32dee9
+# timestamp_C : 20111111094856_14996_05029
+Option  	-EE -input=random:cycle -file_out=inout:cycle -b10 -dump=VCD -dump_signal=PORT bsort_C.IFF 
+signed_flag	mixsigned
+random_flag	YES
+macro	NO
+src_file	bsort_C.cpp
+header_file	bsort_C.h
+carry_flag	ON

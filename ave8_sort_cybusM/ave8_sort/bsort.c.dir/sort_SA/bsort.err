@@ -1,0 +1,121 @@
+I_BT1173: LOG file compressed. (bsort.LOG.gz)
+I_BT1921: License has been successfully obtained by FLEXlm.
+I_BT2619: Synthesize in ASIC mode.
+I_BT4146: Option -Zbit_order_force=down automatically set since all signals declared in descending order.
+W_BT4131: Change the physical type of signal(d) to var.
+	[Source Lines]
+	670(../../CybusM_IF.bdl):     ter(CBM_DATA_RANGE_bus1)           d;
+W_BT4486: The bitwidth of reference variable (num) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	65(../../bsort.c): 		out_sorted = array[num] ;
+W_BT4486: The bitwidth of reference variable (n) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	54(../../bsort.c): 				array[m]   = array[n] ;
+W_BT4486: The bitwidth of reference variable (m) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	53(../../bsort.c): 				temp         = array[m] ;
+W_BT4486: The bitwidth of reference variable (m) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	52(../../bsort.c): 			if(array[n] < array[m]){				
+W_BT4486: The bitwidth of reference variable (n) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	52(../../bsort.c): 			if(array[n] < array[m]){				
+W_BT4486: The bitwidth of reference variable (n) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	55(../../bsort.c): 				array[n] = temp ;
+W_BT4486: The bitwidth of reference variable (m) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	54(../../bsort.c): 				array[m]   = array[n] ;
+W_BT4486: The bitwidth of reference variable (num) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	37(../../bsort.c): 			array[num] = CBM_get_data();
+W_BT4486: The bitwidth of reference variable (array) automatically reduced from 32 bit to 8 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	65(../../bsort.c): 		out_sorted = array[num] ;
+I_BT4568: Function CBM_set_response is inline expanded/unrolled.
+I_BT4568: Function CBM_get_data is inline expanded/unrolled.
+I_BT4568: Function CBM_poll_req is inline expanded/unrolled.
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	50(../../bsort.c): 	for(m = 0 ; m < DSIZE; m++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+W_BT4611: Loop statement is ignored since it cannot be executed.
+	[Source Lines]
+	51(../../bsort.c): 		for(n=m+1 ; n<DSIZE ; n++){
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	64(../../bsort.c): 	for(num=0;num<DSIZE;num++){
+W_BT4131: Change the physical type of signal(stat_req) to var.
+	[Source Lines]
+	631(../../CybusM_IF.bdl):     ter(1..0)                          req;                     /* CBM_IDLE or CBM_READ_REQ or CBM_WRITE_REQ */
+	22(../../bsort.c): 	CBM_Req_Stat_t stat;
+W_BT4131: Change the physical type of signal(stat_addr) to var.
+	[Source Lines]
+	632(../../CybusM_IF.bdl):     ter(CBM_ADDRESS_RANGE_bus1)        addr;                    /* read/write address */
+	22(../../bsort.c): 	CBM_Req_Stat_t stat;
+W_BT1320: Unused input variable 'sort_SA_bus1_CBM_size'.
+ [Action] Access to input variable or delete it.
+W_BT1323: out variable sort_SA_bus1_CBM_read_data is not used in assignment destination.
+ [Action] Rewrite the correct description so that out variable is used in assignment destination.
+W_BT1320: Unused input variable 'sort_SA_bus1_CBM_size'.
+ [Action] Access to input variable or delete it.
+W_BT1323: out variable sort_SA_bus1_CBM_read_data is not used in assignment destination.
+ [Action] Rewrite the correct description so that out variable is used in assignment destination.
+I_BT5513: Array signal array is synthesized by number (2) of address decoders R1,W1.
+ [Action] When the decoder is increased, specify by 'rw_port = RW numeric character' by attribute of signal.
+	[Source Lines]
+	16(../../bsort.c): reg(31..0) array[DSIZE]  = {0};
+W_BT8766: Since the assignment to the following variable(stat_r_addr) is non-referencing so delete it.
+ [Action] Rewrite as description not having non-referencing assignment.
+	[Source Lines]
+	26(../../bsort.c): 	stat_r = stat;
+W_BT8766: Since the assignment to the following variable(stat_r_addr) is non-referencing so delete it.
+ [Action] Rewrite as description not having non-referencing assignment.
+	[Source Lines]
+	41(../../bsort.c): 		stat_r = stat;
+W_BT8766: Since the assignment to the following variable(stat_addr) is non-referencing so delete it.
+ [Action] Rewrite as description not having non-referencing assignment.
+	[Source Lines]
+	640(../../CybusM_IF.bdl):     p->addr = input(CBM_addr);
+W_BT8766: Since the assignment to the following variable(stat_addr) is non-referencing so delete it.
+ [Action] Rewrite as description not having non-referencing assignment.
+	[Source Lines]
+	640(../../CybusM_IF.bdl):     p->addr = input(CBM_addr);
+W_BT5521: Since the wiring of array(array) implemented in register file become excessive, layout becomes difficult.
+ [Action] Confirm the size of array (array), location utilized, implementation method.
+I_BT5712: Port sort_SA_bus1_CBM_addr is not used, but do not delete it.
+I_BT5712: Port sort_SA_bus1_CBM_size is not used, but do not delete it.
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	22 warning      exist
+	19 information  exist
+	 1 tips         exist
+	---> SEE bsort.err FILE and bsort.tips FILE for DETAILS

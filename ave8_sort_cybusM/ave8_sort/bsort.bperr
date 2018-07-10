@@ -1,0 +1,10 @@
+Copyright (C) 1988-2017 NEC Corporation. All rights reserved.
+bdlpars version : 6.76 (Windows 32-bit) Tue Nov  7 13:19:52 JST 2017
+         (BIF version : 3.41m)
+         (LICflex version : 1.53 cylmd)
+         (PARSE COMMON version : 2.89)
+"../../bsort.c", line 16: Warning: number of initial values < storage size, set 0 <W2801>
+"../../CybusM_IF.bdl", line 645: Warning: global variable 'sort_SA_bus1_CBM_size' unused <W2600>
+Create: bsort.IFF
+Token count: 212
+bdlpars finished successfully.

@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<!-- cmscgen version : 6.74 -->
+<!-- options : -EE -input=random:cycle -b10 -file_out=cycle -dump=VCD -dump_signal=PORT:BDL -org_type=pin -enum_int=NO -out_dir=. -file cmscgen_file.ave8_MA.txt  -->
+<!-- checksum : 00009506b8efbb4cb7e98891f93a85fc1e2fe1f1a3d4a465 -->
+<!-- timestamp_C : 20170419111232_57596_19877 -->
+<debugInfo version="3.30">
+    <cycleModelSymbolInfo>
+        <registers>
+            <register id="187">
+                <name>RG_buffer</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+                <reset portID="4" mode="async"/>
+            </register>
+            <register id="188">
+                <name>RG_buffer_1</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+                <reset portID="4" mode="async"/>
+            </register>
+            <register id="189">
+                <name>RG_buffer_2</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+                <reset portID="4" mode="async"/>
+            </register>
+            <register id="190">
+                <name>RG_buffer_3</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+                <reset portID="4" mode="async"/>
+            </register>
+            <register id="191">
+                <name>RG_buffer_4</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+                <reset portID="4" mode="async"/>
+            </register>
+            <register id="192">
+                <name>RG_buffer_5</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+                <reset portID="4" mode="async"/>
+            </register>
+            <register id="193">
+                <name>RG_buffer_d</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+                <reset portID="4" mode="async"/>
+            </register>
+            <register id="194">
+                <name>RG_buffer_6</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <clock portID="3"/>
+            </register>
+        </registers>
+        <terminals>
+            <terminal id="207">
+                <name>buffer_a061_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="208">
+                <name>buffer_a051_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="209">
+                <name>buffer_a041_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="210">
+                <name>buffer_a031_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="211">
+                <name>buffer_a021_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="212">
+                <name>buffer_a011_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="213">
+                <name>buffer_a001_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="216">
+                <name>sum1_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>11</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+            <terminal id="217">
+                <name>out0_v1_t</name>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </terminal>
+        </terminals>
+        <ports>
+            <port id="3">
+                <name>bus1_HCLK</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="4">
+                <name>bus1_HRESETn</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="16">
+                <name>ave8_MA_bus1_CBM_read_data</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>32</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="19">
+                <name>ave8_MA_bus1_CBM_error</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="20">
+                <name>ave8_MA_bus1_CBM_count</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>11</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="195">
+                <name>ave8_MA_bus1_CBM_read_req</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="196">
+                <name>ave8_MA_bus1_CBM_write_req</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="197">
+                <name>ave8_MA_bus1_CBM_burst</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>3</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="198">
+                <name>ave8_MA_bus1_CBM_addr</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>32</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="199">
+                <name>ave8_MA_bus1_CBM_length</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>11</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="200">
+                <name>ave8_MA_bus1_CBM_size</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>3</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="201">
+                <name>ave8_MA_bus1_CBM_lock</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="202">
+                <name>ave8_MA_bus1_CBM_write_data</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>32</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="203">
+                <name>ave8_MA_bus1_CBM_command_busy</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="204">
+                <name>ave8_MA_bus1_CBM_data_ready</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="205">
+                <name>in0</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+            <port id="206">
+                <name>out0</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+            </port>
+        </ports>
+        <hier_ports>
+        </hier_ports>
+        <memories>
+        </memories>
+        <fsmStates>
+            <fsmState id="1"><name>ST1_00</name></fsmState>
+            <fsmState id="2"><name>ST1_01</name></fsmState>
+            <fsmState id="3"><name>ST1_02</name></fsmState>
+            <fsmState id="4"><name>ST1_03</name></fsmState>
+        </fsmStates>
+    </cycleModelSymbolInfo>
+    <langSymbolInfo>
+        <structs>
+        </structs>
+        <bdlVars>
+            <bdlVar id="3">
+                <name>bus1_HCLK</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic></physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="61" end="61"/>
+            </bdlVar>
+            <bdlVar id="4">
+                <name>bus1_HRESETn</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic></physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="62" end="62"/>
+            </bdlVar>
+            <bdlVar id="5">
+                <name>ave8_MA_bus1_CBM_read_req</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="65" end="65"/>
+            </bdlVar>
+            <bdlVar id="6">
+                <name>ave8_MA_bus1_CBM_write_req</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="66" end="66"/>
+            </bdlVar>
+            <bdlVar id="8">
+                <name>ave8_MA_bus1_CBM_burst</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(2..0)</org_type>
+                <bitwidth>3</bitwidth>
+                <bitstart>2</bitstart>
+                <is_down>1</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="68" end="68"/>
+            </bdlVar>
+            <bdlVar id="10">
+                <name>ave8_MA_bus1_CBM_addr</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(31..0)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>31</bitstart>
+                <is_down>1</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="69" end="69"/>
+            </bdlVar>
+            <bdlVar id="12">
+                <name>ave8_MA_bus1_CBM_length</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(10..0)</org_type>
+                <bitwidth>11</bitwidth>
+                <bitstart>10</bitstart>
+                <is_down>1</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="70" end="70"/>
+            </bdlVar>
+            <bdlVar id="13">
+                <name>ave8_MA_bus1_CBM_size</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(2..0)</org_type>
+                <bitwidth>3</bitwidth>
+                <bitstart>2</bitstart>
+                <is_down>1</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="71" end="71"/>
+            </bdlVar>
+            <bdlVar id="14">
+                <name>ave8_MA_bus1_CBM_lock</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="72" end="72"/>
+            </bdlVar>
+            <bdlVar id="15">
+                <name>ave8_MA_bus1_CBM_write_data</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(31..0)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>31</bitstart>
+                <is_down>1</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="73" end="73"/>
+            </bdlVar>
+            <bdlVar id="16">
+                <name>ave8_MA_bus1_CBM_read_data</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(31..0)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>31</bitstart>
+                <is_down>1</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="75" end="75"/>
+            </bdlVar>
+            <bdlVar id="17">
+                <name>ave8_MA_bus1_CBM_command_busy</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="76" end="76"/>
+            </bdlVar>
+            <bdlVar id="18">
+                <name>ave8_MA_bus1_CBM_data_ready</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="77" end="77"/>
+            </bdlVar>
+            <bdlVar id="19">
+                <name>ave8_MA_bus1_CBM_error</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="78" end="78"/>
+            </bdlVar>
+            <bdlVar id="20">
+                <name>ave8_MA_bus1_CBM_count</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(10..0)</org_type>
+                <bitwidth>11</bitwidth>
+                <bitstart>10</bitstart>
+                <is_down>1</is_down>
+                <category>External</category>
+                <line fileName="../../CybusM_IF.bdl" start="79" end="79"/>
+            </bdlVar>
+            <bdlVar id="75">
+                <scope><name>CBM_single_write_lk</name></scope>
+                <name>a</name>
+                <direction></direction>
+                <sign>unsigned</sign>
+                <physic>var</physic>
+                <org_type>unsigned var(31..0)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>31</bitstart>
+                <is_down>1</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../CybusM_IF.bdl" start="393" end="393"/>
+            </bdlVar>
+            <bdlVar id="76">
+                <scope><name>CBM_single_write_lk</name></scope>
+                <name>d</name>
+                <direction></direction>
+                <sign>unsigned</sign>
+                <physic>var</physic>
+                <org_type>unsigned var(31..0)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>31</bitstart>
+                <is_down>1</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../CybusM_IF.bdl" start="394" end="394"/>
+            </bdlVar>
+            <bdlVar id="77">
+                <scope><name>CBM_single_write_lk</name></scope>
+                <name>lk</name>
+                <direction></direction>
+                <sign>unsigned</sign>
+                <physic>var</physic>
+                <org_type>unsigned var(0:1)</org_type>
+                <bitwidth>1</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../CybusM_IF.bdl" start="395" end="395"/>
+            </bdlVar>
+            <bdlVar id="78">
+                <scope><name>CBM_single_write</name></scope>
+                <name>a</name>
+                <direction></direction>
+                <sign>unsigned</sign>
+                <physic>var</physic>
+                <org_type>unsigned var(31..0)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>31</bitstart>
+                <is_down>1</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../CybusM_IF.bdl" start="414" end="414"/>
+            </bdlVar>
+            <bdlVar id="79">
+                <scope><name>CBM_single_write</name></scope>
+                <name>d</name>
+                <direction></direction>
+                <sign>unsigned</sign>
+                <physic>var</physic>
+                <org_type>unsigned var(31..0)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>31</bitstart>
+                <is_down>1</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../CybusM_IF.bdl" start="415" end="415"/>
+            </bdlVar>
+            <bdlVar id="113">
+                <name>in0</name>
+                <direction>in</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:8)</org_type>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../ave8.c" start="27" end="27"/>
+            </bdlVar>
+            <bdlVar id="114">
+                <name>out0</name>
+                <direction>out</direction>
+                <sign>unsigned</sign>
+                <physic>ter</physic>
+                <org_type>unsigned ter(0:8)</org_type>
+                <bitwidth>8</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <category>External</category>
+                <line fileName="../../ave8.c" start="28" end="28"/>
+            </bdlVar>
+            <bdlVar id="116" array="yes">
+                <name>buffer</name>
+                <dim>1</dim>
+                <element depth="1">8</element>
+                <direction></direction>
+                <sign>unsigned</sign>
+                <physic>var</physic>
+                <org_type>unsigned var(0:32)</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <address></address>
+                <category>External</category>
+                <line fileName="../../ave8.c" start="29" end="29"/>
+            </bdlVar>
+            <bdlVar id="117">
+                <scope><name>ave8_MA</name></scope>
+                <name>out0_v</name>
+                <direction></direction>
+                <sign>signed</sign>
+                <physic>var</physic>
+                <org_type>int</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../ave8.c" start="35" end="35"/>
+            </bdlVar>
+            <bdlVar id="118">
+                <scope><name>ave8_MA</name></scope>
+                <name>sum</name>
+                <direction></direction>
+                <sign>signed</sign>
+                <physic>var</physic>
+                <org_type>int</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../ave8.c" start="35" end="35"/>
+            </bdlVar>
+            <bdlVar id="119">
+                <scope><name>ave8_MA</name></scope>
+                <name>i</name>
+                <direction></direction>
+                <sign>signed</sign>
+                <physic>var</physic>
+                <org_type>int</org_type>
+                <bitwidth>32</bitwidth>
+                <bitstart>0</bitstart>
+                <is_down>0</is_down>
+                <address></address>
+                <category>Internal</category>
+                <line fileName="../../ave8.c" start="35" end="35"/>
+            </bdlVar>
+        </bdlVars>
+        <pointers>
+        </pointers>
+    </langSymbolInfo>
+    <relations>
+        <variable_relations>
+            <var bdlVarID="3">
+                <port_relation portID="3"/>
+            </var>
+            <var bdlVarID="4">
+                <port_relation portID="4"/>
+            </var>
+            <var bdlVarID="5">
+                <port_relation portID="195" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="6">
+                <port_relation portID="196" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="8">
+                <port_relation portID="197" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="10">
+                <port_relation portID="198" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="12">
+                <port_relation portID="199" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="13">
+                <port_relation portID="200" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="14">
+                <port_relation portID="201" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="15">
+                <port_relation portID="202" stateID="4" branchID="7"/>
+            </var>
+            <var bdlVarID="16">
+                <port_relation portID="16"/>
+            </var>
+            <var bdlVarID="17">
+                <port_relation portID="203"/>
+            </var>
+            <var bdlVarID="18">
+                <port_relation portID="204"/>
+            </var>
+            <var bdlVarID="19">
+                <port_relation portID="19"/>
+            </var>
+            <var bdlVarID="20">
+                <port_relation portID="20"/>
+            </var>
+            <var bdlVarID="76">
+                <reg_relation regID="193">
+                    <relation_begin stateID="2" branchID="1"/>
+                    <relation_end stateID="4" branchID="7"/>
+                </reg_relation>
+            </var>
+            <var bdlVarID="113">
+                <port_relation portID="205"/>
+            </var>
+            <var bdlVarID="114">
+                <port_relation portID="206" stateID="2" branchID="1"/>
+            </var>
+            <var bdlVarID="116">
+                <expand nestingLevel="1" depth="1" arrayIndex="6" id="232" relationID="1">
+                    <reg_relation regID="192">
+                        <relation_begin stateID="2" branchID="1"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <ter_relation terID="207" stateID="2" branchID="1" order="4"/>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="6" id="232" relationID="2">
+                    <reg_relation regID="193">
+                        <relation_begin stateID="1" branchID="0"/>
+                        <relation_end stateID="2" branchID="1"/>
+                    </reg_relation>
+                    <reg_relation regID="193">
+                        <relation_begin stateID="4" branchID="7"/>
+                        <relation_end stateID="2" branchID="1"/>
+                    </reg_relation>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="5" id="231" relationID="1">
+                    <reg_relation regID="191">
+                        <relation_begin stateID="2" branchID="1"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <ter_relation terID="208" stateID="2" branchID="1" order="6"/>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="5" id="231" relationID="2">
+                    <reg_relation regID="192">
+                        <relation_begin stateID="1" branchID="0"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <reg_relation regID="192">
+                        <relation_begin stateID="4" branchID="7"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="4" id="230" relationID="1">
+                    <reg_relation regID="190">
+                        <relation_begin stateID="2" branchID="1"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <ter_relation terID="209" stateID="2" branchID="1" order="7"/>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="4" id="230" relationID="2">
+                    <reg_relation regID="191">
+                        <relation_begin stateID="1" branchID="0"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <reg_relation regID="191">
+                        <relation_begin stateID="4" branchID="7"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="3" id="229" relationID="1">
+                    <reg_relation regID="189">
+                        <relation_begin stateID="2" branchID="1"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <ter_relation terID="210" stateID="2" branchID="1" order="10"/>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="3" id="229" relationID="2">
+                    <reg_relation regID="190">
+                        <relation_begin stateID="1" branchID="0"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <reg_relation regID="190">
+                        <relation_begin stateID="4" branchID="7"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="2" id="228" relationID="1">
+                    <reg_relation regID="188">
+                        <relation_begin stateID="2" branchID="1"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <ter_relation terID="211" stateID="2" branchID="1" order="11"/>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="2" id="228" relationID="2">
+                    <reg_relation regID="189">
+                        <relation_begin stateID="1" branchID="0"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <reg_relation regID="189">
+                        <relation_begin stateID="4" branchID="7"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="1" id="227" relationID="1">
+                    <reg_relation regID="187">
+                        <relation_begin stateID="2" branchID="1"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <ter_relation terID="212" stateID="2" branchID="1" order="13"/>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="1" id="227" relationID="2">
+                    <reg_relation regID="188">
+                        <relation_begin stateID="1" branchID="0"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <reg_relation regID="188">
+                        <relation_begin stateID="4" branchID="7"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="0" id="226" relationID="1">
+                    <reg_relation regID="187">
+                        <relation_begin stateID="1" branchID="0"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <reg_relation regID="187">
+                        <relation_begin stateID="4" branchID="7"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                    <ter_relation terID="213" stateID="2" branchID="1" order="14"/>
+                </expand>
+                <expand nestingLevel="1" depth="1" arrayIndex="0" id="226" relationID="2">
+                    <reg_relation regID="194">
+                        <relation_begin stateID="2" branchID="1"/>
+                        <relation_end stateID="4" branchID="7"/>
+                    </reg_relation>
+                </expand>
+            </var>
+            <var bdlVarID="117">
+                <ter_relation terID="217" stateID="2" branchID="1" order="18"/>
+            </var>
+            <var bdlVarID="118">
+                <ter_relation terID="216" stateID="2" branchID="1" order="17"/>
+            </var>
+        </variable_relations>
+        <pointer_relations>
+        </pointer_relations>
+    </relations>
+    <structureInfo>
+        <loops>
+        </loops>
+        <functions>
+            <function id="27" inline="yes">
+                <name>CBM_single_write_lk</name>
+                <line fileName="../../CybusM_IF.bdl" start="392" end="408"/>
+                <instance num="0"/>
+            </function>
+            <function id="28" inline="yes">
+                <name>CBM_single_write</name>
+                <line fileName="../../CybusM_IF.bdl" start="413" end="417"/>
+                <instance num="0"/>
+            </function>
+            <function id="35" process="yes">
+                <name>ave8_MA</name>
+                <line fileName="../../ave8.c" start="32" end="61"/>
+                <instance num="0"/>
+            </function>
+        </functions>
+        <blocks>
+        </blocks>
+    </structureInfo>
+    <state_line_relation>
+        <state_relation stateID="1" branchID="0">
+            <lineinfo fileName="../../ave8.c">
+                <line start="29" end="29"/>
+            </lineinfo>
+        </state_relation>
+        <state_relation stateID="2" branchID="1">
+            <lineinfo fileName="../../CybusM_IF.bdl">
+                <line start="417" end="417"/>
+            </lineinfo>
+            <lineinfo fileName="../../ave8.c">
+                <line start="41" end="41"/>
+                <line start="44" end="45"/>
+                <line start="49" end="49"/>
+                <line start="53" end="54"/>
+                <line start="57" end="57"/>
+            </lineinfo>
+        </state_relation>
+        <state_relation stateID="3" branchID="2">
+            <lineinfo fileName="../../CybusM_IF.bdl">
+                <line start="397" end="397"/>
+            </lineinfo>
+        </state_relation>
+        <state_relation stateID="3" branchID="3">
+            <lineinfo fileName="../../CybusM_IF.bdl">
+                <line start="397" end="397"/>
+            </lineinfo>
+        </state_relation>
+        <state_relation stateID="3" branchID="4">
+            <lineinfo fileName="../../CybusM_IF.bdl">
+                <line start="397" end="397"/>
+            </lineinfo>
+        </state_relation>
+        <state_relation stateID="3" branchID="5">
+            <lineinfo fileName="../../CybusM_IF.bdl">
+                <line start="397" end="397"/>
+            </lineinfo>
+        </state_relation>
+        <state_relation stateID="3" branchID="6">
+            <lineinfo fileName="../../CybusM_IF.bdl">
+                <line start="397" end="397"/>
+            </lineinfo>
+        </state_relation>
+        <state_relation stateID="4" branchID="7">
+            <lineinfo fileName="../../CybusM_IF.bdl">
+                <line start="401" end="408"/>
+            </lineinfo>
+        </state_relation>
+    </state_line_relation>
+    <stage_line_relation>
+    </stage_line_relation>
+    <codeInfo></codeInfo>
+    <processInfo>
+        <name>ave8_MA</name>
+        <modelInfo>
+            <name>ave8_MA</name>
+            <file>ave8_C.cpp</file>
+        </modelInfo>
+    </processInfo>
+    <childProcessInfo>
+    </childProcessInfo>
+</debugInfo>

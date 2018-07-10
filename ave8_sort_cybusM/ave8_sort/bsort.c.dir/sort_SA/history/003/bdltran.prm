@@ -1,0 +1,1 @@
+  -c1000 -s -EE -lb /eda/bin/cwb/cyber/lib/asic_45.BLIB -lfl /eda/bin/cwb/cyber/lib/asic_45.FLIB -lfc bsort-auto.FCNT

@@ -1,0 +1,28 @@
+<!DOCTYPE AQUARIUM_OPTION [
+<!ELEMENT root (properties)>
+<!ELEMENT properties (property)*>
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+   name CDATA #REQUIRED
+   type CDATA #REQUIRED
+   value CDATA #REQUIRED
+>
+]>
+<root>
+  <properties>
+    <property type="string" value="dfc_SA" name="Process" />
+    <property type="string" value="Analyzed" name="State" />
+    <property type="string" value="1000" name="bt::Clock" />
+    <property type="string" value="2" name="bt::ClockResetSyncronizerNum" />
+    <property type="string" value="10" name="bt::ErrorWarningOptionFalseLoopMax" />
+    <property type="string" value="C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" name="bt::LibraryBlibFile" />
+    <property type="string" value="C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB" name="bt::LibraryFlibFile" />
+    <property type="string" value="0" name="bt::ModeScheduleMode" />
+    <property type="string" value="NO" name="bt::Unnesting" />
+    <property type="string" value="2017/03/16 15:18:46.000" name="bt::timestamp" />
+    <property type="string" value="dynamic_frequency_controller_E.v" name="ls::AddFile" />
+    <property type="string" value="2017/03/16 15:18:46.000" name="ls::timestamp" />
+    <property type="string" value="2017/03/16 15:18:46.000" name="vh::timestamp" />
+    <property type="string" value="2017/03/16 15:18:46.000" name="vl::timestamp" />
+  </properties>
+</root>

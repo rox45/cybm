@@ -1,0 +1,11 @@
+Copyright (C) 1988-2015 NEC Corporation. All rights reserved.
+veriloggen version : 6.53.1 (Windows 32-bit) Wed Jul 29 10:41:09 JST 2015
+         (BIF version : 3.31g)
+         (LICflex version : 1.52 cylmd)
+         (GEN COMMON version : 3.04)
+options : veriloggen -EE ave8_E.IFF
+bdlpars options :  -EE -I../.. "-IC:/Program Files (x86)/cyber/5.52/include" ../../ave8.c
+bdltran options :  -EE -c1000 -s -Zresource_fcnt=USE -Zresource_mcnt=GENERATE -Zscheduling_block=non-transparent -Zdup_reset=YES -Zreset_state=AUTO -EE -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_45.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_45.FLIB" +lfl ave8-auto.FLIB -lfc ave8-auto.FCNT -o-I ave8.IFF 
+N_GH0000: Verilog file generated: (ave8_E.v)
+N_GH0011: LSInfo file generated: (ave8_E.v.LSInfo)
+veriloggen finished successfully.

@@ -1,0 +1,73 @@
+#@VERSION{3.00}
+#@CNT{bus1}
+#@KIND{BASIC_OPERATOR}
+#@CLK 100000
+#@UNIT 1/10ps
+@PROCESS{
+	NAME	bus1
+#	KIND
+#	LIMIT
+#	BITWIDTH
+#	DELAY
+	AREA	2200
+	AREA_REG	594
+	AREA_COMB	1606
+	AREA_FU	55
+	AREA_MUX	700
+	AREA_DEC	3
+	AREA_MISC	848
+	AREA_MEM	0
+	NET	467
+	PIN_PAIR	945
+#	SPECULATION
+#	COMMENT
+	DEFMOD {
+		clock                    bus1_HCLK        /* c, bus1_HCLK, @clock_period = 10ns, clock_edge = pos */;
+		reset                    bus1_HRESETn     /* r, bus1_HRESETn, reset_mode = async, reset_active = low */;
+		in    unsigned ter(0..0) ave8_MA_bus1_HBUSREQ /* glo, ave8_MA_bus1_HBUSREQ */;
+		out   unsigned ter(0..0) ave8_MA_bus1_HGRANT /* glo, ave8_MA_bus1_HGRANT */;
+		in    unsigned ter(1..0) ave8_MA_bus1_HTRANS /* glo, ave8_MA_bus1_HTRANS */;
+		in    unsigned ter(2..0) ave8_MA_bus1_HBURST /* glo, ave8_MA_bus1_HBURST */;
+		in    unsigned ter(0..0) ave8_MA_bus1_HWRITE /* glo, ave8_MA_bus1_HWRITE */;
+		out   unsigned ter(0..0) ave8_MA_bus1_HREADY /* glo, ave8_MA_bus1_HREADY */;
+		out   unsigned ter(1..0) ave8_MA_bus1_HRESP /* glo, ave8_MA_bus1_HRESP */;
+		in    unsigned ter(0..0) ave8_MA_bus1_HLOCK /* glo, ave8_MA_bus1_HLOCK */;
+		in    unsigned ter(2..0) ave8_MA_bus1_HSIZE /* glo, ave8_MA_bus1_HSIZE */;
+		in    unsigned ter(3..0) ave8_MA_bus1_HPROT /* glo, ave8_MA_bus1_HPROT */;
+		in    unsigned ter(31..0) ave8_MA_bus1_HADDR /* glo, ave8_MA_bus1_HADDR */;
+		out   unsigned ter(31..0) ave8_MA_bus1_HRDATA /* glo, ave8_MA_bus1_HRDATA */;
+		in    unsigned ter(31..0) ave8_MA_bus1_HWDATA /* glo, ave8_MA_bus1_HWDATA */;
+		out   unsigned ter(0..0) sort_SA_bus1_HSEL /* glo, sort_SA_bus1_HSEL */;
+		out   unsigned ter(31..0) sort_SA_bus1_HADDR /* glo, sort_SA_bus1_HADDR */;
+		out   unsigned ter(0..0) sort_SA_bus1_HWRITE /* glo, sort_SA_bus1_HWRITE */;
+		out   unsigned ter(1..0) sort_SA_bus1_HTRANS /* glo, sort_SA_bus1_HTRANS */;
+		out   unsigned ter(2..0) sort_SA_bus1_HSIZE /* glo, sort_SA_bus1_HSIZE */;
+		out   unsigned ter(2..0) sort_SA_bus1_HBURST /* glo, sort_SA_bus1_HBURST */;
+		out   unsigned ter(31..0) sort_SA_bus1_HWDATA /* glo, sort_SA_bus1_HWDATA */;
+		out   unsigned ter(3..0) sort_SA_bus1_HMASTER /* glo, sort_SA_bus1_HMASTER */;
+		out   unsigned ter(0..0) sort_SA_bus1_HMASTLOCK /* glo, sort_SA_bus1_HMASTLOCK */;
+		out   unsigned ter(3..0) sort_SA_bus1_HPROT /* glo, sort_SA_bus1_HPROT */;
+		out   unsigned ter(0..0) sort_SA_bus1_HREADY /* glo, sort_SA_bus1_HREADY */;
+		in    unsigned ter(0..0) sort_SA_bus1_HREADYOUT /* glo, sort_SA_bus1_HREADYOUT */;
+		in    unsigned ter(1..0) sort_SA_bus1_HRESP /* glo, sort_SA_bus1_HRESP */;
+		in    unsigned ter(31..0) sort_SA_bus1_HRDATA /* glo, sort_SA_bus1_HRDATA */;
+		in    unsigned ter(15..0) sort_SA_bus1_HSPLIT /* glo, sort_SA_bus1_HSPLIT */;
+		out   unsigned ter(0..0) dfc_SA_bus1_HSEL /* glo, dfc_SA_bus1_HSEL */;
+		out   unsigned ter(31..0) dfc_SA_bus1_HADDR /* glo, dfc_SA_bus1_HADDR */;
+		out   unsigned ter(0..0) dfc_SA_bus1_HWRITE /* glo, dfc_SA_bus1_HWRITE */;
+		out   unsigned ter(1..0) dfc_SA_bus1_HTRANS /* glo, dfc_SA_bus1_HTRANS */;
+		out   unsigned ter(2..0) dfc_SA_bus1_HSIZE /* glo, dfc_SA_bus1_HSIZE */;
+		out   unsigned ter(2..0) dfc_SA_bus1_HBURST /* glo, dfc_SA_bus1_HBURST */;
+		out   unsigned ter(31..0) dfc_SA_bus1_HWDATA /* glo, dfc_SA_bus1_HWDATA */;
+		out   unsigned ter(3..0) dfc_SA_bus1_HMASTER /* glo, dfc_SA_bus1_HMASTER */;
+		out   unsigned ter(0..0) dfc_SA_bus1_HMASTLOCK /* glo, dfc_SA_bus1_HMASTLOCK */;
+		out   unsigned ter(3..0) dfc_SA_bus1_HPROT /* glo, dfc_SA_bus1_HPROT */;
+		out   unsigned ter(0..0) dfc_SA_bus1_HREADY /* glo, dfc_SA_bus1_HREADY */;
+		in    unsigned ter(0..0) dfc_SA_bus1_HREADYOUT /* glo, dfc_SA_bus1_HREADYOUT */;
+		in    unsigned ter(1..0) dfc_SA_bus1_HRESP /* glo, dfc_SA_bus1_HRESP */;
+		in    unsigned ter(31..0) dfc_SA_bus1_HRDATA /* glo, dfc_SA_bus1_HRDATA */;
+		in    unsigned ter(15..0) dfc_SA_bus1_HSPLIT /* glo, dfc_SA_bus1_HSPLIT */;
+	}
+}
+#@HASH{3cc333a64e9480401195ae60adca83a0}
+#@END{bus1}

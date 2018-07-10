@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<!-- cmscgen version : 5.43 -->
+<!-- options : -EE -input=random:cycle -b10 -dump=VCD -dump_signal=PORT soc_C.IFF sort_SA_IF_bus1_C.IFF bus1_C.IFF bsort_C.IFF ave8_MA_IF_bus1_C.IFF ave8_C.IFF  -->
+<!-- checksum : 000005c56e31a53c1da660b6fb832360f3e167c4f3bb24d1 -->
+<!-- timestamp_C : 20111111094331_12896_10528 -->
+<debugInfo version="3.20">
+    <cycleModelSymbolInfo>
+        <registers>
+        </registers>
+        <terminals>
+        </terminals>
+        <ports>
+        </ports>
+        <memories>
+        </memories>
+        <fsmStates>
+        </fsmStates>
+    </cycleModelSymbolInfo>
+    <langSymbolInfo>
+        <structs>
+        </structs>
+        <bdlVars>
+        </bdlVars>
+        <pointers>
+        </pointers>
+    </langSymbolInfo>
+    <relations>
+        <variable_relations>
+        </variable_relations>
+        <pointer_relations>
+        </pointer_relations>
+    </relations>
+    <structureInfo>
+        <loops>
+        </loops>
+        <functions>
+        </functions>
+    </structureInfo>
+    <state_line_relation>
+    </state_line_relation>
+    <stage_line_relation>
+    </stage_line_relation>
+    <codeInfo></codeInfo>
+    <processInfo>
+        <name>ave8_MA</name>
+        <modelInfo>
+            <name>ave8_MA</name>
+            <file>ave8_C.cpp</file>
+        </modelInfo>
+    </processInfo>
+    <childProcessInfo>
+    </childProcessInfo>
+</debugInfo>

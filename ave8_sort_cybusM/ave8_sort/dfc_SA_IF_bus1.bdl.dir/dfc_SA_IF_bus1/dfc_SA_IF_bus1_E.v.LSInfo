@@ -1,0 +1,21 @@
+LSInfo_version: 1.06
+
+iff_filename: "dfc_SA_IF_bus1_E.IFF"
+rtl_filename: "dfc_SA_IF_bus1_E.v"
+
+timestamp_0: 20170316152301_15576_07433
+timestamp_5: 20170316152305_16840_22262
+timestamp_9: 20170316152306_16840_23657
+timestamp_C: 20170316152306_16840_00451
+timestamp_E: 20170316152306_16840_26133
+timestamp_V: 20170316152307_16704_21818
+
+lang: verilog
+
+gated_clock_register: EXIST
+
+stall_register: NONE
+
+module_name: dfc_SA_IF_bus1
+
+syn_tool: DC

@@ -1,0 +1,8 @@
+Copyright (C) 1988-2011 NEC Corporation. All rights reserved.
+mkmfsim version : 1.94  Thu Jul 28 15:04:49 JST 2011
+         (BIF version : 3.12g)
+Option: -EE -VC -I. -cycle 200 -log_stdout -target sim_cycle_top.exe soc_C.MakeInfo ave8_C.MakeInfo ave8_MA_IF_bus1_C.MakeInfo bsort_C.MakeInfo bus1_C.MakeInfo sort_SA_IF_bus1_C.MakeInfo 
+I_MK8000: Created Makefile(Makefile.VC)
+I_MK8001: Copy file(D:\Program Files\Cyber\5.22\lib\mt19937ar.cpp)
+I_MK8001: Copy file(D:\Program Files\Cyber\5.22\lib\mt19937ar.h)
+mkmfsim finished successfully.

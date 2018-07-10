@@ -1,0 +1,45 @@
+#@VERSION{2.00}
+#@CNT{ave8_MA}
+#@KIND{BASIC_OPERATOR}
+#@CLK 1000
+#@UNIT 1/100ns
+@PROCESS{
+	NAME	ave8_MA
+#	KIND
+#	LIMIT
+#	BITWIDTH
+#	DELAY
+	AREA	892
+	AREA_REG	396
+	AREA_COMB	496
+	AREA_FU	354
+	AREA_MUX	136
+	AREA_DEC	0
+	AREA_MISC	6
+	AREA_MEM	0
+	NET	682
+	PIN_PAIR	1564
+#	SPECULATION
+#	COMMENT
+	DEFMOD {
+		clock                    bus1_HCLK        /* c, bus1_HCLK, @clock_period = 10ns, clock_edge = pos */;
+		reset                    bus1_HRESETn     /* r, bus1_HRESETn, reset_mode = async, reset_active = low */;
+		out   unsigned ter(0:1)  ave8_MA_bus1_CBM_read_req /* glo, ave8_MA_bus1_CBM_read_req */;
+		out   unsigned ter(0:1)  ave8_MA_bus1_CBM_write_req /* glo, ave8_MA_bus1_CBM_write_req */;
+		out   unsigned ter(2..0) ave8_MA_bus1_CBM_burst /* glo, ave8_MA_bus1_CBM_burst */;
+		out   unsigned ter(31..0) ave8_MA_bus1_CBM_addr /* glo, ave8_MA_bus1_CBM_addr */;
+		out   unsigned ter(10..0) ave8_MA_bus1_CBM_length /* glo, ave8_MA_bus1_CBM_length */;
+		out   unsigned ter(2..0) ave8_MA_bus1_CBM_size /* glo, ave8_MA_bus1_CBM_size */;
+		out   unsigned ter(0:1)  ave8_MA_bus1_CBM_lock /* glo, ave8_MA_bus1_CBM_lock */;
+		out   unsigned ter(31..0) ave8_MA_bus1_CBM_write_data /* glo, ave8_MA_bus1_CBM_write_data */;
+		in    unsigned ter(31..0) ave8_MA_bus1_CBM_read_data /* glo, ave8_MA_bus1_CBM_read_data */;
+		in    unsigned ter(0:1)  ave8_MA_bus1_CBM_command_busy /* glo, ave8_MA_bus1_CBM_command_busy */;
+		in    unsigned ter(0:1)  ave8_MA_bus1_CBM_data_ready /* glo, ave8_MA_bus1_CBM_data_ready */;
+		in    unsigned ter(0:1)  ave8_MA_bus1_CBM_error /* glo, ave8_MA_bus1_CBM_error */;
+		in    unsigned ter(10..0) ave8_MA_bus1_CBM_count /* glo, ave8_MA_bus1_CBM_count */;
+		in    unsigned ter(0:8)  in0              /* glo, in0 */;
+		out   unsigned ter(0:8)  out0             /* glo, out0 */;
+	}
+}
+#@HASH{0933391992c34d1c4508dce26409b66f}
+#@END{ave8_MA}

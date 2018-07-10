@@ -1,0 +1,57 @@
+I_BT1173: LOG file compressed. (ave8.LOG.gz)
+I_BT1921: License has been successfully obtained by FLEXlm.
+W_BT2781: Delay units in file (C:/Program Files (x86)/cyber/5.52/packages/asic_45.FLIB,ave8-auto.FLIB) are different (1/10ps, 1/100ns).
+I_BT2854: Delay value unit in functional unit constraint file (ave8-auto.FCNT) is changed (delay value is made 100 times).
+ [Action] Either option or unit in functional unit constraint file needs to be considered again.
+I_BT2619: Synthesize in ASIC mode.
+I_BT4568: Function CBM_single_write is inline-expanded.
+I_BT4568: Function CBM_single_write_lk is inline-expanded.
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	40(../../ave8.c):         for (i = DSIZE-1; i > 0; i--) { 	
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	48(../../ave8.c):       for (i= 1; i< DSIZE;  i++) { 	
+I_BT4466: The sequence of the operation in unrolled loop is optimized, and number of stages of operation is reduced.
+	[Source Lines]
+	49(../../ave8.c): 	sum += buffer[i];
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_read_data'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_error'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_count'.
+ [Action] Access to input variable or delete it.
+I_BT4679: Array buffer was expanded.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_read_data'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_error'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_count'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_read_data'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_error'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'ave8_MA_bus1_CBM_count'.
+ [Action] Access to input variable or delete it.
+W_BT8766: Removed unreferenced assignment to variable 'buffer_a07'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	29(../../ave8.c): unsigned var(0:32)  buffer[DSIZE] = {0, 0, 0, 0, 0, 0, 0, 0};
+I_BT4393: No memory required. Empty memory library file (ave8-auto.MLIB) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4394: No memory required. Empty memory constraint file (ave8-auto.MCNT) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4383: Generate memory library file / memory constraint file.
+	ave8-auto.MLIB
+	ave8-auto.MCNT
+I_BT5712: Port ave8_MA_bus1_CBM_read_data is not used, but do not delete it.
+I_BT5712: Port ave8_MA_bus1_CBM_error is not used, but do not delete it.
+I_BT5712: Port ave8_MA_bus1_CBM_count is not used, but do not delete it.
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	11 warning      exist
+	16 information  exist
+	 1 tips         exist
+	---> SEE ave8.err FILE and ave8.tips FILE for DETAILS

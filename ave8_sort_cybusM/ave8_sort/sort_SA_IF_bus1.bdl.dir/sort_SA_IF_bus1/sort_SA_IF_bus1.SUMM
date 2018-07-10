@@ -1,0 +1,63 @@
+Copyright (C) 1988-2015 NEC Corporation. All rights reserved.
+bdltran version : 5.52.01 (Windows 32-bit) Mon Aug 24 17:11:41 JST 2015
+         (BIF version : 3.31o)
+         (LICflex version : 1.52 cylmd)
+         make at 17:24:44 Aug 24 2015
+ Option  -sN -c1000 -cu1/100ns -Af -Zfsm_st=1 -ou -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB" -lfc sort_SA_IF_bus1-auto.FCNT sort_SA_IF_bus1 
+
+bdlpars  -DBDL -I../.. ../../sort_SA_IF_bus1.bdl -o sort_SA_IF_bus1.IFF
+
+################ CyberI started (manual scheduling mode) ################
+[Clock period]    100,000 (1/10ps) [define]
+[Datapath delay]   90,000 (1/10ps)
+[Clock uncertainty] 10,000 (1/10ps)
+
+******* Initial # of operations in the input behavior description *******
+ === Operators ===
+  ~  :  1  (1bit:1)
+  !  : 10  (1bit:10)
+  &  : 26  (1bit:26)
+  == : 12  (1bit:11, 16bit:1)
+  != : 15  (2bit:14, 16bit:1)
+  |  :  1  (1bit:1)
+  |> : 50  (1bit:50)
+  Data transfer : 398
+
+********* After optimizing & expanding the behavior description *********
+ === Operators ===
+  ~  : 15  (1bit:15)
+  &  : 26  (1bit:26)
+  == :  1  (16bit:1)
+  != : 15  (2bit:14, 16bit:1)
+  |  :  1  (1bit:1)
+  |> : 21  (1bit:21)
+  Data transfer : 371
+
+#########################  Synthesized Circuit  #########################
+[Performance index max/min] 5 / 2
+  MEM : 
+	
+
+  Module Name         : sort_SA_IF_bus1
+  Basic Library Name  : CWBSTDBLIB
+
+  Total Area          :      3,694
+    Sequential        :      1,539
+    Combinational     :      2,155
+
+  Latency Index       :         13
+  Total States        :         23
+
+  Clock Period        :       10ns
+  Critical Path Delay :   1.2066ns
+
+  Net                 :        620
+  Pin Pair            :      1,195
+
+  Port                :        242
+    In                :        122
+    Out               :        120
+
+TOTAL AREA 3,694 (FU: 0 + REG: 1,539 + MUX: 871 + DEC: 0 + MISC: 1,284) + pin pair 1,195(net 620) + 23FSMs of 1state
+####### CyberI Normal finish (manual scheduling mode) [sort_SA_IF_bus1] #######
+

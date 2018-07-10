@@ -1,0 +1,43 @@
+#
+# Makefile template
+#
+# Option: -EE -VC -I. -cycle 100 -log_stdout -target sim_cycle_ave8.exe ave8_C.MakeInfo 
+#
+
+TARGET	= "sim_cycle_ave8.exe"
+
+SRCS	=  \
+	"mt19937ar.cpp" \
+	"ave8_C.cpp"
+
+HDRS	=  \
+	"mt19937ar.h" \
+	"ave8_C.h"
+
+SYSTEMC_HOME	= $(CYBER_PATH)\osci
+SYSTEMC_ARCH	= vc2008
+SYSTEMC_INCL	= /I"$(SYSTEMC_HOME)\include"
+SYSTEMC_LDFLAGS	= /LIBPATH:"$(SYSTEMC_HOME)\lib-$(SYSTEMC_ARCH)"
+SYSTEMC_LIBS	= systemc.lib
+
+CC	= cl
+LINKER	= link
+INCL	= /I"."
+CFLAGS	= /DCYCLE_NUM=100 /DLOG_STDOUT /O1 /EHsc /GR /vmg /nologo /DWIN32 /DNDEBUG /D_CONSOLE /D_MBCS $(CFLAGS_USER)
+LDFLAGS	= $(SYSTEMC_LDFLAGS)
+LIBS	= $(SYSTEMC_LIBS)
+
+OBJS	=  \
+	"mt19937ar.obj" \
+	"ave8_C.obj"
+
+$(TARGET) : $(OBJS)
+	$(LINKER) /OUT:$@ $(LDFLAGS) $(OBJS) $(LIBS)
+
+.cpp.obj :
+	$(CC) $(CFLAGS) $(INCL) $(SYSTEMC_INCL) /c $< /Fo$@
+
+clean :
+	@del $(OBJS)
+	@del $(TARGET)
+

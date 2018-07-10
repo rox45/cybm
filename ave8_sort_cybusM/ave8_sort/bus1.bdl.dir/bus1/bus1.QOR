@@ -1,0 +1,380 @@
+
+Cyber Synthesis Report
+
+===========
+; Summary ;
+===========
+
+  Module Name         : bus1
+  Basic Library Name  : CWBSTDBLIB
+
+  Total Area          :      2,200
+    Sequential        :        594
+    Combinational     :      1,606
+
+  Latency Index       :          2
+  Total States        :          2
+
+  Clock Period        :       10ns
+  Critical Path Delay :     1.19ns
+
+  Net                 :        467
+  Pin Pair            :        945
+
+  Port                :        387
+    In                :        183
+    Out               :        204
+
+========
+; Area ;
+========
+
+  Total :
+    Total           :      2,200
+      Sequential    : 
+        REG         :        594 (27%)
+      Combinational :      1,606 (73%)
+        FU          :         55 ( 2%)
+        MUX         :        700 (31%)
+        DEC         :          3 ( <1%)
+        MISC        :        848 (38%)
+      Memory        :          -
+
+===================
+; Functional Unit ;
+===================
+
+    FU Name                Area  Reg  Delay  Pipeline  Count
+                                       (ns)    Stage
+    --------------------------------------------------------
+    decr4u                   55     0   0.21         -      1
+
+  Unused Functional Units :
+    ---------------------------------------------------
+    None
+
+============
+; Register ;
+============
+
+     Used      Declared                 Used
+      Bit           Bit      Count       Bit  * Count
+    -------------------------------------------------
+        0             1          1                  0
+    -------------------------------------------------
+        1             1         10                 10
+                      2          1                  1
+                      4          1                  1
+    -------------------------------------------------
+        2             2          1                  2
+    -------------------------------------------------
+        4             4          2                  8
+    -------------------------------------------------
+    Total                                          22
+
+===============
+; Multiplexer ;
+===============
+
+   1 bit: (1way: 7),  2way: 7 ,  3way: 6 
+   2 bit: (1way: 1),  2way: 2 ,  3way: 2 
+   3 bit: (1way: 1),  2way: 1 
+   4 bit:  2way: 3 ,  4way: 1 
+  32 bit: (1way: 2),  2way: 1 
+   Total : 162 (# of Fanins)
+
+===========
+; Decoder ;
+===========
+
+    1to2: 1
+
+==========
+; Memory ;
+==========
+
+    None
+
+===========
+; Latency ;
+===========
+
+    Total:
+        Type          : S
+        Latency       : {1, 2}
+        Latency Index : 2
+        State No.     : 1, 2
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : -
+
+=======
+; FSM ;
+=======
+
+  Total States      :          2
+  #FSM              :          2
+  States/FSM        :          1
+  FSM Decoder Delay :        0ns
+
+=========
+; Delay ;
+=========
+
+  Clock Period        :       10ns
+  Critical Path Delay :     1.19ns
+
+              Subtotal
+      Class       (ns)    Ratio
+      -------------------------
+      IN           0.00      0%
+      FU           0.00      0%
+      MUX          0.40     33%
+      DEC          0.00      0%
+      MISC         0.79     66%
+      MEM          0.00      0%
+      -------------------------
+      Total        1.19
+
+    Path: #1
+                                                                Arrival
+                                                          Delay    Time Logic
+      Name                 / Port [Signal              ]   (ns)   (ns)  Stage
+      -----------------------------------------------------------------------
+      HMASTER              / dout [                    ]      -    0.00     0
+      _RNOR_1883           / o1   [M_40                ]   0.14    0.14     2
+      _NMUX_33             / o1   [HBURST              ]   0.00    0.14     2
+      _RNOR_2040           / o1   [                    ]   0.14    0.28     4
+      _LOGIC_2019          / o1   [M_52                ]   0.14    0.42     5
+      _AND_1967            / o1   [M_48                ]   0.05    0.47     6
+      _AND_1796            / o1   [                    ]   0.00    0.47     6
+      _NMUX_499            / o1   [r_1_a01             ]   0.05    0.52     7
+      _NMUX_502            / o1   [rv                  ]   0.10    0.62     8
+      _NMUX_485            / o1   [HGRANT_ave8_MA_int  ]   0.15    0.77    10
+      _AND_2000            / o1   [M_49                ]   0.03    0.80    10
+      _LOGIC_1612          / o1   [                    ]   0.29    1.09    13
+      _NMUX_83             / o1   [HMASTER             ]   0.10    1.19    14
+      HMASTER              / din  [                    ]      -    1.19    14
+
+  False Path                    :  Unchecked
+  Multi Cycle Path              :  Unchecked
+  False Loop/Combinational Loop :          0
+  Latch (bit)                   :          0
+
+========
+; Wire ;
+========
+
+  Total Net Count      :      467
+  Total Pin Pair Count :      945
+  Const Fanout         :      166
+
+  Net Count :
+         Bit       Net    Bit*Net
+     ----------------------------
+           1       158        158
+           2        16         32
+           3         6         18
+           4        10         40
+           8         1          8
+           9         1          9
+          16         2         32
+          32         7        224
+     ----------------------------
+       Total                  521
+
+  Pin Pair Count :
+      Fanout    Bit    Count   Subtotal
+    -----------------------------------
+          17      1        1         17
+          16      1        2         32
+          14      3        1         42
+          11      1        1         11
+           9      1        1          9
+           8      1        2         16
+           7      4        1         28
+           7      1        2         14
+           6      1        1          6
+           5      2        1         10
+           5      1        5         25
+           4     24        1         96
+           4      4        1         16
+           4      2        1          8
+           4      1        5         20
+           3      1       18         54
+           2     32        1         64
+           2      8        1         16
+           2      4        1          8
+           2      3        1          6
+           2      1       40         80
+           1     32        5        160
+           1      9        1          9
+           1      8        1          8
+           1      4        6         24
+           1      3        5         15
+           1      2       12         24
+           1      1       86         86
+    -----------------------------------
+       Total                        904
+
+  Fanout for Consts:
+      Value    Fanout
+          0       143
+          1        23
+    ------------------
+      Total       166
+
+  Clock Fanout:
+      Name                         Count
+      ----------------------------------
+      bus1_HCLK(0..0)                 16
+
+  Reset Fanout:
+      Name                         Count
+      ----------------------------------
+      bus1_HRESETn(0..0)              11
+
+  Register Fanin/Fanout Cone Size:
+
+    Fanin: (Top 10 Registers)
+      Register Name                              Cone Size
+      ----------------------------------------------------
+      HMASTER(3..0)                                     21
+      SplitStat_rg01(0..0)                              21
+      lock_stat(1..0)                                   20
+      SplitStat_rg00(0..0)                              12
+      B_01(0..0)                                        10
+      B00_streg(0..0)                                    9
+      B01_streg(0..0)                                    9
+      HSEL_sort_SA_data_phase(0..0)                      8
+      HSEL_dfc_SA_data_phase(0..0)                       8
+      HSEL_DefaultSlave_data_phase(0..0)                 8
+
+    Fanout: (Top 10 Registers)
+      Register Name                              Cone Size
+      ----------------------------------------------------
+      HMASTER(3..0)                                     29
+      B00_streg(0..0)                                   14
+      HSEL_sort_SA_data_phase(0..0)                     13
+      HSEL_dfc_SA_data_phase(0..0)                      13
+      HSEL_DefaultSlave_data_phase(0..0)                12
+      HRESP_DefaultSlave(1..0)                          11
+      SplitStat_rg01(0..0)                               8
+      B01_streg(0..0)                                    7
+      count(3..0)                                        7
+      HSPLIT_sort_SA_reg_a01(0..0)                       7
+
+  Routability:
+
+    Top 25 Nets
+    sorted by "Total" (Total Pin Pair)
+      Net Name                                    Total      Max
+      -----------------------------------------------------------------
+      HADDR(31..0)                                  112        4 (24bit)
+      HWDATA(31..0)                                  64        2 (32bit)
+      HBURST(2..0)                                   42       14 ( 3bit)
+      ave8_MA_bus1_HADDR(31..0)                      32        1 (32bit)
+      ave8_MA_bus1_HWDATA(31..0)                     32        1 (32bit)
+      sort_SA_bus1_HRDATA(31..0)                     32        1 (32bit)
+      dfc_SA_bus1_HRDATA(31..0)                      32        1 (32bit)
+      _NMUX_78(31..0)                                32        1 (32bit)
+      HMASTER(3..0)                                  28        7 ( 4bit)
+      HREADY(0..0)                                   17       17 ( 1bit)
+      bus1_HCLK(0..0)                                16       16 ( 1bit)
+      M_41(0..0)                                     16       16 ( 1bit)
+      count(3..0)                                    16        4 ( 4bit)
+      bus1_HRESETn(0..0)                             11       11 ( 1bit)
+      HTRANS(1..0)                                   10        5 ( 2bit)
+      burst_end(0..0)                                 9        9 ( 1bit)
+      _NOT_2191(0:9)                                  9        1 ( 9bit)
+      C_13(0..0)                                      8        8 ( 1bit)
+      M_40(0..0)                                      8        8 ( 1bit)
+      HRESP(1..0)                                     8        4 ( 2bit)
+      HPROT(3..0)                                     8        2 ( 4bit)
+      _NOT_2182(0:8)                                  8        1 ( 8bit)
+      ave8_MA_bus1_HBUSREQ(0..0)                      7        7 ( 1bit)
+      SplitStat_rg01(0..0)                            7        7 ( 1bit)
+      M_36(0..0)                                      6        6 ( 1bit)
+
+    Top 25 Nets
+    sorted by "Max" (Maximum Fanout)
+      Net Name                                    Total      Max
+      -----------------------------------------------------------------
+      HREADY(0..0)                                   17       17 ( 1bit)
+      bus1_HCLK(0..0)                                16       16 ( 1bit)
+      M_41(0..0)                                     16       16 ( 1bit)
+      HBURST(2..0)                                   42       14 ( 3bit)
+      bus1_HRESETn(0..0)                             11       11 ( 1bit)
+      burst_end(0..0)                                 9        9 ( 1bit)
+      C_13(0..0)                                      8        8 ( 1bit)
+      M_40(0..0)                                      8        8 ( 1bit)
+      HMASTER(3..0)                                  28        7 ( 4bit)
+      ave8_MA_bus1_HBUSREQ(0..0)                      7        7 ( 1bit)
+      SplitStat_rg01(0..0)                            7        7 ( 1bit)
+      M_36(0..0)                                      6        6 ( 1bit)
+      HTRANS(1..0)                                   10        5 ( 2bit)
+      ST1_02d(0..0)                                   5        5 ( 1bit)
+      U_16(0..0)                                      5        5 ( 1bit)
+      M_38(0..0)                                      5        5 ( 1bit)
+      M_44(0..0)                                      5        5 ( 1bit)
+      _AND_2079(0:1)                                  5        5 ( 1bit)
+      HADDR(31..0)                                  112        4 (24bit)
+      count(3..0)                                    16        4 ( 4bit)
+      HRESP(1..0)                                     8        4 ( 2bit)
+      ST1_01d(0..0)                                   4        4 ( 1bit)
+      U_02(0..0)                                      4        4 ( 1bit)
+      U_03(0..0)                                      4        4 ( 1bit)
+      M_43(0..0)                                      4        4 ( 1bit)
+
+================
+; Primary Port ;
+================
+
+    Name               Type   Bitw
+    ------------------------------
+      ave8_MA_bus1_HBUSREQ  in      1
+      ave8_MA_bus1_HGRANT  out     1
+      ave8_MA_bus1_HTRANS  in      2
+      ave8_MA_bus1_HBURST  in      3
+      ave8_MA_bus1_HWRITE  in      1
+      ave8_MA_bus1_HREADY  out     1
+      ave8_MA_bus1_HRESP  out     2
+      ave8_MA_bus1_HLOCK  in      1
+      ave8_MA_bus1_HSIZE  in      3
+      ave8_MA_bus1_HPROT  in      4
+      ave8_MA_bus1_HADDR  in     32
+      ave8_MA_bus1_HRDATA  out    32
+      ave8_MA_bus1_HWDATA  in     32
+      sort_SA_bus1_HSEL  out     1
+      sort_SA_bus1_HADDR  out    32
+      sort_SA_bus1_HWRITE  out     1
+      sort_SA_bus1_HTRANS  out     2
+      sort_SA_bus1_HSIZE  out     3
+      sort_SA_bus1_HBURST  out     3
+      sort_SA_bus1_HWDATA  out    32
+      sort_SA_bus1_HMASTER  out     4
+      sort_SA_bus1_HMASTLOCK  out     1
+      sort_SA_bus1_HPROT  out     4
+      sort_SA_bus1_HREADY  out     1
+      sort_SA_bus1_HREADYOUT  in      1
+      sort_SA_bus1_HRESP  in      2
+      sort_SA_bus1_HRDATA  in     32
+      sort_SA_bus1_HSPLIT  in     16
+      dfc_SA_bus1_HSEL  out     1
+      dfc_SA_bus1_HADDR  out    32
+      dfc_SA_bus1_HWRITE  out     1
+      dfc_SA_bus1_HTRANS  out     2
+      dfc_SA_bus1_HSIZE  out     3
+      dfc_SA_bus1_HBURST  out     3
+      dfc_SA_bus1_HWDATA  out    32
+      dfc_SA_bus1_HMASTER  out     4
+      dfc_SA_bus1_HMASTLOCK  out     1
+      dfc_SA_bus1_HPROT  out     4
+      dfc_SA_bus1_HREADY  out     1
+      dfc_SA_bus1_HREADYOUT  in      1
+      dfc_SA_bus1_HRESP  in      2
+      dfc_SA_bus1_HRDATA  in     32
+      dfc_SA_bus1_HSPLIT  in     16
+

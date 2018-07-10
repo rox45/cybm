@@ -1,0 +1,10 @@
+Copyright (C) 1988-2011 NEC Corporation. All rights reserved.
+cmscgen version : 5.43  Oct  7 2011 20:26:30
+         (BIF version : 3.12C)
+         (GEN COMMON version : 1.97)
+Option: -EE -input=random:cycle -file_out=inout:cycle -b10 -dump=VCD -dump_signal=PORT ave8_C.IFF 
+[Information]
+     input  file : ave8_C.IFF
+     output file : ave8_C.cpp
+     output file : ave8_C.xml
+cmscgen finished successfully.

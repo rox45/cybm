@@ -1,0 +1,176 @@
+Copyright (C) 1988-2013 NEC Corporation. All rights reserved.
+bdltran version : 5.40.02  Mon Jul  8 09:54:54 JST 2013
+         (BIF version : 3.15C)
+         (LICflex version : 1.50 cylmd)
+         make at Mon Jul  8 10:07:00 JST 2013
+ Option  -EE -c1000 -s -EE -lb /eda/bin/cwb/cyber/lib/asic_45.BLIB -lfl /eda/bin/cwb/cyber/lib/asic_45.FLIB -lfc bsort-auto.FCNT bsort.IFF 
+
+bdlpars  -EE -I../.. -I/eda/bin/cwb/cyber_540/LINUX/include ../../bsort.c
+
+############## CyberII started (automatic scheduling mode) ##############
+[Clock period]      1,000 (1/100ns) [define]
+[Datapath delay]    1,000 (1/100ns)
+[Clock uncertainty]     0 (1/100ns)
+
+******* Initial # of operations in the input behavior description *******
+ === Operators ===
+  == :  2  (2bit:1, 32bit:1)
+  ++ :  4  (32bit:4)
+  <  :  4  (32bit:4)
+  +  :  1  (32bit:1)
+  Data transfer : 65
+
+ === array / memory ===
+  read  :  5
+  write :  3
+
+********* After optimizing & expanding the behavior description *********
+ === Operators ===
+  == :  2  (2bit:1, 4bit:1)
+  <  : 28  (32bit:28)
+  INCR:  1  (3bit:1)
+  Data transfer : 212
+
+ === array / memory ===
+  read  : 64
+  write : 65
+
+#########################  Synthesized Circuit  #########################
+[Performance index max/min/ave] 18 / 3 / 10.50
+  FU USED   lop32u   incr3u
+             0.824    0.029
+  MEM USED
+           read writ r/w 
+          
+  MEM : 
+	
+  IO USED
+   (1) : CH_bus1_HCLK
+   (2) : CH_bus1_HRESETn
+   (3) : CH_sort_SA_bus1_CBM_busy
+   (4) : CH_sort_SA_bus1_CBM_error
+   (5) : CH_sort_SA_bus1_CBM_retry
+   (6) : CH_sort_SA_bus1_CBM_split
+   (7) : CH_sort_SA_bus1_CBM_read_data
+   (8) : CH_sort_SA_bus1_CBM_read_req
+   (9) : CH_sort_SA_bus1_CBM_write_req
+  (10) : CH_sort_SA_bus1_CBM_addr
+  (11) : CH_sort_SA_bus1_CBM_size
+  (12) : CH_sort_SA_bus1_CBM_write_data
+  (13) : CH_out_sorted
+             (1)   (2)   (3)   (4)   (5)   (6)   (7)   (8)   (9)  (10)  (11)  (12)  (13)
+           0.000 0.000 0.029 0.029 0.029 0.029 0.000 0.118 0.118 0.000 0.000 0.029 0.235
+  IO  : 46 (pins)
+	IN   1bit: 2, 32bit: 1,
+	OUT  1bit: 4, 8bit: 1,
+  REG :
+     used      declared                 used
+      bit           bit      count       bit  * count
+    -------------------------------------------------
+        2             2          1                  2
+    -------------------------------------------------
+        3             3          1                  3
+    -------------------------------------------------
+        5             5          1                  5
+    -------------------------------------------------
+       32            32          8                256
+    -------------------------------------------------
+    Total                                         266
+
+  MUX :
+   2 bit:  2way: 5 
+   3 bit:  2way: 3 
+   4 bit:  2way: 2 
+   5 bit:  4way: 1 
+   8 bit:  8way: 1 
+  32 bit:  2way: 2 ,  4way: 2 ,  5way: 1 ,  7way: 2 , 10way: 8 
+   total: 3,690 (# of fanins)
+  DECODER:
+    3to8: 1
+
+  FU  :
+    Fu name                area  delay  pipeline  count
+                                  (ns)    stage
+    ---------------------------------------------------
+    incr3u                    6   0.12         -      1
+    lop32u_1                109   0.51         -      4
+
+  Unused FUs:
+    --------------------------------------------------------------
+       None
+
+  Total states : 17 (+Reset)
+
+  Total net count      :    3,970
+  Total pin pair count :   12,270
+  Const fanout         :      168
+
+  Critical path delay        : 1.39ns
+
+  False path                 : Unchecked
+  Multi-cycle path           : Unchecked
+  False loop/Combinational loop : 0
+
+  Net count:
+         bit       net    bitXnet
+     ----------------------------
+           1       112        112
+           2        17         34
+           3        10         30
+           4         6         24
+           5        22        110
+           8         2         16
+          32        32      1,024
+     ----------------------------
+       Total                1,350
+
+  Pin pair:
+      fanout    bit    count  sub total
+    -----------------------------------
+          18      5        1         90
+          16      8        1        128
+          15     24        1        360
+          15      8        2        240
+          14     24        2        672
+          13      8        2        208
+          13      1        1         13
+          12     24        2        576
+          12      8        1         96
+          12      1        2         24
+          11     24        1        264
+          11      1        3         33
+          10      8        2        160
+          10      1        3         30
+           9     24        2        432
+           9      1        3         27
+           8     32        1        256
+           8      1        4         32
+           5      1        3         15
+           4      3        1         12
+           4      1        2          8
+           3      1        5         15
+           2      3        1          6
+           2      2        1          4
+           2      1       34         68
+           1     32       23        736
+           1      8        2         16
+           1      5       21        105
+           1      4        5         20
+           1      3        9         27
+           1      2       16         32
+           1      1       53         53
+    -----------------------------------
+       Total                      4,758
+
+  Fanout for consts:
+      value    fanout
+          0       122
+          1        46
+    ------------------
+      Total       168
+
+Basic Library Name: CWBSTDBLIB (BLIB Version 2.00)
+Latency index: 18
+TOTAL AREA 5,042 (FU: 442 + REG: 1,596 + MUX: 2,910 + DEC: 14 + MISC: 80) + pin pair 12,270(net 3,970) + 1FSM of 17(+Reset)states
+##### CyberII Normal finish (automatic scheduling mode) [bsort] #####
+

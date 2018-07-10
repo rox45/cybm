@@ -1,0 +1,4 @@
+H_BT9017: More than two arithmetic operators are extracted.
+ [Tips] Option "-oI" or attribute "thr_block" may reduce the latency by scheduling operations in parallel.
+	[Source Lines]
+	49(../../ave8.c): 	sum += buffer[i];

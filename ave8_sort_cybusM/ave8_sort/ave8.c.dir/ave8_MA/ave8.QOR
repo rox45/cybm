@@ -1,0 +1,340 @@
+
+Cyber Synthesis Report
+
+===========
+; Summary ;
+===========
+
+  Module Name         : ave8_MA
+  Basic Library Name  : CWBSTDBLIB
+
+  Total Area          :        834
+    Sequential        :        396
+    Combinational     :        438
+
+  Latency Index       :          4
+  Total States        :          3 (+Reset)
+
+  Clock Period        :       10ns
+  Critical Path Delay :   1.0575ns
+
+  Net                 :        683
+  Pin Pair            :      1,498
+
+  Port                :        148
+    In                :         56
+    Out               :         92
+
+========
+; Area ;
+========
+
+  Total :
+    Total           :        834
+      Sequential    : 
+        REG         :        396 (47%)
+      Combinational :        438 (52%)
+        FU          :        354 (42%)
+        MUX         :         78 ( 9%)
+        DEC         :          0 ( 0%)
+        MISC        :          6 ( <1%)
+      Memory        :          -
+
+===================
+; Functional Unit ;
+===================
+
+    FU Name                Area  Reg  Delay  Pipeline  Count
+                                       (ns)    Stage
+    --------------------------------------------------------
+    add12u_11                74     0   0.39         -      1
+    add12u_11_10             74     0   0.39         -      2
+    add8u                    47     0   0.30         -      4
+
+  Unused Functional Units :
+    ---------------------------------------------------
+    None
+
+============
+; Register ;
+============
+
+     Used      Declared                 Used
+      Bit           Bit      Count       Bit  * Count
+    -------------------------------------------------
+        2             2          1                  2
+    -------------------------------------------------
+        8             8          8                 64
+    -------------------------------------------------
+    Total                                          66
+
+===============
+; Multiplexer ;
+===============
+
+   2 bit:  4way: 1 
+   8 bit: (1way: 2),  2way: 1 ,  3way: 6 ,  4way: 1 
+   9 bit: (1way: 1)
+   Total : 200 (# of Fanins)
+
+===========
+; Decoder ;
+===========
+
+    None
+
+==========
+; Memory ;
+==========
+
+    None
+
+===========
+; Latency ;
+===========
+
+    Total:
+        Type          : S
+        Latency       : Reset + L1
+        Latency Index : 4
+        State No.     : 0, 1, 2, 3
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : L1
+        Line          : -
+    L1:
+        Type          : S
+        Latency       : (1 + L2 + 1) * N1    [N1 >= 1]
+        Latency Index : 3
+        State No.     : 1, 2, 3
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : L2
+        Line          : ../../ave8.c:32
+    L2:
+        Type          : S
+        Latency       : 1 * N2    [N2 >= 1]
+        Latency Index : 1
+        State No.     : 2
+        Folding Loop  : -
+        Folding Stages: - , Total Folding States: - , Hazard: -
+        User Operator : -
+        Sub Loops     : -
+        Line          : ../../CybusM_IF.bdl:397
+
+=======
+; FSM ;
+=======
+
+  Total States      :          3 (+Reset)
+  #FSM              :          1
+  States/FSM        :          3 (+Reset)
+  FSM Decoder Delay :     0.09ns
+
+=========
+; Delay ;
+=========
+
+  Clock Period        :       10ns
+  Critical Path Delay :   1.0575ns
+
+              Subtotal
+      Class       (ns)    Ratio
+      -------------------------
+      IN           0.00      0%
+      FU           0.97     91%
+      MUX          0.09      8%
+      DEC          0.00      0%
+      MISC         0.00      0%
+      MEM          0.00      0%
+      -------------------------
+      Total        1.06
+
+    Path: #1
+                                                                Arrival
+                                                          Delay    Time Logic
+      Name                 / Port [Signal              ]   (ns)   (ns)  Stage
+      -----------------------------------------------------------------------
+      RG_buffer_d          / dout [                    ]      -    0.00     0
+      add8u@2              / o1   [add8u2ot            ]   0.30    0.30     6
+      add12u_11_10@1       / o1   [add12u_11_101ot     ]   0.32    0.62    12
+      add12u_11@1          / o1   [add12u_111ot        ]   0.35    0.97    18
+      _NMUX_245            / o1   [RG_buffer_d         ]   0.09    1.06    20
+      RG_buffer_d          / din  [                    ]      -    1.06    20
+
+  False Path                    :  Unchecked
+  Multi Cycle Path              :  Unchecked
+  False Loop/Combinational Loop :          0
+  Latch (bit)                   :          0
+
+========
+; Wire ;
+========
+
+  Total Net Count      :      683
+  Total Pin Pair Count :    1,498
+  Const Fanout         :      113
+
+  Net Count :
+         Bit       Net    Bit*Net
+     ----------------------------
+           1        15         15
+           2         7         14
+           8        19        152
+           9         5         45
+          10         2         20
+          11         1         11
+     ----------------------------
+       Total                  257
+
+  Pin Pair Count :
+      Fanout    Bit    Count   Subtotal
+    -----------------------------------
+          13      1        1         13
+           9      1        1          9
+           8      1        2         16
+           4      2        1          8
+           4      1        1          4
+           3      8        7        168
+           2      8        3         48
+           2      1        1          2
+           1     10        2         20
+           1      9        5         45
+           1      8       10         80
+           1      2        6         12
+           1      1        9          9
+    -----------------------------------
+       Total                        434
+
+  Fanout for Consts:
+      Value    Fanout
+          0        96
+          1        17
+    ------------------
+      Total       113
+
+  Clock Fanout:
+      Name                         Count
+      ----------------------------------
+      bus1_HCLK(0:1)                   9
+
+  Reset Fanout:
+      Name                         Count
+      ----------------------------------
+      bus1_HRESETn(0:1)                8
+      ST1_00d(0:1)                     8
+
+  Register Fanin/Fanout Cone Size:
+
+    Fanin: (Top 10 Registers)
+      Register Name                              Cone Size
+      ----------------------------------------------------
+      RG_buffer_d(0:8)                                  10
+      B01_streg(0:2)                                     4
+      RG_buffer(0:8)                                     4
+      RG_buffer_1(0:8)                                   4
+      RG_buffer_2(0:8)                                   4
+      RG_buffer_3(0:8)                                   4
+      RG_buffer_4(0:8)                                   4
+      RG_buffer_5(0:8)                                   4
+      RG_buffer_6(0:8)                                   4
+
+    Fanout: (Top 10 Registers)
+      Register Name                              Cone Size
+      ----------------------------------------------------
+      B01_streg(0:2)                                    22
+      RG_buffer(0:8)                                     4
+      RG_buffer_1(0:8)                                   4
+      RG_buffer_2(0:8)                                   4
+      RG_buffer_3(0:8)                                   4
+      RG_buffer_4(0:8)                                   4
+      RG_buffer_d(0:8)                                   3
+      RG_buffer_5(0:8)                                   3
+      RG_buffer_6(0:8)                                   2
+
+  Routability:
+
+    Top 25 Nets
+    sorted by "Total" (Total Pin Pair)
+      Net Name                                    Total      Max
+      -----------------------------------------------------------------
+      RG_buffer(0:8)                                 24        3 ( 8bit)
+      RG_buffer_1(0:8)                               24        3 ( 8bit)
+      RG_buffer_2(0:8)                               24        3 ( 8bit)
+      RG_buffer_3(0:8)                               24        3 ( 8bit)
+      RG_buffer_4(0:8)                               24        3 ( 8bit)
+      RG_buffer_5(0:8)                               24        3 ( 8bit)
+      RG_buffer_d(0:8)                               24        3 ( 8bit)
+      RG_buffer_6(0:8)                               16        2 ( 8bit)
+      in0(0:8)                                       16        2 ( 8bit)
+      add12u_111ot(0:11)                             16        2 ( 8bit)
+      ST1_03d(0:1)                                   13       13 ( 1bit)
+      add12u_11_101ot(0:10)                          10        1 (10bit)
+      add12u_11_102ot(0:10)                          10        1 (10bit)
+      bus1_HCLK(0:1)                                  9        9 ( 1bit)
+      add8u1ot(0:9)                                   9        1 ( 9bit)
+      add8u2ot(0:9)                                   9        1 ( 9bit)
+      add8u3ot(0:9)                                   9        1 ( 9bit)
+      add8u4ot(0:9)                                   9        1 ( 9bit)
+      M_14(0:9)                                       9        1 ( 9bit)
+      bus1_HRESETn(0:1)                               8        8 ( 1bit)
+      ST1_00d(0:1)                                    8        8 ( 1bit)
+      B01_streg(0:2)                                  8        4 ( 2bit)
+      TR_04(0:8)                                      8        1 ( 8bit)
+      _NMUX_233(0:8)                                  8        1 ( 8bit)
+      _NMUX_235(0:8)                                  8        1 ( 8bit)
+
+    Top 25 Nets
+    sorted by "Max" (Maximum Fanout)
+      Net Name                                    Total      Max
+      -----------------------------------------------------------------
+      ST1_03d(0:1)                                   13       13 ( 1bit)
+      bus1_HCLK(0:1)                                  9        9 ( 1bit)
+      bus1_HRESETn(0:1)                               8        8 ( 1bit)
+      ST1_00d(0:1)                                    8        8 ( 1bit)
+      B01_streg(0:2)                                  8        4 ( 2bit)
+      ST1_01d(0:1)                                    4        4 ( 1bit)
+      RG_buffer(0:8)                                 24        3 ( 8bit)
+      RG_buffer_1(0:8)                               24        3 ( 8bit)
+      RG_buffer_2(0:8)                               24        3 ( 8bit)
+      RG_buffer_3(0:8)                               24        3 ( 8bit)
+      RG_buffer_4(0:8)                               24        3 ( 8bit)
+      RG_buffer_5(0:8)                               24        3 ( 8bit)
+      RG_buffer_d(0:8)                               24        3 ( 8bit)
+      RG_buffer_6(0:8)                               16        2 ( 8bit)
+      in0(0:8)                                       16        2 ( 8bit)
+      add12u_111ot(0:11)                             16        2 ( 8bit)
+      JF_01(0:1)                                      2        2 ( 1bit)
+      add12u_11_101ot(0:10)                          10        1 (10bit)
+      add12u_11_102ot(0:10)                          10        1 (10bit)
+      add8u1ot(0:9)                                   9        1 ( 9bit)
+      add8u2ot(0:9)                                   9        1 ( 9bit)
+      add8u3ot(0:9)                                   9        1 ( 9bit)
+      add8u4ot(0:9)                                   9        1 ( 9bit)
+      M_14(0:9)                                       9        1 ( 9bit)
+      TR_04(0:8)                                      8        1 ( 8bit)
+
+================
+; Primary Port ;
+================
+
+    Name               Type   Bitw
+    ------------------------------
+      ave8_MA_bus1_CBM_read_data  in     32
+      ave8_MA_bus1_CBM_error  in      1
+      ave8_MA_bus1_CBM_count  in     11
+      ave8_MA_bus1_CBM_read_req  out     1
+      ave8_MA_bus1_CBM_write_req  out     1
+      ave8_MA_bus1_CBM_burst  out     3
+      ave8_MA_bus1_CBM_addr  out    32
+      ave8_MA_bus1_CBM_length  out    11
+      ave8_MA_bus1_CBM_size  out     3
+      ave8_MA_bus1_CBM_lock  out     1
+      ave8_MA_bus1_CBM_write_data  out    32
+      ave8_MA_bus1_CBM_command_busy  in      1
+      ave8_MA_bus1_CBM_data_ready  in      1
+      in0               in      8
+      out0              out     8
+

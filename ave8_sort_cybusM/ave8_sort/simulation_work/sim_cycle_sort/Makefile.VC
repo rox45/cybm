@@ -1,0 +1,43 @@
+#
+# Makefile template
+#
+# Option: -EE -VC -I. -cycle 100 -log_stdout -target sim_cycle_sort.exe bsort_C.MakeInfo 
+#
+
+TARGET	= "sim_cycle_sort.exe"
+
+SRCS	=  \
+	"mt19937ar.cpp" \
+	"bsort_C.cpp"
+
+HDRS	=  \
+	"mt19937ar.h" \
+	"bsort_C.h"
+
+SYSTEMC_HOME	= $(CYBER_PATH)\osci
+SYSTEMC_ARCH	= vc2008
+SYSTEMC_INCL	= /I"$(SYSTEMC_HOME)\include"
+SYSTEMC_LDFLAGS	= /LIBPATH:"$(SYSTEMC_HOME)\lib-$(SYSTEMC_ARCH)"
+SYSTEMC_LIBS	= systemc.lib
+
+CC	= cl
+LINKER	= link
+INCL	= /I"."
+CFLAGS	= /DCYCLE_NUM=100 /DLOG_STDOUT /O1 /EHsc /GR /vmg /nologo /DWIN32 /DNDEBUG /D_CONSOLE /D_MBCS $(CFLAGS_USER)
+LDFLAGS	= $(SYSTEMC_LDFLAGS)
+LIBS	= $(SYSTEMC_LIBS)
+
+OBJS	=  \
+	"mt19937ar.obj" \
+	"bsort_C.obj"
+
+$(TARGET) : $(OBJS)
+	$(LINKER) /OUT:$@ $(LDFLAGS) $(OBJS) $(LIBS)
+
+.cpp.obj :
+	$(CC) $(CFLAGS) $(INCL) $(SYSTEMC_INCL) /c $< /Fo$@
+
+clean :
+	@del $(OBJS)
+	@del $(TARGET)
+

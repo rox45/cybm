@@ -1,0 +1,27 @@
+defbus AMBA_AHB{
+width address = 32;
+width data = 32;
+module master = {ave8_MA}; 
+module slave = {sort_SA, dfc_SA};
+mode arbiter_rule = RoundRobin;
+} bus1;
+
+
+module AMBA_AHB_MASTER {
+mode burst = Enable;
+mode data_transfer = Direct; 
+mode clock = Enable;
+mode reset = Enable;
+} ave8_MA;
+
+module AMBA_AHB_SLAVE {
+mode burst = Enable;
+map address = 0x0001FF00-0x0001FFFF & 0xFFFFFF00;
+} sort_SA;
+
+
+module AMBA_AHB_SLAVE {
+mode burst = Enable;
+ map address = 0x0002FF00-0x0002FFFF & 0xFFFFFF00;
+
+} dfc_SA;

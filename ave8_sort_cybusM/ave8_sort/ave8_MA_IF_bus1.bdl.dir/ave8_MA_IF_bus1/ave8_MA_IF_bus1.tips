@@ -1,0 +1,30 @@
+H_BT9009: Bitwidths of right and left operands are different.
+ [Tips] Casting can reduce area when the maximum value is known.
+        example)
+         var(1..0) a,b,c;
+         var(2..0) x; 
+         x = a+b+c;   ->  (var (1..0))x =a+b+c;
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+H_BT9008: The bitwidth of value assigned to variable ave8_MA_bus1_HPROT_r (bitwidth 4) is 2 or below.
+ [Tips] Reduce the bitwidth for the variable.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext

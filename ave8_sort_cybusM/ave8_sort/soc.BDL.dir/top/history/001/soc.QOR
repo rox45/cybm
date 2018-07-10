@@ -1,0 +1,289 @@
+
+Cyber RTL Synthesis report (module name : top)
+
+Basic Library Name: CWBSTDBLIB (BLIB Version 2.00)
+Clock period: 10ns
+
+  AREA:
+    TOTAL Area      :          0
+      Sequential    :          0
+      Combinational :          0
+    Memory          :          0
+
+    top (TOTAL):
+      REG  :        0 ( 0%)
+      FU   :        0 ( 0%)
+      MUX  :        0 ( 0%)
+      DEC  :        0 ( 0%)
+      MISC :        0 ( 0%)
+      MEM  :        0
+      count: -
+
+    top (w/o sub modules):
+      REG  :        0
+      FU   :        0
+      MUX  :        0
+      DEC  :        0
+      MISC :        0
+      MEM  :        0
+      count: -
+
+    ave8_MA:
+      REG  : -
+      FU   : -
+      MUX  : -
+      DEC  : -
+      MISC : -
+      MEM  : -
+      count: x 1
+
+    sort_SA:
+      REG  : -
+      FU   : -
+      MUX  : -
+      DEC  : -
+      MISC : -
+      MEM  : -
+      count: x 1
+
+  Controller:
+    TOTAL STATES      : 1
+    #FSM              : 0
+    STATES/FSM        : -
+    FSM DECODER DELAY : -
+
+  WIRE:
+    NET      :      261
+    PIN PAIR :      263
+
+  PORT:
+    TOTAL  :      261
+    IN     :      125
+    OUT    :      136
+    IN/OUT :        0
+
+  Critical path delay        : 0ns
+
+  False path                 : Unchecked
+  Multi-cycle path           : Unchecked
+  False loop/Combinational loop : 0
+
+  LATCH (bit):
+    count : 0
+
+  Latency:
+    total:
+        Type: S
+        Latency: L1
+        Latency index: 1
+        State No.: 1
+        Folding loop: -
+        Folding stages: - , Total folding states: - , Hazard: -
+        User operator: -
+        Sub loops: L1
+        Line: -
+    L1:
+        Type: S
+        Latency: 1 * N1    [N1 >= 1]
+        Latency index: 1
+        State No.: 1
+        Folding loop: -
+        Folding stages: - , Total folding states: - , Hazard: -
+        User operator: -
+        Sub loops: -
+        Line: -
+
+  PORT:
+    name               type   bitw
+    ------------------------------
+      ave8_MA_bus1_CBM_read_req  out     1
+      ave8_MA_bus1_CBM_write_req  out     1
+      ave8_MA_bus1_CBM_burst  out     3
+      ave8_MA_bus1_CBM_addr  out    32
+      ave8_MA_bus1_CBM_length  out    11
+      ave8_MA_bus1_CBM_size  out     3
+      ave8_MA_bus1_CBM_lock  out     1
+      ave8_MA_bus1_CBM_write_data  out    32
+      ave8_MA_bus1_CBM_read_data  in     32
+      ave8_MA_bus1_CBM_command_busy  in      1
+      ave8_MA_bus1_CBM_data_ready  in      1
+      ave8_MA_bus1_CBM_error  in      1
+      ave8_MA_bus1_CBM_count  in     11
+      in0               in      8
+      out0              out     8
+      sort_SA_bus1_CBM_busy  out     1
+      sort_SA_bus1_CBM_error  out     1
+      sort_SA_bus1_CBM_retry  out     1
+      sort_SA_bus1_CBM_split  out     1
+      sort_SA_bus1_CBM_read_data  out    32
+      sort_SA_bus1_CBM_read_req  in      1
+      sort_SA_bus1_CBM_write_req  in      1
+      sort_SA_bus1_CBM_addr  in     32
+      sort_SA_bus1_CBM_size  in      3
+      sort_SA_bus1_CBM_write_data  in     32
+      out_sorted        out     8
+
+  REG :
+     used      declared                 used
+      bit           bit      count       bit  * count
+    -------------------------------------------------
+       None
+    -------------------------------------------------
+    Total                                           0
+
+  MEM :
+       None
+
+  MUX :
+   total: 0 (# of fanins)
+
+  FU  :
+    Fu name                area  delay  pipeline  count
+                                  (ns)    stage
+    ---------------------------------------------------
+       None
+
+  Unused FUs:
+    --------------------------------------------------------------
+       None
+
+  Timing:
+
+    Path: #1
+                                                                arrival
+                                                          delay    time logic
+      name                 / port [signal              ]   (ns)   (ns)  stage
+      -----------------------------------------------------------------------
+      bus1_HCLK            / o1   [                    ]      -    0.00     0
+      INST_ave8_MA         / i1   [INST_ave8_MA.bus1_HCLK]      -    0.00     0
+
+              sub total
+      class       (ns)    ratio
+      -------------------------
+      IN           0.00      0%
+      FU           0.00      0%
+      MUX          0.00      0%
+      DEC          0.00      0%
+      MISC         0.00      0%
+      MEM          0.00      0%
+      -------------------------
+      Total        0.00
+
+  Total net count      :      261
+  Total pin pair count :      263
+  Const fanout         :        0
+
+  Net count:
+         bit       net    bitXnet
+     ----------------------------
+           1        14         14
+           3         3          9
+           8         3         24
+          11         2         22
+          32         6        192
+     ----------------------------
+       Total                  261
+
+  Pin pair:
+      fanout    bit    count  sub total
+    -----------------------------------
+           2      1        2          4
+           1     32        6        192
+           1     11        2         22
+           1      8        3         24
+           1      3        3          9
+           1      1       12         12
+    -----------------------------------
+       Total                        263
+
+  Fanout for consts:
+      value    fanout
+          0         0
+          1         0
+    ------------------
+      Total         0
+
+  Clock fanout:
+      name                         count
+      ----------------------------------
+      bus1_HCLK(0:1)                   2
+
+  Reset fanout:
+      name                         count
+      ----------------------------------
+      bus1_HRESETn(0:1)                2
+
+  Register fanin/fanout cone size:
+
+    Fanin: (Top 10 registers)
+      Register name            cone size
+      ----------------------------------
+          None
+
+    Fanout: (Top 10 registers)
+      Register name            cone size
+      ----------------------------------
+          None
+
+  Routability:
+
+    Top 25 nets
+    sorted by "total" (total pin pair)
+      Net name                     total           max
+      ------------------------------------------------------
+      ave8_MA_bus1_CBM_read_data(31..0)        32           1 (32bit)
+      sort_SA_bus1_CBM_addr(31..0)        32           1 (32bit)
+      sort_SA_bus1_CBM_write_data(31..0)        32           1 (32bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_addr(31..0)        32           1 (32bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_write_data(31..0)        32           1 (32bit)
+      INST_sort_SA.sort_SA_bus1_CBM_read_data(31..0)        32           1 (32bit)
+      ave8_MA_bus1_CBM_count(10..0)        11           1 (11bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_length(10..0)        11           1 (11bit)
+      in0(0:8)                         8           1 ( 8bit)
+      INST_ave8_MA.out0(0:8)           8           1 ( 8bit)
+      INST_sort_SA.out_sorted(7..0)         8           1 ( 8bit)
+      sort_SA_bus1_CBM_size(2..0)         3           1 ( 3bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_burst(2..0)         3           1 ( 3bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_size(2..0)         3           1 ( 3bit)
+      bus1_HCLK(0:1)                   2           2 ( 1bit)
+      bus1_HRESETn(0:1)                2           2 ( 1bit)
+      ave8_MA_bus1_CBM_command_busy(0:1)         1           1 ( 1bit)
+      ave8_MA_bus1_CBM_data_ready(0:1)         1           1 ( 1bit)
+      ave8_MA_bus1_CBM_error(0:1)         1           1 ( 1bit)
+      sort_SA_bus1_CBM_read_req(0:1)         1           1 ( 1bit)
+      sort_SA_bus1_CBM_write_req(0:1)         1           1 ( 1bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_read_req(0:1)         1           1 ( 1bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_write_req(0:1)         1           1 ( 1bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_lock(0:1)         1           1 ( 1bit)
+      INST_sort_SA.sort_SA_bus1_CBM_busy(0:1)         1           1 ( 1bit)
+
+    Top 25 nets
+    sorted by "max" (maximum fan out)
+      Net name                     total           max
+      ------------------------------------------------------
+      bus1_HCLK(0:1)                   2           2 ( 1bit)
+      bus1_HRESETn(0:1)                2           2 ( 1bit)
+      ave8_MA_bus1_CBM_read_data(31..0)        32           1 (32bit)
+      sort_SA_bus1_CBM_addr(31..0)        32           1 (32bit)
+      sort_SA_bus1_CBM_write_data(31..0)        32           1 (32bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_addr(31..0)        32           1 (32bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_write_data(31..0)        32           1 (32bit)
+      INST_sort_SA.sort_SA_bus1_CBM_read_data(31..0)        32           1 (32bit)
+      ave8_MA_bus1_CBM_count(10..0)        11           1 (11bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_length(10..0)        11           1 (11bit)
+      in0(0:8)                         8           1 ( 8bit)
+      INST_ave8_MA.out0(0:8)           8           1 ( 8bit)
+      INST_sort_SA.out_sorted(7..0)         8           1 ( 8bit)
+      sort_SA_bus1_CBM_size(2..0)         3           1 ( 3bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_burst(2..0)         3           1 ( 3bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_size(2..0)         3           1 ( 3bit)
+      ave8_MA_bus1_CBM_command_busy(0:1)         1           1 ( 1bit)
+      ave8_MA_bus1_CBM_data_ready(0:1)         1           1 ( 1bit)
+      ave8_MA_bus1_CBM_error(0:1)         1           1 ( 1bit)
+      sort_SA_bus1_CBM_read_req(0:1)         1           1 ( 1bit)
+      sort_SA_bus1_CBM_write_req(0:1)         1           1 ( 1bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_read_req(0:1)         1           1 ( 1bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_write_req(0:1)         1           1 ( 1bit)
+      INST_ave8_MA.ave8_MA_bus1_CBM_lock(0:1)         1           1 ( 1bit)
+      INST_sort_SA.sort_SA_bus1_CBM_busy(0:1)         1           1 ( 1bit)
+

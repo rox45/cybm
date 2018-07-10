@@ -1,0 +1,135 @@
+I_BT1173: LOG file compressed. (ave8_MA_IF_bus1.LOG.gz)
+I_BT1921: License has been successfully obtained by FLEXlm.
+I_BT2971: Delay value unit of functional unit library file (C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB) is changed (Delay value was changed to 100 double).
+ [Action] Review the specification unit in option or, functional unit library file.
+I_BT2788: Adjusted the unit of delay value of BLIB file (C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB) (made the delay value 100 times).
+ [Action] The specification of delay value unit needs to be revisited.
+I_BT2619: Synthesize in ASIC mode.
+I_BT4146: All signals are synthesized as descending bit-order because all declared signals are of descending bit-order.
+W_BT3305: Global signal 'current_burst_mode' is assigned but not referenced.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+I_BT1388: There is a description, which do not get executed (Remove the statement of lower side).
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+I_BT4568: Function set_burst is inline-expanded.
+I_BT4568: Function set_single is inline-expanded.
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'icnt'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'icnt'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'icnt'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'icnt'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'ebt_flag'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'ebt_flag'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'ebt_flag'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'ebt_flag'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'current_burst_mode'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'ebt_flag'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT8766: Removed unreferenced assignment to variable 'ebt_flag'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	47(../../ave8_MA_IF_bus1.bdl): /* Cyber ciphertext
+I_BT4393: No memory required. Empty memory library file (ave8_MA_IF_bus1-auto.MLIB) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4394: No memory required. Empty memory constraint file (ave8_MA_IF_bus1-auto.MCNT) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4383: Generate memory library file / memory constraint file.
+	ave8_MA_IF_bus1-auto.MLIB
+	ave8_MA_IF_bus1-auto.MCNT
+I_BT7452: Usage count of functional unit addsub32u was increased from numbers of constraints 1 to 2.
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	27 warning      exist
+	13 information  exist
+	 2 tips         exist
+	---> SEE ave8_MA_IF_bus1.err FILE and ave8_MA_IF_bus1.tips FILE for DETAILS

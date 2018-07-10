@@ -1,0 +1,72 @@
+I_BT1173: LOG file compressed. (ave8.LOG.gz)
+I_BT2619: Synthesize in ASIC mode.
+W_BT4486: The bitwidth of reference variable (i) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	49(../../ave8.c): 	sum += fifo[i];
+W_BT4486: The bitwidth of reference variable (i) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	41(../../ave8.c):             fifo[i] = fifo[i-1];
+I_BT1388: There is a description, which do not get executed (Remove the statement of lower side).
+	[Source Lines]
+	61(../../ave8.c):     return (0); 	
+W_BT4486: The bitwidth of reference variable (i) automatically reduced from 32 bit to 3 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	41(../../ave8.c):             fifo[i] = fifo[i-1];
+W_BT4476: The bitwidth of constant 1 is reduced from 32 bit to 3 bit.
+ [Action] Check the assignment destination bitwidth etc.
+	[Source Lines]
+	41(../../ave8.c):             fifo[i] = fifo[i-1];
+W_BT4486: The bitwidth of reference variable (out0_v) automatically reduced from 32 bit to 8 bit.
+ [Action] Confirm the bitwidth etc. for assignment point variable.
+	[Source Lines]
+	54(../../ave8.c):         out0 = out0_v;	
+I_BT4568: Function CBM_single_write is inline expanded/unrolled.
+I_BT4568: Function CBM_single_write_lk is inline expanded/unrolled.
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	40(../../ave8.c):         for (i = DSIZE-1; i > 0; i--) { 	
+I_BT4607: for loop is unrolled
+	[Source Lines]
+	48(../../ave8.c):       for (i= 1; i< DSIZE;  i++) { 	
+I_BT4466: The sequence of the operation in unrolled loop is optimized, and number of stages of operation is reduced.
+	[Source Lines]
+	49(../../ave8.c): 	sum += fifo[i];
+I_BT6502: Since the memory constraint file is not configured, synthesize array fifo is synthesized as register and not into memory.
+ [Action] In case of synthesizing into memory, specify memory constraint file by option.
+W_BT1320: in variable ave8_MA_bus1_CBM_read_data is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT1320: in variable ave8_MA_bus1_CBM_error is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT1320: in variable ave8_MA_bus1_CBM_count is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+I_BT4679: Array fifo was variable unrolled.
+W_BT1320: in variable ave8_MA_bus1_CBM_read_data is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT1320: in variable ave8_MA_bus1_CBM_error is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT1320: in variable ave8_MA_bus1_CBM_count is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT1320: in variable ave8_MA_bus1_CBM_read_data is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT1320: in variable ave8_MA_bus1_CBM_error is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT1320: in variable ave8_MA_bus1_CBM_count is not referred.
+ [Action] Rewrite the description so that in variable gets referenced.
+W_BT8766: Since the assignment to the following variable(fifo_a07) is non-referencing so delete it.
+ [Action] Rewrite as description not having non-referencing assignment.
+	[Source Lines]
+	29(../../ave8.c): unsigned var(0:32)  fifo[DSIZE] = {0, 0, 0, 0, 0, 0, 0, 0};
+W_BT5668: Loop is not folded because the latency (3) is equal to DII (3).
+ [Action] Remove 'folding = #' attribute if possible.
+	[Source Lines]
+	38(../../ave8.c): while(1){
+I_BT5712: Port ave8_MA_bus1_CBM_read_data is not used, but do not delete it.
+I_BT5712: Port ave8_MA_bus1_CBM_error is not used, but do not delete it.
+I_BT5712: Port ave8_MA_bus1_CBM_count is not used, but do not delete it.
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	16 warning      exist
+	13 information  exist
+	---> SEE ave8.err FILE for DETAILS

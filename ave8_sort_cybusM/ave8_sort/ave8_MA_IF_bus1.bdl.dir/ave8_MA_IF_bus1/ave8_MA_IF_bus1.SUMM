@@ -1,0 +1,70 @@
+Copyright (C) 1988-2015 NEC Corporation. All rights reserved.
+bdltran version : 5.52.01 (Windows 32-bit) Mon Aug 24 17:11:41 JST 2015
+         (BIF version : 3.31o)
+         (LICflex version : 1.52 cylmd)
+         make at 17:24:44 Aug 24 2015
+ Option  -sN -c1000 -cu1/100ns -Af -Zfsm_st=1 -ou -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB" -lfc ave8_MA_IF_bus1-auto.FCNT ave8_MA_IF_bus1 
+
+bdlpars  -DBDL -I../.. ../../ave8_MA_IF_bus1.bdl -o ave8_MA_IF_bus1.IFF
+
+################ CyberI started (manual scheduling mode) ################
+[Clock period]    100,000 (1/10ps) [define]
+[Datapath delay]   90,000 (1/10ps)
+[Clock uncertainty] 10,000 (1/10ps)
+
+******* Initial # of operations in the input behavior description *******
+ === Operators ===
+  -  :  1  (11bit:1)
+  |  : 10  (1bit:10)
+  == : 76  (1bit:34, 2bit:30, 11bit:6, 12bit:6)
+  !  :  4  (1bit:4)
+  += :  6  (32bit:6)
+  +  :  6  (11bit:6)
+  ++ :  4  (11bit:4)
+  -= :  2  (32bit:2)
+  >  :  4  (11bit:4)
+  &  : 14  (1bit:14)
+  |> : 48  (1bit:48)
+  Data transfer : 544
+
+********* After optimizing & expanding the behavior description *********
+ === Operators ===
+  -  :  2  (32bit:2)
+  |  : 10  (1bit:10)
+  == : 42  (2bit:30, 11bit:6, 12bit:6)
+  +  :  8  (11bit:2, 32bit:6)
+  &  : 14  (1bit:14)
+  |> : 44  (1bit:40, 11bit:4)
+  ~  : 30  (1bit:30)
+  INCR:  8  (11bit:8)
+  DECR:  2  (11bit:2)
+  Data transfer : 566
+
+#########################  Synthesized Circuit  #########################
+[Performance index max/min] 5 / 3
+  MEM : 
+	
+
+  Module Name         : ave8_MA_IF_bus1
+  Basic Library Name  : CWBSTDBLIB
+
+  Total Area          :     12,166
+    Sequential        :      4,320
+    Combinational     :      7,846
+
+  Latency Index       :          5
+  Total States        :         15
+
+  Clock Period        :       10ns
+  Critical Path Delay :   4.0285ns
+
+  Net                 :      1,793
+  Pin Pair            :      3,920
+
+  Port                :        247
+    In                :        122
+    Out               :        125
+
+TOTAL AREA 12,166 (FU: 1,912 + REG: 4,320 + MUX: 2,797 + DEC: 0 + MISC: 3,137) + pin pair 3,920(net 1,793) + 15FSMs of 1state
+####### CyberI Normal finish (manual scheduling mode) [ave8_MA_IF_bus1] #######
+

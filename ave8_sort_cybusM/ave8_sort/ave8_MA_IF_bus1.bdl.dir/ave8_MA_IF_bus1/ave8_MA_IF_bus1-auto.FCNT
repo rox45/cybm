@@ -1,0 +1,27 @@
+#@VERSION{3.00}
+#@CNT{ave8_MA_IF_bus1}
+#@KIND{BASIC_OPERATOR}
+#@CLK 100000
+#@UNIT 1/10ps
+@FCNT{
+	NAME	addsub32u
+	LIMIT	1
+#	COMMENT
+}
+@FCNT{
+	NAME	add12u
+	LIMIT	1
+#	COMMENT
+}
+@FCNT{
+	NAME	incr12u
+	LIMIT	1
+#	COMMENT
+}
+@FCNT{
+	NAME	decr12u
+	LIMIT	1
+#	COMMENT
+}
+#@HASH{27ede1a5429007a2e2a695e1032de55b}
+#@END{ave8_MA_IF_bus1}

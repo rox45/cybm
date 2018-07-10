@@ -1,0 +1,297 @@
+
+Cyber RTL Synthesis report (module name : ave8_MA)
+
+Basic Library Name: CWBSTDBLIB (BLIB Version 2.00)
+Clock period: 10ns
+
+  AREA:
+    TOTAL Area      :        892
+      Sequential    :        396
+      Combinational :        496
+    Memory          :          0
+
+    ave8_MA (TOTAL):
+      REG  :      396 (44%)
+      FU   :      354 (39%)
+      MUX  :      136 (15%)
+      DEC  :        0 ( 0%)
+      MISC :        6 ( <1%)
+      MEM  :        0
+      count: -
+
+  Controller:
+    TOTAL STATES      : 3 (+Reset)
+    #FSM              : 1
+    STATES/FSM        : 3 (+Reset)
+    FSM DECODER DELAY : 0.09ns
+
+  WIRE:
+    NET      :      682
+    PIN PAIR :    1,564
+
+  PORT:
+    TOTAL  :      148
+    IN     :       56
+    OUT    :       92
+    IN/OUT :        0
+
+  Critical path delay        : 1.05ns
+
+  False path                 : Unchecked
+  Multi-cycle path           : Unchecked
+  False loop/Combinational loop : 0
+
+  LATCH (bit):
+    count : 0
+
+  Latency:
+    total:
+        Type: S
+        Latency: Reset + L1
+        Latency index: 4
+        State No.: 0, 1, 2, 3
+        Folding loop: -
+        Folding stages: - , Total folding states: - , Hazard: -
+        User operator: -
+        Sub loops: L1
+        Line: -
+    L1:
+        Type: S
+        Latency: (1 + L2 + 1) * N1    [N1 >= 1]
+        Latency index: 3
+        State No.: 1, 2, 3
+        Folding loop: -
+        Folding stages: - , Total folding states: - , Hazard: -
+        User operator: -
+        Sub loops: L2
+        Line: ../../ave8.c:32
+    L2:
+        Type: S
+        Latency: 1 * N2    [N2 >= 1]
+        Latency index: 1
+        State No.: 2
+        Folding loop: -
+        Folding stages: - , Total folding states: - , Hazard: -
+        User operator: -
+        Sub loops: -
+        Line: ../../CybusM_IF.bdl:396
+
+  PORT:
+    name               type   bitw
+    ------------------------------
+      ave8_MA_bus1_CBM_read_data  in     32
+      ave8_MA_bus1_CBM_error  in      1
+      ave8_MA_bus1_CBM_count  in     11
+      ave8_MA_bus1_CBM_read_req  out     1
+      ave8_MA_bus1_CBM_write_req  out     1
+      ave8_MA_bus1_CBM_burst  out     3
+      ave8_MA_bus1_CBM_addr  out    32
+      ave8_MA_bus1_CBM_length  out    11
+      ave8_MA_bus1_CBM_size  out     3
+      ave8_MA_bus1_CBM_lock  out     1
+      ave8_MA_bus1_CBM_write_data  out    32
+      ave8_MA_bus1_CBM_command_busy  in      1
+      ave8_MA_bus1_CBM_data_ready  in      1
+      in0               in      8
+      out0              out     8
+
+  REG :
+     used      declared                 used
+      bit           bit      count       bit  * count
+    -------------------------------------------------
+        2             2          1                  2
+    -------------------------------------------------
+        8             8          8                 64
+    -------------------------------------------------
+    Total                                          66
+
+  MEM :
+       None
+
+  MUX :
+   2 bit:  4way: 1 
+   8 bit: (1way: 2),  2way: 1 ,  3way: 6 ,  4way: 1 
+   9 bit: (1way: 1)
+   total: 200 (# of fanins)
+
+  FU  :
+    Fu name                area  delay  pipeline  count
+                                  (ns)    stage
+    ---------------------------------------------------
+    add12u_11                74   0.39         -      1
+    add12u_11_10             74   0.39         -      2
+    add8u                    47   0.30         -      4
+
+  Unused FUs:
+    --------------------------------------------------------------
+       None
+
+  Timing:
+
+    Path: #1
+                                                                arrival
+                                                          delay    time logic
+      name                 / port [signal              ]   (ns)   (ns)  stage
+      -----------------------------------------------------------------------
+      RG_d_fifo            / dout [                    ]      -    0.00     0
+      add8u@3              / o1   [add8u3ot            ]   0.30    0.30     6
+      add12u_11_10@1       / o1   [add12u_11_101ot     ]   0.32    0.62    12
+      add12u_11@1          / o1   [add12u_111ot        ]   0.34    0.96    18
+      _NMUX_421            / o1   [RG_d_fifo           ]   0.09    1.05    20
+      RG_d_fifo            / din  [                    ]      -    1.05    20
+
+              sub total
+      class       (ns)    ratio
+      -------------------------
+      IN           0.00      0%
+      FU           0.96     91%
+      MUX          0.09      8%
+      DEC          0.00      0%
+      MISC         0.00      0%
+      MEM          0.00      0%
+      -------------------------
+      Total        1.05
+
+  Total net count      :      682
+  Total pin pair count :    1,564
+  Const fanout         :      113
+
+  Net count:
+         bit       net    bitXnet
+     ----------------------------
+           1        15         15
+           2         7         14
+           8        19        152
+           9         5         45
+          10         2         20
+          11         1         11
+     ----------------------------
+       Total                  257
+
+  Pin pair:
+      fanout    bit    count  sub total
+    -----------------------------------
+          13      1        1         13
+           9      1        2         18
+           8      1        1          8
+           4      2        1          8
+           4      1        1          4
+           3      8        7        168
+           2      8        3         48
+           2      1        1          2
+           1     10        2         20
+           1      9        5         45
+           1      8       10         80
+           1      2        6         12
+           1      1        9          9
+    -----------------------------------
+       Total                        435
+
+  Fanout for consts:
+      value    fanout
+          0        96
+          1        17
+    ------------------
+      Total       113
+
+  Clock fanout:
+      name                         count
+      ----------------------------------
+      bus1_HCLK(0:1)                   9
+
+  Reset fanout:
+      name                         count
+      ----------------------------------
+      bus1_HRESETn(0:1)                9
+      ST1_00d(0:1)                     8
+
+  Register fanin/fanout cone size:
+
+    Fanin: (Top 10 registers)
+      Register name            cone size
+      ----------------------------------
+      RG_d_fifo(0:8)                  10
+      B01_streg(0:2)                   4
+      RG_fifo(0:8)                     4
+      RG_fifo_1(0:8)                   4
+      RG_fifo_2(0:8)                   4
+      RG_fifo_3(0:8)                   4
+      RG_fifo_4(0:8)                   4
+      RG_fifo_5(0:8)                   4
+      RG_fifo_6(0:8)                   4
+
+    Fanout: (Top 10 registers)
+      Register name            cone size
+      ----------------------------------
+      B01_streg(0:2)                  22
+      RG_fifo(0:8)                     4
+      RG_fifo_1(0:8)                   4
+      RG_fifo_2(0:8)                   4
+      RG_fifo_3(0:8)                   4
+      RG_fifo_4(0:8)                   4
+      RG_d_fifo(0:8)                   3
+      RG_fifo_5(0:8)                   3
+      RG_fifo_6(0:8)                   2
+
+  Routability:
+
+    Top 25 nets
+    sorted by "total" (total pin pair)
+      Net name                     total           max
+      ------------------------------------------------------
+      RG_fifo(0:8)                    24           3 ( 8bit)
+      RG_fifo_1(0:8)                  24           3 ( 8bit)
+      RG_fifo_2(0:8)                  24           3 ( 8bit)
+      RG_fifo_3(0:8)                  24           3 ( 8bit)
+      RG_fifo_4(0:8)                  24           3 ( 8bit)
+      RG_fifo_5(0:8)                  24           3 ( 8bit)
+      RG_d_fifo(0:8)                  24           3 ( 8bit)
+      RG_fifo_6(0:8)                  16           2 ( 8bit)
+      in0(0:8)                        16           2 ( 8bit)
+      add12u_111ot(0:11)              16           2 ( 8bit)
+      ST1_03d(0:1)                    13          13 ( 1bit)
+      add12u_11_101ot(0:10)           10           1 (10bit)
+      add12u_11_102ot(0:10)           10           1 (10bit)
+      bus1_HCLK(0:1)                   9           9 ( 1bit)
+      bus1_HRESETn(0:1)                9           9 ( 1bit)
+      add8u1ot(0:9)                    9           1 ( 9bit)
+      add8u2ot(0:9)                    9           1 ( 9bit)
+      add8u3ot(0:9)                    9           1 ( 9bit)
+      add8u4ot(0:9)                    9           1 ( 9bit)
+      M_14(0:9)                        9           1 ( 9bit)
+      ST1_00d(0:1)                     8           8 ( 1bit)
+      B01_streg(0:2)                   8           4 ( 2bit)
+      TR_04(0:8)                       8           1 ( 8bit)
+      ST1_01d(0:1)                     4           4 ( 1bit)
+      JF_01(0:1)                       2           2 ( 1bit)
+
+    Top 25 nets
+    sorted by "max" (maximum fan out)
+      Net name                     total           max
+      ------------------------------------------------------
+      ST1_03d(0:1)                    13          13 ( 1bit)
+      bus1_HCLK(0:1)                   9           9 ( 1bit)
+      bus1_HRESETn(0:1)                9           9 ( 1bit)
+      ST1_00d(0:1)                     8           8 ( 1bit)
+      B01_streg(0:2)                   8           4 ( 2bit)
+      ST1_01d(0:1)                     4           4 ( 1bit)
+      RG_fifo(0:8)                    24           3 ( 8bit)
+      RG_fifo_1(0:8)                  24           3 ( 8bit)
+      RG_fifo_2(0:8)                  24           3 ( 8bit)
+      RG_fifo_3(0:8)                  24           3 ( 8bit)
+      RG_fifo_4(0:8)                  24           3 ( 8bit)
+      RG_fifo_5(0:8)                  24           3 ( 8bit)
+      RG_d_fifo(0:8)                  24           3 ( 8bit)
+      RG_fifo_6(0:8)                  16           2 ( 8bit)
+      in0(0:8)                        16           2 ( 8bit)
+      add12u_111ot(0:11)              16           2 ( 8bit)
+      JF_01(0:1)                       2           2 ( 1bit)
+      add12u_11_101ot(0:10)           10           1 (10bit)
+      add12u_11_102ot(0:10)           10           1 (10bit)
+      add8u1ot(0:9)                    9           1 ( 9bit)
+      add8u2ot(0:9)                    9           1 ( 9bit)
+      add8u3ot(0:9)                    9           1 ( 9bit)
+      add8u4ot(0:9)                    9           1 ( 9bit)
+      M_14(0:9)                        9           1 ( 9bit)
+      TR_04(0:8)                       8           1 ( 8bit)
+

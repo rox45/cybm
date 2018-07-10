@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<sourceInfo version="1.00">
+    <hierInfo>
+        <processes>
+            <process name="ave8_MA" type="process" file="ave8.IFF">
+            </process>
+        </processes>
+    </hierInfo>
+    <fileInfo>
+        <sourcefiles>
+            <sourcefile name="../../ave8.c" timestamp="20170209221202"/>
+            <sourcefile name="C:/Program Files (x86)/cyber/6.10/include/bdlstd.h" timestamp="20180322211224"/>
+            <sourcefile name="../../CybusM_IF.bdl" timestamp="20170316202301"/>
+        </sourcefiles>
+    </fileInfo>
+</sourceInfo>

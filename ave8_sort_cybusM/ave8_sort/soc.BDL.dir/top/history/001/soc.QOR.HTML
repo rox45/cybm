@@ -1,0 +1,1246 @@
+<html>
+
+<head>
+  <title>Cyber RTL Synthesis report (module name : top)</title>
+
+  <style><!--
+  h1 {
+    font-size: 14pt;
+    margin: 3px;
+  }
+  h2 {
+    font-size: 13pt;
+    margin: 3px;
+  }
+  h3 {
+    font-size: 12pt;
+    margin: 3px;
+  }
+  h4 {
+    font-size: 11pt;
+    margin: 3px;
+  }
+  table {
+    border-width: 1px;
+    border-style:solid;
+    border-color: #aaaaff;
+    margin: 0px;
+    font-size: 10pt;
+  }
+  th {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    background-color: #aaaaff
+  }
+  td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    padding: 3px;
+  }
+  td.top {
+    border-width: 3px 1px 1px;
+    border-style: double solid solid;
+  }
+  a {
+    text-color: #666699
+  }
+  //-->
+  </style>
+</head>
+
+<body>
+<h1>Cyber RTL Synthesis Report (module name : top)</h1>
+
+<a name="TOP"></a>
+<h2>Summary</h2>
+
+<table border="1" cellspacing="0">
+  <tr>
+    <th>Basic Library Name</th>
+    <td align="center"> CWBSTDBLIB (BLIB Version 2.00) </td>
+  </tr>
+  <tr>
+    <th align="left"> Clock period </th>
+    <td align="right"> 10ns </td>
+  </tr>
+</table>
+
+<br>
+
+
+<table border="1" cellspacing="0" width="600">
+  <tr>
+    <th rowspan="4" colspan="2">AREA</th>
+    <th colspan="5">TOTAL Area</th>
+    <th>Memory</th>
+  </tr>
+  <tr>
+    <td colspan="5" align="center">0</td>
+    <td rowspan="3" align="center">0</td>
+  </tr>
+  <tr>
+    <th>Sequential</th>
+    <th colspan="4">Combinational</th>
+  </tr>
+  <tr>
+    <td align="center">0</td>
+    <td colspan="4" align="center">0</td>
+  </tr>
+  <tr>
+    <th>Design</th>
+    <th width=50>count</th>
+    <th width=50><a href="#REG">REG</a></th>
+    <th width=50><a href="#FU">FU</a></th>
+    <th width=50><a href="#MUX">MUX</a></th>
+    <th width=50><a href="#DEC">DEC</a></th>
+    <th width=50>MISC</th>
+    <th width=50><a href="#MEM">MEM</a></th>
+  </tr>
+  <tr>
+    <td> top <br> (TOTAL) </td>
+    <td align="right"> - </td>
+    <td align="right"> 0 <br> ( 0%) </td>
+    <td align="right"> 0 <br> ( 0%) </td>
+    <td align="right"> 0 <br> ( 0%) </td>
+    <td align="right"> 0 <br> ( 0%) </td>
+    <td align="right"> 0 <br> ( 0%) </td>
+    <td align="right"> 0 </td>
+  </tr>
+  <tr>
+    <td class="top"> top <br> (w/o sub modules) </td>
+    <td class="top" align="right"> - </td>
+    <td class="top" align="right"> 0 </td>
+    <td class="top" align="right"> 0 </td>
+    <td class="top" align="right"> 0 </td>
+    <td class="top" align="right"> 0 </td>
+    <td class="top" align="right"> 0 </td>
+    <td class="top" align="right"> 0 </td>
+  </tr>
+  <tr>
+    <td>
+      <A HREF="../../ave8.c.dir/ave8_MA/ave8.QOR.HTML">
+      ave8_MA
+      </A>
+    </td>
+    <td align="right"> x 1 </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+  </tr>
+  <tr>
+    <td>
+      <A HREF="../../bsort.c.dir/sort_SA/bsort.QOR.HTML">
+      sort_SA
+      </A>
+    </td>
+    <td align="right"> x 1 </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+  </tr>
+</table>
+
+<br>
+
+<table border="1" cellspacing="0" width="600">
+  <tr>
+    <th colspan="4">Controller</th>
+    <th colspan="2">WIRE</th>
+    <th colspan="4">PORT</th>
+  </tr>
+  <tr>
+    <th>TOTAL STATES</th>
+    <th>#FSM</th>
+    <th>STATES / FSM</th>
+    <th>FSM <br> DECODER <br> DELAY</th>
+    <th>NET</th>
+    <th>PIN PAIR</th>
+    <th>TOTAL</th>
+    <th>IN</th>
+    <th>OUT</th>
+    <th>IN / OUT</th>
+  </tr>
+  <tr>
+    <td align="right"> 1 </td>
+    <td align="right"> 0 </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> 261 </td>
+    <td align="right"> 263 </td>
+    <td align="right"> 261 </td>
+    <td align="right"> 125 </td>
+    <td align="right"> 136 </td>
+    <td align="right"> 0 </td>
+  </tr>
+</table>
+
+<hr>
+
+<a name="IMPORT_INFO"></a>
+<h2>Important Information</h2>
+
+<table border="0" style="border-width:0px">
+  <tr>
+
+    <td valign="top" style="border-width:0px">
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>False path</th>
+          <th>Multi-cycle path</th>
+          <th>False loop/Combinational loop<a href="#TERM_COMBLOOP"><span style="font-size:0.7em;vertical-align:super">*1</span></a></th>
+          <th>Latch <br> (bit)</th>
+        </tr>
+        <tr>
+          <td align="right"> Unchecked </td>
+          <td align="right"> Unchecked </td>
+          <td align="right"> 0 </td>
+          <td align="right"> 0 </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<hr>
+
+<a name="LATENCY"></a>
+<h2>Latency</h2>
+
+<table border="1" cellspacing="0">
+  <tr>
+    <th>Loop</th>
+    <th>Type</th>
+    <th width="150">Latency</th>
+    <th width="10">Latency index</th>
+    <th width="50">State No.</th>
+    <th width="10">Folding loop</th>
+    <th width="10">Folding stages</th>
+    <th width="10">Total folding states</th>
+    <th width="10">Hazard</th>
+    <th width="10">User operator</th>
+    <th width="10">Sub loops</th>
+    <th>Line</th>
+  </tr>
+  <tr>
+    <td align="center"> total </td>
+    <td align="center"> S </td>
+    <td align="center" width="150"> L1 </td>
+    <td align="center"> 1 </td>
+    <td align="center" width="50"> 1 </td>
+    <td align="center"> - </td>
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="center"> - </td>
+    <td align="center"> - </td>
+    <td align="center"> <a href="#L1">L1</a> </td>
+    <td align="center"> - </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a name="L1">
+      L1
+    </td>
+    <td align="center"> S </td>
+    <td align="center" width="150"> 1 * N1    [N1 >= 1] </td>
+    <td align="center"> 1 </td>
+    <td align="center" width="50"> 1 </td>
+    <td align="center"> - </td>
+
+    <td align="right"> - </td>
+    <td align="right"> - </td>
+    <td align="center"> - </td>
+    <td align="center"> - </td>
+    <td align="center"> - </td>
+    <td align="center"> - </td>
+  </tr>
+</table>
+
+<br>
+<div style="font-size: 0.8em">
+  <ul>
+    <li>Loop: loop name (L#)</li>
+    <li>Type: loop type ([S]equential/[F]olding)</li>
+    <li>Latency: latency of loop</li>
+      <ul>
+        <li>Reset: reset state</li>
+        <li>L#: latency of loop L#</li>
+        <li>N#: number of iteration (not necessarily same as number of iteration in description)</li>
+      </ul>
+    <li>Latency index: Index to measure latency. (A relative index for the same description. Smaller value means smaller number of cycles between input and output.)</li>
+    <li>State No.: state numbers included in loop</li>
+    <li>Folding loop: folding loop name (FL#)</li>
+    <li>Folding stages: number of stages in folding loop</li>
+    <li>Total folding states: number of states in folding loop (inner loops included)</li>
+    <li>Hazard: existence of hazard in folding loop (Exist/None)</li>
+    <li>User operator: user operators used in loop</li>
+    <li>Sub loops: inner loop</li>
+  </ul>
+</div>
+
+<hr>
+
+<a name="DELAY_INFO"></a>
+<h2>Delay Information</h2>
+
+<table border="0" style="border-width:0px">
+  <tr>
+    <td valign="top" style="border-width:0px" width="750">
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>Critical Path Delay</th>
+          <td align="center"> 0ns </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table border="0" style="border-width:0px">
+
+  <tr>
+
+    <td valign="top" style="border-width:0px" width="750">
+
+<table border="1" cellspacing="0">
+  <tr>
+    <th width=50> TOTAL (ns) </th>
+    <th width=50> IN </th>
+    <th width=50> FU </th>
+    <th width=50> MUX </th>
+    <th width=50> DEC </th>
+    <th width=50> MISC </th>
+    <th width=50> MEM </th>
+  </tr>
+  <tr>
+    <td align="right"> 0.00 <br> &nbsp; </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<hr>
+<table border="0" style="border-width:0px">
+  <tr>
+
+
+    <td valign="top" style="border-width:0px" width="200">
+      <a name="PORT"></a>
+      <h2>Primary Port</h2>
+
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>name</th>
+          <th>type</th>
+          <th>bit</th>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_read_req </td>
+          <td> out </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_write_req </td>
+          <td> out </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_burst </td>
+          <td> out </td>
+          <td align="right"> 3 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_addr </td>
+          <td> out </td>
+          <td align="right"> 32 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_length </td>
+          <td> out </td>
+          <td align="right"> 11 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_size </td>
+          <td> out </td>
+          <td align="right"> 3 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_lock </td>
+          <td> out </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_write_data </td>
+          <td> out </td>
+          <td align="right"> 32 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_read_data </td>
+          <td> in </td>
+          <td align="right"> 32 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_command_busy </td>
+          <td> in </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_data_ready </td>
+          <td> in </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_error </td>
+          <td> in </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_count </td>
+          <td> in </td>
+          <td align="right"> 11 </td>
+        </tr>
+        <tr>
+          <td> in0 </td>
+          <td> in </td>
+          <td align="right"> 8 </td>
+        </tr>
+        <tr>
+          <td> out0 </td>
+          <td> out </td>
+          <td align="right"> 8 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_busy </td>
+          <td> out </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_error </td>
+          <td> out </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_retry </td>
+          <td> out </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_split </td>
+          <td> out </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_read_data </td>
+          <td> out </td>
+          <td align="right"> 32 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_read_req </td>
+          <td> in </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_write_req </td>
+          <td> in </td>
+          <td align="right"> 1 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_addr </td>
+          <td> in </td>
+          <td align="right"> 32 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_size </td>
+          <td> in </td>
+          <td align="right"> 3 </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_write_data </td>
+          <td> in </td>
+          <td align="right"> 32 </td>
+        </tr>
+        <tr>
+          <td> out_sorted </td>
+          <td> out </td>
+          <td align="right"> 8 </td>
+        </tr>
+      </table>
+
+    </td>
+
+    <td valign="top" style="border-width:0px" width="600">
+      <a name="MEM"></a>
+      <h2>Memory</h2>
+
+      <h3>None</h3>
+
+    </td>
+
+  </tr>
+</table>
+
+<hr>
+
+<table border="0" style="border-width:0px">
+  <tr>
+
+
+    <td valign="top" style="border-width:0px" width="700">
+      <a name="FU"></a>
+      <h2>Functional Unit</h2>
+
+      <h3>None</h3>
+
+      <h3>Unused Functional Units</h3>
+      <h3>None</h3>
+
+    </td>
+
+  </tr>
+</table>
+
+<hr>
+
+<table border="0" style="border-width:0px">
+  <tr>
+
+    <td valign="top" style="border-width:0px" width="300">
+      <a name="REG"></a>
+      <h2>Register</h2>
+
+      <h3>None</h3>
+
+    </td>
+
+    <td valign="top" style="border-width:0px" width="200">
+      <a name="MUX"></a>
+      <h2>Multiplexer</h2>
+
+      <h3>None</h3>
+
+    </td>
+
+    <td valign="top" style="border-width:0px" width="200">
+      <a name="DEC"></a>
+      <h2>Decoder</h2>
+
+      <h3>None</h3>
+
+    </td>
+
+  </tr>
+</table>
+
+<hr>
+
+<a name="MAX_PATH"></a>
+<h2> Timing </h2>
+<h3> Clock period : 10ns , Path delay : 0ns </h3>
+
+<table border="0" style="border-width:0px">
+  <tr>
+
+    <td valign="top" style="border-width:0px" width="750">
+      <table border="1" cellspacing="0">
+        <tr>
+          <th> name </th>
+          <th> pin </th>
+          <th> signal </th>
+          <th> delay (ns) </th>
+          <th> arrival time (ns) </th>
+          <th> logic stage </th>
+          <th> type </th>
+        </tr>
+        <tr>
+          <td> bus1_HCLK </td>
+          <td> o1 </td>
+          <td> - </td>
+          <td align="right"> - </td>
+          <td align="right"> 0.00 </td>
+          <td align="right"> 0 </td>
+          <td> - </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA </td>
+          <td> i1 </td>
+          <td> INST_ave8_MA.bus1_HCLK </td>
+          <td align="right"> - </td>
+          <td align="right"> 0.00 </td>
+          <td align="right"> 0 </td>
+          <td> - </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<table border="0" style="border-width:0px">
+
+  <tr>
+
+    <td valign="top" style="border-width:0px" width="750">
+
+<table border="1" cellspacing="0">
+  <tr>
+    <th width=50> TOTAL (ns) </th>
+    <th width=50> IN </th>
+    <th width=50> FU </th>
+    <th width=50> MUX </th>
+    <th width=50> DEC </th>
+    <th width=50> MISC </th>
+    <th width=50> MEM </th>
+  </tr>
+  <tr>
+    <td align="right"> 0.00 <br> &nbsp; </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+    <td align="right"> 0.00 <br> ( 0%) </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<dl>
+  <dd>
+    * i:input, o:output, s:MUX select, din:FF's input, dout:FF's output<br>
+  <font size="-1">
+    <br>
+    Critical path delay can be larger than clock constraint because<br>
+    false paths are not excluded in timing report.<br>
+    Even in true paths, critical path delay can exceed the clock constraint<br>
+    because of logic gate delays which logic synthesis tool reduces to meet<br>
+    the constraint. When critical path delay greatly exceeds the clock constraint,<br>
+    logic synthesis can take long or circuit size can be unexpectedly large.<br>
+  </font>
+  </dd>
+</dl>
+
+<h4 align="right"><a href="#TOP">TOP&gt;&gt;</a></h4>
+<hr>
+
+
+<a name="NET"></a>
+<h2>WIRE</h2>
+
+<table border="0" style="border-width:0px">
+  <tr>
+    <td valign="top" style="border-width:0px">
+      <table border="0" style="border-width:0px">
+        <tr>
+          <td valign="top" style="border-width:0px">
+            <table border="1" cellspacing="0">
+              <tr>
+                <th>Total net count<a href="#TERM_TOTAL_NET"><span style="font-size:0.7em;vertical-align:super">*2</span></a></th>
+                <th>Total pin pair count<a href="#TERM_TOTAL_PINPAIR"><span style="font-size:0.7em;vertical-align:super">*3</span></a></th>
+                <th>Const fanout</th>
+              </tr>
+              <tr>
+                <td align="right" width="165"> 261 </td>
+                <td align="right" width="165"> 263 </td>
+                <td align="right" width="165"> 0 </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td valign="top" style="border-width:0px">
+      <table border="0" style="border-width:0px" cellspacing="0">
+        <tr>
+          <td valign="top" style="border-width:0px">
+            <h4><a href="#DETAIL_REGFIFO">Register fanin/fanout&gt;&gt;</a></h4>
+            <h4><a href="#DETAIL_FO">Routability&gt;&gt;</a></h4>
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<table border="0" style="border-width:0px">
+  <tr>
+
+
+    <td valign="top" style="border-width:0px" width="250">
+
+      <h3>Net count<a href="#TERM_NET"><span style="font-size:0.7em;vertical-align:super">*4</span></a></h3>
+
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>bit</th>
+          <th>net</th>
+          <th>bit x net</th>
+        </tr>
+        <tr>
+          <td align="right"> 1 </td>
+          <td align="right"> 14 </td>
+          <td align="right"> 14 </td>
+        </tr>
+        <tr>
+          <td align="right"> 3 </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 9 </td>
+        </tr>
+        <tr>
+          <td align="right"> 8 </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 24 </td>
+        </tr>
+        <tr>
+          <td align="right"> 11 </td>
+          <td align="right"> 2 </td>
+          <td align="right"> 22 </td>
+        </tr>
+        <tr>
+          <td align="right"> 32 </td>
+          <td align="right"> 6 </td>
+          <td align="right"> 192 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Total </th>
+          <td align="right" bgcolor="#ffffcc"> 261 </td>
+        </tr>
+      </table>
+
+    </td>
+
+
+    <td valign="top" style="border-width:0px" width="300">
+
+      <h3>Pin pair count<a href="#TERM_PINPAIR"><span style="font-size:0.7em;vertical-align:super">*5</span></a></h3>
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>fanout</th>
+          <th>bit</th>
+          <th>count</th>
+          <th>sub total</th>
+        </tr>
+        <tr>
+          <td align="right"> 2 </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 2 </td>
+          <td align="right"> 4 </td>
+        </tr>
+        <tr>
+          <td align="right"> 1 </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 6 </td>
+          <td align="right"> 192 </td>
+        </tr>
+        <tr>
+          <td align="right"> 1 </td>
+          <td align="right"> 11 </td>
+          <td align="right"> 2 </td>
+          <td align="right"> 22 </td>
+        </tr>
+        <tr>
+          <td align="right"> 1 </td>
+          <td align="right"> 8 </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 24 </td>
+        </tr>
+        <tr>
+          <td align="right"> 1 </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 9 </td>
+        </tr>
+        <tr>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 12 </td>
+          <td align="right"> 12 </td>
+        </tr>
+        <tr>
+          <th colspan="3">Total</th>
+          <td align="right" bgcolor="#ffffcc"> 263 </td>
+        </tr>
+      </table>
+
+    </td>
+
+    <td valign="top" style="border-width:0px" width="250">
+
+      <h3>Fanout for consts</h3>
+
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>value</th>
+          <th>fanout</th>
+        </tr>
+        <tr>
+          <th>0</th>
+          <td align="right"> 0 </td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td align="right"> 0 </td>
+        </tr>
+        <tr>
+          <th>Total</th>
+          <td align="right" bgcolor="#ffffcc"> 0 </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<table border="0" style="border-width:0px">
+  <tr>
+
+    <td valign="top" style="border-width:0px" width="250">
+
+      <h3>Clock fanout</h3>
+
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>name</th>
+          <th>count</th>
+        </tr>
+        <tr>
+          <td align="left"> bus1_HCLK(0:1) </td>
+          <td align="right"> 2 </td>
+        </tr>
+      </table>
+    </td>
+
+    <td valign="top" style="border-width:0px" width="250">
+
+      <h3>Reset fanout</h3>
+
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>name</th>
+          <th>count</th>
+        </tr>
+        <tr>
+          <td align="left"> bus1_HRESETn(0:1) </td>
+          <td align="right"> 2 </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<h4 align="right"><a href="#TOP">TOP&gt;&gt;</a></h4>
+<hr>
+
+<a name="DETAIL_REGFIFO"></a>
+<h3> Register fanin/fanout cone size </h3>
+
+<table border="0" style="border-width:0px">
+  <tr>
+
+    <td valign="top" style="border-width:0px" width="400">
+      <h4> Fanin (Top 10 registers) </h4>
+      <h3>None</h3>
+
+    </td>
+
+    <td valign="top" style="border-width:0px" width="400">
+      <h4> Fanout (Top 10 registers) </h4>
+      <h3>None</h3>
+
+    </td>
+
+  </tr>
+</table>
+
+<h4 align="right"><a href="#TOP">TOP&gt;&gt;</a></h4>
+<hr>
+
+<a name="DETAIL_FO"></a>
+<h3> Routability </h3>
+<table border="0" style="border-width:0px">
+  <tr>
+
+    <td valign="top" style="border-width:0px" width="400">
+      <h4> Top 25 nets <br> sorted by &quot;total&quot; (total pin pair) <br> </h4>
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>Net name</th>
+          <th>total<a href="#TERM_TOTAL_FANOUT"><span style="font-size:0.7em;vertical-align:super">*6</span></a></th>
+          <th>max<a href="#TERM_MAX_FANOUT"><span style="font-size:0.7em;vertical-align:super">*7</span></a></th>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_read_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_addr(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_write_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_addr(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_write_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> INST_sort_SA.sort_SA_bus1_CBM_read_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_count(10..0) </td>
+          <td align="right"> 11 </td>
+          <td align="right"> 1 (11bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_length(10..0) </td>
+          <td align="right"> 11 </td>
+          <td align="right"> 1 (11bit) </td>
+        </tr>
+        <tr>
+          <td> in0(0:8) </td>
+          <td align="right"> 8 </td>
+          <td align="right"> 1 (8bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.out0(0:8) </td>
+          <td align="right"> 8 </td>
+          <td align="right"> 1 (8bit) </td>
+        </tr>
+        <tr>
+          <td> INST_sort_SA.out_sorted(7..0) </td>
+          <td align="right"> 8 </td>
+          <td align="right"> 1 (8bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_size(2..0) </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 1 (3bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_burst(2..0) </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 1 (3bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_size(2..0) </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 1 (3bit) </td>
+        </tr>
+        <tr>
+          <td> bus1_HCLK(0:1) </td>
+          <td align="right"> 2 </td>
+          <td align="right"> 2 (1bit) </td>
+        </tr>
+        <tr>
+          <td> bus1_HRESETn(0:1) </td>
+          <td align="right"> 2 </td>
+          <td align="right"> 2 (1bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_command_busy(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_data_ready(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_error(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_read_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_write_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_read_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_write_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_lock(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_sort_SA.sort_SA_bus1_CBM_busy(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+      </table>
+
+    </td>
+
+    <td valign="top" style="border-width:0px" width="400">
+      <h4> Top 25 nets <br> sorted by &quot;max&quot; (maximum fan out) <br> </h4>
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>Net name</th>
+          <th>total<a href="#TERM_TOTAL_FANOUT"><span style="font-size:0.7em;vertical-align:super">*6</span></a></th>
+          <th>max<a href="#TERM_MAX_FANOUT"><span style="font-size:0.7em;vertical-align:super">*7</span></a></th>
+        </tr>
+        <tr>
+          <td> bus1_HCLK(0:1) </td>
+          <td align="right"> 2 </td>
+          <td align="right"> 2 (1bit) </td>
+        </tr>
+        <tr>
+          <td> bus1_HRESETn(0:1) </td>
+          <td align="right"> 2 </td>
+          <td align="right"> 2 (1bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_read_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_addr(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_write_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_addr(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_write_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> INST_sort_SA.sort_SA_bus1_CBM_read_data(31..0) </td>
+          <td align="right"> 32 </td>
+          <td align="right"> 1 (32bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_count(10..0) </td>
+          <td align="right"> 11 </td>
+          <td align="right"> 1 (11bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_length(10..0) </td>
+          <td align="right"> 11 </td>
+          <td align="right"> 1 (11bit) </td>
+        </tr>
+        <tr>
+          <td> in0(0:8) </td>
+          <td align="right"> 8 </td>
+          <td align="right"> 1 (8bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.out0(0:8) </td>
+          <td align="right"> 8 </td>
+          <td align="right"> 1 (8bit) </td>
+        </tr>
+        <tr>
+          <td> INST_sort_SA.out_sorted(7..0) </td>
+          <td align="right"> 8 </td>
+          <td align="right"> 1 (8bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_size(2..0) </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 1 (3bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_burst(2..0) </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 1 (3bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_size(2..0) </td>
+          <td align="right"> 3 </td>
+          <td align="right"> 1 (3bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_command_busy(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_data_ready(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> ave8_MA_bus1_CBM_error(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_read_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> sort_SA_bus1_CBM_write_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_read_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_write_req(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_ave8_MA.ave8_MA_bus1_CBM_lock(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+        <tr>
+          <td> INST_sort_SA.sort_SA_bus1_CBM_busy(0:1) </td>
+          <td align="right"> 1 </td>
+          <td align="right"> 1 (1bit) </td>
+        </tr>
+      </table>
+
+    </td>
+
+  </tr>
+</table>
+
+<h4 align="right"><a href="#TOP">TOP&gt;&gt;</a></h4>
+
+<hr>
+
+<a name="TERMINOLOGY"></a>
+<h2>Terminology</h2>
+
+<a name="TERM_COMBLOOP"></a>
+<dl>
+  <dt>(*1) Combinational loop</dt>
+  <dd>
+  <font size="-1">
+    See *.err file for detailed loop information.
+  </font>
+  </dd>
+</dl>
+
+<a name="TERM_TOTAL_NET"></a>
+<dl>
+  <dt>(*2) Total net count</dt>
+  <dd>
+  <font size="-1">
+    Count one siterminal net is counted as one.<br>
+    The number of fanouts is not counted.<br>
+    Nets inside RTL parts such as functional units, multmultiplexers, and decoders,<br>
+    are included when BLIB version 2.00 or later is usedused.
+  </font>
+  </dd>
+</dl>
+
+<a name="TERM_TOTAL_PINPAIR"></a>
+<dl>
+  <dt>(*3) Total pin pair count</dt>
+  <dd>
+  <font size="-1">
+    Count one fanout as 1 for each signal.<br>
+    Pin pairs inside RTL parts such as functional unitunits, multiplexers, and decoders<br>
+    are included when BLIB version 2.00 or later is usedused.
+  </font>
+  </dd>
+</dl>
+
+<a name="TERM_NET"></a>
+<dl>
+  <dt>(*4) Net count</dt>
+  <dd>
+  <font size="-1">
+    Nets inside RTL parts such as functional units, multmultiplexers, and decoders are not included.<br>
+  </font>
+  </dd>
+</dl>
+
+<a name="TERM_PINPAIR"></a>
+<dl>
+  <dt>(*5) Pin pair count</dt>
+  <dd>
+  <font size="-1">
+    Pin pairs inside RTL parts such as functional unitunits, multiplexers, and decoders are not included.
+  </font>
+  </dd>
+</dl>
+
+<a name="TERM_TOTAL_FANOUT"></a>
+<dl>
+  <dt>(*6) total</dt>
+  <dd>
+  <font size="-1">
+    The number of all pin pairs counted by every bit for a signal.
+  </font>
+  </dd>
+</dl>
+
+<a name="TERM_MAX_FANOUT"></a>
+<dl>
+  <dt>(*7) max</dt>
+  <dd>
+  <font size="-1">
+    Maximum value among fanouts counted by every bit for for a signal.<br>
+    The number in ( ) represents the number of bits withwith the maximum fanout.
+  </font>
+  </dd>
+</dl>
+
+<h4 align="right"><a href="#TOP">TOP&gt;&gt;</a></h4>
+
+</body>
+</html>

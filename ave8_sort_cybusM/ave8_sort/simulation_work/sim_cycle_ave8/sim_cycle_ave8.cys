@@ -1,0 +1,38 @@
+<!DOCTYPE AQUARIUM_OPTION [
+<!ELEMENT root (properties)>
+<!ELEMENT properties (property)*>
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+   name CDATA #REQUIRED
+   type CDATA #REQUIRED
+   value CDATA #REQUIRED
+>
+]>
+<root>
+  <properties>
+    <property type="string" value="2011/11/11 09:27:36.000" name="created" />
+    <property type="string" value="2011/11/11 09:27:37.031" name="do::timestamp" />
+    <property type="int" value="536870912" name="extraInfo" />
+    <property type="string" value="cycle" name="mk::Cycle" />
+    <property type="string" value="100" name="mk::CycleVal" />
+    <property type="string" value="log_stdout" name="mk::LogStdout" />
+    <property type="string" value="SystemC" name="mk::Model" />
+    <property type="string" value="Cycle" name="mk::SimLevel" />
+    <property type="string" value="sim_cycle_ave8.exe" name="mk::Target" />
+    <property type="string" value="2011/11/11 09:28:20.531" name="mk::timestamp" />
+    <property type="string" value="ON" name="sc::CheckDump" />
+    <property type="string" value="ON" name="sc::CheckFileOut" />
+    <property type="string" value="10" name="sc::DataRadix" />
+    <property type="string" value="2011/11/11 09:28:05.500" name="sc::timestamp" />
+    <property type="string" value="2011/11/11 09:27:37.031" name="se::timestamp" />
+    <property type="string" value="2011/11/11 09:47:16.734" name="ss::LastCompiled" />
+    <property type="string" value="2011/11/11 09:43:33.359" name="ss::LastModelGenerated" />
+    <property type="string" value="systemc" name="ss::ModelLang" />
+    <property type="string" value="sim_cycle_ave8" name="ss::Name" />
+    <property type="string" value="on" name="ss::PatternFileOutAuto" />
+    <property type="string" value="on" name="ss::PatternFileOutSpecify" />
+    <property type="string" value="ave8_MA" name="ss::Processes" />
+    <property type="string" value="cycle" name="ss::SimLevel" />
+    <property type="string" value="2011/11/11 09:43:33.359" name="ss::timestamp" />
+  </properties>
+</root>

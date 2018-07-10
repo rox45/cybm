@@ -1,0 +1,66 @@
+I_BT1173: LOG file compressed. (dfc_SA_IF_bus1.LOG.gz)
+I_BT1921: License has been successfully obtained by FLEXlm.
+I_BT2971: Delay value unit of functional unit library file (C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB) is changed (Delay value was changed to 100 double).
+ [Action] Review the specification unit in option or, functional unit library file.
+I_BT2788: Adjusted the unit of delay value of BLIB file (C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB) (made the delay value 100 times).
+ [Action] The specification of delay value unit needs to be revisited.
+I_BT2619: Synthesize in ASIC mode.
+I_BT4146: All signals are synthesized as descending bit-order because all declared signals are of descending bit-order.
+W_BT4178: No timing descriptor '$' at the end of process function, and inserted automatically.
+ [Action] Insert '$' at the end of process function.
+	[Source Lines]
+	2(../../dfc_SA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT1320: Unused input variable 'dfc_SA_bus1_HBURST'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'dfc_SA_bus1_HMASTLOCK'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'dfc_SA_bus1_HPROT'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'dfc_SA_bus1_HBURST'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'dfc_SA_bus1_HMASTLOCK'.
+ [Action] Access to input variable or delete it.
+W_BT1320: Unused input variable 'dfc_SA_bus1_HPROT'.
+ [Action] Access to input variable or delete it.
+I_BT4393: No memory required. Empty memory library file (dfc_SA_IF_bus1-auto.MLIB) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4394: No memory required. Empty memory constraint file (dfc_SA_IF_bus1-auto.MCNT) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4383: Generate memory library file / memory constraint file.
+	dfc_SA_IF_bus1-auto.MLIB
+	dfc_SA_IF_bus1-auto.MCNT
+I_BT4392: No arithmetic macro functional unit required.
+I_BT4398: The empty FLIB file generated since additional functional units are not required.
+I_BT4318: Empty FCNT file (dfc_SA_IF_bus1-auto.FCNT) generated. No functional units required.
+ [Action] If required, confirm the description.
+I_BT4319: Empty FLIB file (dfc_SA_IF_bus1-amacro-auto.FLIB) generated. No functional units required.
+ [Action] If required, confirm the description.
+I_BT4318: Empty FCNT file (dfc_SA_IF_bus1-amacro-auto.FCNT) generated. No functional units required.
+ [Action] If required, confirm the description.
+I_BT4384: Overwrite functional unit library files / functional unit constraint files.
+	dfc_SA_IF_bus1-auto.FCNT
+I_BT4382: Generate functional unit library files / functional unit constraint files.
+	dfc_SA_IF_bus1-auto.FLIB
+	dfc_SA_IF_bus1-amacro-auto.FLIB
+	dfc_SA_IF_bus1-amacro-auto.FCNT
+W_BT1511: Signal master_data having multiple assignment with concatenated nmux (dmux) at state ST1_01.
+ [Action] There is no problem if it is intended.
+	[Source Lines]
+	2(../../dfc_SA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	2(../../dfc_SA_IF_bus1.bdl): /* Cyber ciphertext
+W_BT1511: Signal split_master having multiple assignment with concatenated nmux (dmux) at state ST1_01.
+ [Action] There is no problem if it is intended.
+	[Source Lines]
+	2(../../dfc_SA_IF_bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	2(../../dfc_SA_IF_bus1.bdl): /* Cyber ciphertext
+I_BT5712: Port dfc_SA_bus1_HBURST is not used, but do not delete it.
+I_BT5712: Port dfc_SA_bus1_HMASTLOCK is not used, but do not delete it.
+I_BT5712: Port dfc_SA_bus1_HPROT is not used, but do not delete it.
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	 9 warning      exist
+	19 information  exist
+	---> SEE dfc_SA_IF_bus1.err FILE for DETAILS

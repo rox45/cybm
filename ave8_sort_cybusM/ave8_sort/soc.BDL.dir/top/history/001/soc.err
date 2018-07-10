@@ -1,0 +1,11 @@
+I_BT1173: LOG file compressed. (soc.LOG.gz)
+I_BT1921: License has been successfully obtained by FLEXlm.
+W_BT2729: defmod 'ave8_MA' exists, but _E.FCNT file is not specified.
+ [Action] Specify the _E.FCNT file generated when synthesizing process 'ave8_MA'.
+W_BT2729: defmod 'sort_SA' exists, but _E.FCNT file is not specified.
+ [Action] Specify the _E.FCNT file generated when synthesizing process 'sort_SA'.
+I_BT2619: Synthesize in ASIC mode.
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	 2 warning      exist
+	 3 information  exist
+	---> SEE soc.err FILE for DETAILS

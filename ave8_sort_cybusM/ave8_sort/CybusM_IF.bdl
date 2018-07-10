@@ -1,0 +1,738 @@
+/* Configured by CybusM */
+/*
+#define CBM_ave8_MA
+#define CBM_sort_SA
+#define CBM_dfc_SA
+*/
+
+/* configurable system parameters */
+#define CBM_ADDRESS_RANGE_bus1 31..0
+#define CBM_DATA_RANGE_bus1 31..0
+#define CBM_LEN_RANGE 10..0
+#define CBM_BURST_RET_RANGE 10..0
+#define CBM_CLEN_RANGE 3..0
+#define CBM_CBURST_RET_RANGE 4..0
+
+/* HBURST type */
+#define SINGLE      0
+#define INCR        1
+#define WRAP4       2
+#define INCR4       3
+#define WRAP8       4
+#define INCR8       5
+#define WRAP16      6
+#define INCR16      7
+/*
+ * MASTER
+ */
+/* Constant definition */
+#define CBM_CHUNK_SIZE_AHB 1024
+#define CBM_RD             0
+#define CBM_WR             1
+#define CBM_SINGLE         0
+#define CBM_BURST          1
+
+#if (defined(CBM_ave8_MA))
+
+#define		CBM_bus_clock		bus1_HCLK
+#define		CBM_bus_reset		bus1_HRESETn
+
+#define		CBM_read_req		ave8_MA_bus1_CBM_read_req
+#define		CBM_write_req		ave8_MA_bus1_CBM_write_req
+
+#define		CBM_burst		ave8_MA_bus1_CBM_burst
+#define		CBM_addr		ave8_MA_bus1_CBM_addr
+#define		CBM_length		ave8_MA_bus1_CBM_length
+#define		CBM_size		ave8_MA_bus1_CBM_size
+#define		CBM_lock		ave8_MA_bus1_CBM_lock
+#define		CBM_write_data		ave8_MA_bus1_CBM_write_data
+
+#define		CBM_read_data		ave8_MA_bus1_CBM_read_data
+#define		CBM_command_busy		ave8_MA_bus1_CBM_command_busy
+#define		CBM_data_ready		ave8_MA_bus1_CBM_data_ready
+#define		CBM_error		ave8_MA_bus1_CBM_error
+#define		CBM_count		ave8_MA_bus1_CBM_count
+
+#endif
+
+#if (defined(CBM_ave8_MA))
+
+/* Clock, Reset */
+clock                                  CBM_bus_clock;
+reset                                  CBM_bus_reset /* Cyber reset_active=low */;
+
+/* Declaration of the BUS Side I/F */
+out   ter                              CBM_read_req;
+out   ter                              CBM_write_req;
+
+out   ter(2..0)                        CBM_burst;               /* 0->SINGLE, 1->INCR ... 7->INCR16 */
+out   ter(CBM_ADDRESS_RANGE_bus1)      CBM_addr;                /* read/write address */
+out   ter(CBM_LEN_RANGE)               CBM_length;              /* read/write transfer length */
+out   ter(2..0)                        CBM_size;                /* read/write size (width) */
+out   ter                              CBM_lock;                /* read/write LOCK */
+out   ter(CBM_DATA_RANGE_bus1)         CBM_write_data;          /* write data from UDL */
+
+in    ter(CBM_DATA_RANGE_bus1)         CBM_read_data;           /* read data from UDL */
+in    ter                              CBM_command_busy;
+in    ter                              CBM_data_ready;
+in    ter                              CBM_error;
+in    ter(CBM_LEN_RANGE)               CBM_count;
+
+#endif
+
+/*
+ * wait for transfer completion
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+void
+CBM_wait()
+{
+    wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1);
+}
+#endif
+
+/*
+ * wait for read transfer completion
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+var(CBM_DATA_RANGE_bus1)
+CBM_wait_read()
+{
+    ter(CBM_DATA_RANGE_bus1)           rv;
+
+    wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1) {
+        rv = input(CBM_read_data);
+    }
+    return rv;
+}
+#endif
+
+/*
+ * wait for read transfer completion with error status check
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+var        /* succeed -> 0 error -> 1 */
+CBM_wait_read_stat(r)
+ter(CBM_DATA_RANGE_bus1)               *r;
+{
+    ter                                f, err;
+
+    wait(input(CBM_command_busy)==0 && f) {
+        *r = input(CBM_read_data);
+        err = input(CBM_error);
+        f = input(CBM_data_ready) | err;
+    }
+    return err;
+}
+#endif
+
+/*
+ * wait for write transfer completion with error status check
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+var        /* succeed -> 0 error -> 1 */
+CBM_wait_write_stat()
+{
+    ter                                f, err;
+
+    wait(input(CBM_command_busy)==0 && f) {
+        err = input(CBM_error);
+        f = input(CBM_data_ready) | err;
+    }
+    return err;
+}
+#endif
+
+/*
+ * single read with lock control
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+void
+CBM_single_read_lk(a,lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1) ;
+
+    /* read 1 word */
+    wait(1) {
+        CBM_read_req = 1;
+        CBM_write_req = 0;
+        CBM_burst = SINGLE;
+        CBM_addr = a;
+        CBM_length = 1;
+        CBM_size = 2; /* 32bit access */
+        CBM_lock = lk;
+    }
+}
+#endif
+
+#if (defined(CBM_ave8_MA))
+/*
+ * burst read with lock control
+ * direct -> blocking
+ */
+/* Cyber func = inline */
+var(CBM_BURST_RET_RANGE)
+CBM_burst_read_lk(a,d,l,lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* read data buffer */
+var(CBM_LEN_RANGE)                     l;                       /* read length (1-1024) */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    reg(CBM_LEN_RANGE)                 i;
+    ter                                err;
+    ter(CBM_LEN_RANGE)                 c;
+    ter(CBM_LEN_RANGE)                 err_ix;                  /* error data index */
+    ter                                dr;                      /* data ready flag */
+
+    wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1);
+
+    /* burst read */
+    wait(1) {
+        CBM_read_req = 1;
+        CBM_write_req = 0;
+        CBM_burst = INCR;
+        CBM_addr = a;
+        CBM_length = l;
+        CBM_size = 2; /* 32bit access */
+        CBM_lock = lk;
+    }
+    i = 0;
+$
+    wait (c == ((unsigned ter(CBM_LEN_RANGE))(l - 1)) || err) {
+        if ((dr = input(CBM_data_ready)) == 1) {
+            d[i++] = input(CBM_read_data);
+        }
+        c = input(CBM_count);
+        if ((err = input(CBM_error)) == 1) {
+            if (c == 0 && dr == 0) {
+                err_ix = 0;
+            }
+            else {
+                err_ix = c + 1;
+            }
+        }
+    }
+    return err_ix::err;
+}
+/* Cyber func = inline */
+var(CBM_BURST_RET_RANGE)
+CBM_burst_read(a,d,l)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* read data buffer */
+var(CBM_LEN_RANGE)                     l;                       /* read length (1-1024) */
+{
+    ter(CBM_BURST_RET_RANGE)           rv;
+    rv = CBM_burst_read_lk(a,d,l,0);
+    return rv;
+}
+#define CBM_burst_read_lock(a,d,l,lk)   CBM_burst_read_lk(a,d,l,lk)
+/*
+ * constant length burst read with lock control
+ * direct -> blocking
+ */
+/* Cyber func = inline */
+var(CBM_CBURST_RET_RANGE)
+CBM_cburst_read_lk(a,d,b,lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* read data buffer */
+var(2..0)                              b;                       /* burst mode */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    reg(CBM_CLEN_RANGE)                i = 0;
+    reg(CBM_CLEN_RANGE)                l;
+    ter                                f;
+    ter                                err;
+    ter(CBM_CLEN_RANGE)                c;
+    ter(CBM_CBURST_RET_RANGE)          rv;
+    ter(CBM_CLEN_RANGE)                err_ix;                  /* error data index */
+    ter                                dr;                      /* data ready flag */
+
+    switch (b) {
+    case INCR4:  
+        f = 0;
+        l = 3;
+        break;
+    case INCR8:  
+        f = 0;
+        l = 7;
+        break;
+    case INCR16:  
+        f = 0;
+        l = 15;
+        break;
+    default :   /* other transfer mode is not supported */
+        f = 1;
+        break;
+    }
+
+    if (f == 0) {
+        wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1);
+
+        /* burst read */
+        wait(1) {
+            CBM_read_req = 1;
+            CBM_write_req = 0;
+            CBM_burst = b;
+            CBM_addr = a;
+            CBM_length = 0; /* dummy */
+            CBM_size = 2; /* 32bit access */
+            CBM_lock = lk;
+        }
+$
+        wait (c == l || err) {
+            if ((dr = input(CBM_data_ready)) == 1) {
+                d[i++] = input(CBM_read_data);
+            }
+            c = input(CBM_count);
+            if ((err = input(CBM_error)) == 1) {
+                if (c == 0 && dr == 0) {
+                    err_ix = 0;
+                }
+                else {
+                    err_ix = c + 1;
+                }
+            }
+        }
+        rv = err_ix::err;
+    }
+    else {
+        rv = 0;
+    }
+    return rv;
+}
+/* Cyber func = inline */
+var(CBM_CBURST_RET_RANGE)
+CBM_cburst_read(a,d,b)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* read data buffer */
+var(2..0)                              b;                       /* burst mode */
+{
+ter(CBM_CBURST_RET_RANGE)              rv;
+
+    rv = CBM_cburst_read_lk(a,d,b,0);
+    return rv;
+}
+#define CBM_cburst_read_lock(a,d,b,lk)   CBM_cburst_read_lk(a,d,b,lk)
+#endif
+
+/*
+ * single read (blocking)
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+var(CBM_DATA_RANGE_bus1)
+CBM_single_read(a)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+{
+    ter(CBM_DATA_RANGE_bus1)           rv;
+    CBM_single_read_lk(a,0);
+$
+    wait(1);
+    rv = CBM_wait_read();
+    return rv;
+}
+/* Cyber func = inline */
+var(CBM_DATA_RANGE_bus1)
+CBM_single_read_lock(a, lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    ter(CBM_DATA_RANGE_bus1)           rv;
+
+    CBM_single_read_lk(a,lk);
+$
+    wait(1);
+    rv = CBM_wait_read();
+    return rv;
+}
+/* Cyber func = inline */
+var
+CBM_single_read_stat(a, d)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+ter(CBM_DATA_RANGE_bus1)               *d;                      /* read data pointer */
+{
+    ter                                rv;
+
+    CBM_single_read_lk(a,0);
+$
+    wait(1);
+    rv = CBM_wait_read_stat(d);
+    return rv;
+}
+/* Cyber func = inline */
+var
+CBM_single_read_lock_stat(a, d, lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* read address */
+ter(CBM_DATA_RANGE_bus1)               *d;                      /* read data pointer */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    ter                                rv;
+
+    CBM_single_read_lk(a,lk);
+$
+    wait(1);
+    rv = CBM_wait_read_stat(d);
+    return rv;
+}
+#endif
+
+/*
+ * single write with lock control
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+void
+CBM_single_write_lk(a,d,lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+var(CBM_DATA_RANGE_bus1)               d;                       /* write data */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1) ;
+
+    /* write 1 word */
+    wait(1) {
+        CBM_read_req = 0;
+        CBM_write_req = 1;
+        CBM_burst = SINGLE;
+        CBM_addr = a;
+        CBM_length = 1;
+        CBM_size = 2; /* 32bit access */
+        CBM_lock = lk;
+        CBM_write_data = d;
+    }
+}
+/* Cyber func = inline */
+void
+CBM_single_write(a,d)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+var(CBM_DATA_RANGE_bus1)               d;                       /* write data */
+{
+    CBM_single_write_lk(a,d,0);
+}
+#define CBM_single_write_lock(a,d,lk)   CBM_single_write_lk(a,d,lk)
+/* Cyber func = inline */
+var
+CBM_single_write_stat(a,d)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+var(CBM_DATA_RANGE_bus1)               d;                       /* write data */
+{
+    ter                                rv;
+
+    CBM_single_write_lk(a,d,0);
+$
+    wait(1);
+    rv = CBM_wait_write_stat();
+    return rv;
+}
+/* Cyber func = inline */
+var
+CBM_single_write_lock_stat(a,d,lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+var(CBM_DATA_RANGE_bus1)               d;                       /* write data */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    ter                                rv;
+    CBM_single_write_lk(a,d,lk);
+$
+    wait(1);
+    rv = CBM_wait_write_stat();
+    return rv;
+}
+#endif
+
+/*
+ * burst write with lock control
+ * direct -> blocking
+ */
+#if (defined(CBM_ave8_MA))
+/* Cyber func = inline */
+var(CBM_BURST_RET_RANGE)
+CBM_burst_write_lk(a,d,l,lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* write data */
+var(CBM_LEN_RANGE)                     l;                       /* write length */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    reg(CBM_LEN_RANGE)                 i;
+    ter                                err;
+    ter(CBM_LEN_RANGE)                 c;
+
+    wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1);
+
+    /* burst write */
+    wait(1) {
+        CBM_read_req = 0;
+        CBM_write_req = 1;
+        CBM_burst = INCR;
+        CBM_addr = a;
+        CBM_length = l;
+        CBM_size = 2; /* 32bit access */
+        CBM_lock = lk;
+        CBM_write_data = d[0];
+    }
+    i = 1;
+$
+    wait (c == ((unsigned ter(CBM_LEN_RANGE))(l - 1)) || err) {
+        if (input(CBM_data_ready) == 1) {
+            CBM_write_req = 1;
+            CBM_write_data = d[i++];
+        }
+        c = input(CBM_count);
+        err = input(CBM_error);
+    }
+    return c::err;
+}
+/* Cyber func = inline */
+var(CBM_BURST_RET_RANGE)
+CBM_burst_write(a,d,l)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* write data */
+var(CBM_LEN_RANGE)                     l;                       /* write length */
+{
+    ter(CBM_BURST_RET_RANGE)           rv;
+    rv = CBM_burst_write_lk(a,d,l,0);
+    return rv;
+}
+#define CBM_burst_write_lock(a,d,l,lk)   CBM_burst_write_lk(a,d,l,lk)
+/* Cyber func = inline */
+var(CBM_CBURST_RET_RANGE)
+CBM_cburst_write_lk(a,d,b,lk)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* write data */
+var(2..0)                              b;                       /* burst mode */
+var                                    lk;                      /* lock flag, CBM_lock->1 else 0 */
+{
+    reg(CBM_CLEN_RANGE)                i = 1;
+    reg(CBM_CLEN_RANGE)                l;
+    ter                                f;
+    ter                                err;
+    ter(CBM_CLEN_RANGE)                c;
+    ter(CBM_CBURST_RET_RANGE)          rv;
+
+    switch (b) {
+    case INCR4:  
+        f = 0;
+        l = 3;
+        break;
+    case INCR8:  
+        f = 0;
+        l = 7;
+        break;
+    case INCR16:  
+        f = 0;
+        l = 15;
+        break;
+    default :   /* other transfer mode is not supported */
+        f = 1;
+        break;
+    }
+
+    if (f == 0) {
+        wait(input(CBM_command_busy)==0 && input(CBM_data_ready)==1);
+
+        /* burst write */
+        wait(1) {
+            CBM_read_req = 0;
+            CBM_write_req = 1;
+            CBM_burst = b;
+            CBM_addr = a;
+            CBM_length = 0; /* dummy */
+            CBM_size = 2; /* 32bit access */
+            CBM_lock = lk;
+            CBM_write_data = d[0];
+        }
+$
+        wait (c == l || err) {
+            if (input(CBM_data_ready) == 1) {
+                CBM_write_req = 1;
+                CBM_write_data = d[i++];
+            }
+            c = input(CBM_count);
+            err = input(CBM_error);
+        }
+        rv = c::err;
+    }
+    else {
+        rv = 0;
+    }
+    return rv;
+}
+/* Cyber func = inline */
+var(CBM_CBURST_RET_RANGE)
+CBM_cburst_write(a,d,b)
+var(CBM_ADDRESS_RANGE_bus1)            a;                       /* write address */
+reg(CBM_DATA_RANGE_bus1)               *d;                      /* write data */
+var(2..0)                              b;                       /* burst mode */
+{
+    ter(CBM_CBURST_RET_RANGE)          rv;
+    rv = CBM_cburst_write_lk(a,d,b,0);
+    return rv;
+}
+#define CBM_cburst_write_lock(a,d,b,lk)   CBM_cburst_write_lk(a,d,b,lk)
+#endif
+
+/*
+ * SLAVE
+ */
+#define CBM_IDLE      0
+#define CBM_READ_REQ  1
+#define CBM_WRITE_REQ 2
+
+#define CBM_OKAY      0
+#define CBM_BUSY      1
+#define CBM_RETRY     2
+#define CBM_SPLIT     3
+#define CBM_ERROR     4
+
+#if (defined(CBM_sort_SA))
+
+#define		CBM_bus_clock		bus1_HCLK
+#define		CBM_bus_reset		bus1_HRESETn
+
+#define		CBM_busy		sort_SA_bus1_CBM_busy
+#define		CBM_error		sort_SA_bus1_CBM_error
+#define		CBM_retry		sort_SA_bus1_CBM_retry
+#define		CBM_split		sort_SA_bus1_CBM_split
+#define		CBM_read_data		sort_SA_bus1_CBM_read_data
+#define		CBM_read_req		sort_SA_bus1_CBM_read_req
+#define		CBM_write_req		sort_SA_bus1_CBM_write_req
+#define		CBM_addr		sort_SA_bus1_CBM_addr
+#define		CBM_size		sort_SA_bus1_CBM_size
+#define		CBM_write_data		sort_SA_bus1_CBM_write_data
+
+#endif
+
+#if (defined(CBM_dfc_SA))
+
+#define		CBM_bus_clock		bus1_HCLK
+#define		CBM_bus_reset		bus1_HRESETn
+
+#define		CBM_busy		dfc_SA_bus1_CBM_busy
+#define		CBM_error		dfc_SA_bus1_CBM_error
+#define		CBM_retry		dfc_SA_bus1_CBM_retry
+#define		CBM_split		dfc_SA_bus1_CBM_split
+#define		CBM_read_data		dfc_SA_bus1_CBM_read_data
+#define		CBM_read_req		dfc_SA_bus1_CBM_read_req
+#define		CBM_write_req		dfc_SA_bus1_CBM_write_req
+#define		CBM_addr		dfc_SA_bus1_CBM_addr
+#define		CBM_size		dfc_SA_bus1_CBM_size
+#define		CBM_write_data		dfc_SA_bus1_CBM_write_data
+
+#endif
+
+#if (defined(CBM_sort_SA) || defined(CBM_dfc_SA))
+
+/* Clock, Reset */
+clock                                  CBM_bus_clock;
+reset                                  CBM_bus_reset /* Cyber reset_active=low */;
+
+/* Declaration of the BUS Side I/F */
+out   ter                              CBM_busy;                /* status signal for UDL -> BUS I/F */
+out   ter                              CBM_error;               /* error signal for UDL -> BUS I/F */
+out   ter                              CBM_retry;               /* retry signal for UDL -> BUS I/F */
+out   ter                              CBM_split;               /* split signal for UDL -> BUS I/F */
+out   ter(CBM_DATA_RANGE_bus1)         CBM_read_data;
+in    ter                              CBM_read_req;
+in    ter                              CBM_write_req;
+in    ter(CBM_ADDRESS_RANGE_bus1)      CBM_addr;                /* read/write address */
+in    ter(2..0)                        CBM_size;                /* read/write size */
+in    ter(CBM_DATA_RANGE_bus1)         CBM_write_data;
+
+/* typedef for SLAVE API */
+typedef struct CBM_Req_Stat {
+    ter(1..0)                          req;                     /* CBM_IDLE or CBM_READ_REQ or CBM_WRITE_REQ */
+    ter(CBM_ADDRESS_RANGE_bus1)        addr;                    /* read/write address */
+} CBM_Req_Stat_t;
+/* Cyber func = inline */
+void
+CBM_poll_req(p) /* request with global decoder */
+CBM_Req_Stat_t *p;
+{
+    p->req  = ((ter(0..0))input(CBM_write_req))::((ter(0..0))input(CBM_read_req));
+    p->addr = input(CBM_addr);
+}
+/* Cyber func = inline */
+void
+CBM_set_data(req,p) /* read/write data */
+var(1..0)                              req;                     /* CBM_IDLE or CBM_READ_REQ or CBM_WRITE_REQ */
+ter(CBM_DATA_RANGE_bus1)               *p;
+{
+    switch (req) {
+    case CBM_READ_REQ:  
+        CBM_read_data = *p;
+        break;
+    case CBM_WRITE_REQ:  
+        *p = input(CBM_write_data);
+        break;
+    default :  
+        break;
+    }
+}
+/* Cyber func = inline */
+void
+CBM_put_data(d) /* read data */
+var(CBM_DATA_RANGE_bus1)               d;
+{
+    CBM_read_data = d;
+}
+/* Cyber func = inline */
+var(CBM_DATA_RANGE_bus1)
+CBM_get_data() /* write data */
+{
+    ter(CBM_DATA_RANGE_bus1)           d;
+    d = input(CBM_write_data);
+    return d;
+}
+/* Cyber func = inline */
+void
+CBM_set_response(r) /* access response */
+var(2..0)                              r;                       /* CBM_OKAY,CBM_BUSY,CBM_RETRY,CBM_SPLIT,CBM_ERROR */
+{
+    switch (r) {
+    case CBM_OKAY:  
+        CBM_busy = 0;
+        CBM_error = 0;
+        CBM_retry = 0;
+        CBM_split = 0;
+        break;
+    case CBM_BUSY:  
+        CBM_busy = 1;
+        CBM_error = 0;
+        CBM_retry = 0;
+        CBM_split = 0;
+        break;
+    case CBM_RETRY:  
+        CBM_busy = 1;
+        CBM_error = 0;
+        CBM_retry = 1;
+        CBM_split = 0;
+        break;
+    case CBM_SPLIT:  
+        CBM_busy = 1;
+        CBM_error = 0;
+        CBM_retry = 0;
+        CBM_split = 1;
+        break;
+    case CBM_ERROR:  
+        CBM_busy = 1;
+        CBM_error = 1;
+        CBM_retry = 0;
+        CBM_split = 0;
+        break;
+    default :  
+        CBM_busy = 0;
+        CBM_error = 0;
+        CBM_retry = 0;
+        CBM_split = 0;
+        break;
+    }
+}
+#endif
+

@@ -1,0 +1,5 @@
+Copyright (C) 2003-2013 NEC Corporation. All rights reserved.
+CybusM version : 1.36  Wed Jan 30 10:25:31 JST 2013
+	(LICfv version : 1.15 cylmd)
+F_CM0259 Option "-c" must be specified for AMBA_AHB,AMBA_APB,AMBA_AHB_ML,AMBA_AXI bus.
+Abnormal termination: error file "ave8_sort.bmerr" is generated.

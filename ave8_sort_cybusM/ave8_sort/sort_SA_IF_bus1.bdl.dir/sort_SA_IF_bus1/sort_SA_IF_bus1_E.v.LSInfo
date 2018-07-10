@@ -1,0 +1,21 @@
+LSInfo_version: 1.06
+
+iff_filename: "sort_SA_IF_bus1_E.IFF"
+rtl_filename: "sort_SA_IF_bus1_E.v"
+
+timestamp_0: 20170316152301_15848_07433
+timestamp_5: 20170316152305_17188_23399
+timestamp_9: 20170316152305_17188_28029
+timestamp_C: 20170316152305_17188_05344
+timestamp_E: 20170316152305_17188_29006
+timestamp_V: 20170316152307_14668_15170
+
+lang: verilog
+
+gated_clock_register: EXIST
+
+stall_register: NONE
+
+module_name: sort_SA_IF_bus1
+
+syn_tool: DC

@@ -1,0 +1,35 @@
+<!DOCTYPE AQUARIUM_OPTION [
+<!ELEMENT root (properties)>
+<!ELEMENT properties (property)*>
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+   name CDATA #REQUIRED
+   type CDATA #REQUIRED
+   value CDATA #REQUIRED
+>
+]>
+<root>
+  <properties>
+    <property type="string" value="top" name="Process" />
+    <property type="string" value="Analyzed" name="State" />
+    <property type="string" value="2017/03/16 14:35:56.000" name="bl::timestamp" />
+    <property type="string" value="non-transparent" name="bt::Circuit1SchedulingBlock" />
+    <property type="string" value="1000" name="bt::Clock" />
+    <property type="string" value="AUTO" name="bt::ClockResetResetStateNo" />
+    <property type="string" value="2" name="bt::ClockResetSyncronizerNum" />
+    <property type="string" value="00,02,04,05,06,07,08,09,10,11,12,13,14,15" name="bt::DescriptionDetails" />
+    <property type="string" value="10" name="bt::ErrorWarningOptionFalseLoopMax" />
+    <property type="string" value="C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB" name="bt::LibraryBlibFile" />
+    <property type="string" value="C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB|/eda/bin/cwb/cyber/lib/asic_45.FLIB" name="bt::LibraryFlibFile" />
+    <property type="string" value="OFF" name="bt::ModeLowModule" />
+    <property type="string" value="1" name="bt::ModeResourceFcnt" />
+    <property type="string" value="0" name="bt::ModeScheduleMode" />
+    <property type="string" value="NO" name="bt::Unnesting" />
+    <property type="string" value="2017/03/16 15:08:29.000" name="bt::timestamp" />
+    <property type="string" value="2017/03/16 14:35:56.000" name="fl::timestamp" />
+    <property type="string" value="soc_E.v|ave8_E.v|bsort_E.v" name="ls::AddFile" />
+    <property type="string" value="2015/01/13 11:20:03.513" name="ls::timestamp" />
+    <property type="string" value="2017/03/16 15:08:29.000" name="vh::timestamp" />
+    <property type="string" value="2017/03/16 15:08:29.000" name="vl::timestamp" />
+  </properties>
+</root>

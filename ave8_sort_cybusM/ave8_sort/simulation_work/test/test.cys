@@ -1,0 +1,25 @@
+<!DOCTYPE AQUARIUM_OPTION [
+<!ELEMENT root (properties)>
+<!ELEMENT properties (property)*>
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+   name CDATA #REQUIRED
+   type CDATA #REQUIRED
+   value CDATA #REQUIRED
+>
+]>
+<root>
+  <properties>
+    <property type="string" value="2017/02/09 15:17:51.000" name="created" />
+    <property type="int" value="536870912" name="extraInfo" />
+    <property type="string" value="SystemC" name="mk::Model" />
+    <property type="string" value="test.exe" name="mk::ScenarioTarget" />
+    <property type="string" value="Cycle" name="mk::SimLevel" />
+    <property type="string" value="test.exe" name="mk::Target" />
+    <property type="string" value="2017/02/09 15:17:51.000" name="mk::timestamp" />
+    <property type="string" value="test" name="ss::Name" />
+    <property type="string" value="top" name="ss::Processes" />
+    <property type="string" value="cycle" name="ss::SimLevel" />
+    <property type="string" value="2017/02/09 15:17:47.000" name="ss::timestamp" />
+  </properties>
+</root>

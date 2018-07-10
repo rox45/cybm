@@ -1,0 +1,21 @@
+LSInfo_version: 1.05
+
+iff_filename: "soc_E.IFF"
+rtl_filename: "soc_E.v"
+
+timestamp_0: 20150113112003_01388_90192
+timestamp_5: 20150113112004_01394_20109
+timestamp_9: 20150113112004_01394_66578
+timestamp_C: 20150113112004_01394_59695
+timestamp_E: 20150113112004_01394_23007
+timestamp_V: 20150113112004_01398_47723
+
+lang: verilog
+
+gated_clock_register: NONE
+
+stall_register: NONE
+
+module_name: top
+
+syn_tool: DC

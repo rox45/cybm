@@ -1,0 +1,21 @@
+LSInfo_version: 1.06
+
+iff_filename: "bus1_E.IFF"
+rtl_filename: "bus1_E.v"
+
+timestamp_0: 20170316152301_16404_07433
+timestamp_5: 20170316152304_07624_24935
+timestamp_9: 20170316152304_07624_02465
+timestamp_C: 20170316152304_07624_00801
+timestamp_E: 20170316152304_07624_21325
+timestamp_V: 20170316152306_16116_19898
+
+lang: verilog
+
+gated_clock_register: EXIST
+
+stall_register: NONE
+
+module_name: bus1
+
+syn_tool: DC

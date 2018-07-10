@@ -1,0 +1,14 @@
+#@VERSION{2.00}
+#@CNT{ave8_MA}
+#@KIND{BASIC_OPERATOR}
+#@UNIT 1/100ns
+@FCNT{
+	NAME	add8u
+	LIMIT	4
+}
+@FCNT{
+	NAME	add12u
+	LIMIT	3
+}
+#@HASH{b6836427a6977baf58df8e5ddf1f14d7}
+#@END{ave8_MA}

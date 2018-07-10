@@ -1,0 +1,10 @@
+Copyright (C) 1988-2011 NEC Corporation. All rights reserved.
+cmscgen version : 5.43  Oct  7 2011 20:26:30
+         (BIF version : 3.12C)
+         (GEN COMMON version : 1.97)
+Option: -EE -input=random:cycle -file_out=inout:cycle -b10 -dump=VCD -dump_signal=PORT bsort_C.IFF 
+[Information]
+     input  file : bsort_C.IFF
+     output file : bsort_C.cpp
+     output file : bsort_C.xml
+cmscgen finished successfully.

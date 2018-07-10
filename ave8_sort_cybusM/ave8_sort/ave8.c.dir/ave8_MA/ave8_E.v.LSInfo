@@ -1,0 +1,21 @@
+LSInfo_version: 1.06
+
+iff_filename: "ave8_E.IFF"
+rtl_filename: "ave8_E.v"
+
+timestamp_0: 20170419111200_21564_31848
+timestamp_5: 20170419111232_57596_24282
+timestamp_9: 20170419111232_57596_04338
+timestamp_C: 20170419111232_57596_19877
+timestamp_E: 20170419111232_57596_18506
+timestamp_V: 20170419111233_99504_30064
+
+lang: verilog
+
+gated_clock_register: EXIST
+
+stall_register: NONE
+
+module_name: ave8_MA
+
+syn_tool: DC

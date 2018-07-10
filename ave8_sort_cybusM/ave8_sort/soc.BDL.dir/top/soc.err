@@ -1,0 +1,7 @@
+I_BT1173: LOG file compressed. (soc.LOG.gz)
+F_BT2886: BLIB file (/eda/bin/cwb/cyber/lib/asic_45.BLIB) cannot be read.
+ [Action] Set the correct BLIB file.
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	 1 fatal error  exist
+	 1 information  exist
+	---> SEE soc.err FILE for DETAILS

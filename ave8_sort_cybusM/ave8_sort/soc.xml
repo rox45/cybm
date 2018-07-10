@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<sourceInfo version="1.00">
+    <hierInfo>
+        <processes>
+            <process name="top" type="process" file="soc.IFF">
+                <childProcess name="sort_SA" type="process"/>
+                <childProcess name="ave8_MA" type="process"/>
+            </process>
+        </processes>
+    </hierInfo>
+    <fileInfo>
+        <sourcefiles>
+            <sourcefile name="../../soc.BDL" timestamp="20150113042003"/>
+        </sourcefiles>
+    </fileInfo>
+</sourceInfo>

@@ -1,0 +1,67 @@
+I_BT1173: LOG file compressed. (bus1.LOG.gz)
+I_BT1921: License has been successfully obtained by FLEXlm.
+I_BT2971: Delay value unit of functional unit library file (C:/Program Files (x86)/cyber/5.52/packages/asic_90.FLIB) is changed (Delay value was changed to 100 double).
+ [Action] Review the specification unit in option or, functional unit library file.
+I_BT2788: Adjusted the unit of delay value of BLIB file (C:/Program Files (x86)/cyber/5.52/packages/asic_90.BLIB) (made the delay value 100 times).
+ [Action] The specification of delay value unit needs to be revisited.
+I_BT2619: Synthesize in ASIC mode.
+I_BT4146: All signals are synthesized as descending bit-order because all declared signals are of descending bit-order.
+W_BT3305: Global signal 'prio' is assigned but not referenced.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+I_BT4568: Function ctrl_hgrant is inline-expanded.
+I_BT4568: Function priority_func is inline-expanded.
+I_BT4568: Function grant_select is inline-expanded.
+I_BT4679: Array HSPLIT_sort_SA_reg was expanded.
+I_BT4679: Array HSPLIT_dfc_SA_reg was expanded.
+I_BT4679: Array r_1 was expanded.
+W_BT8766: Removed unreferenced assignment to variable 'prio'.
+ [Action] Remove the assignment.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+I_BT4393: No memory required. Empty memory library file (bus1-auto.MLIB) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4394: No memory required. Empty memory constraint file (bus1-auto.MCNT) generated.
+ [Action] Change type of array to 'mem' if required.
+          <OR> Specify appropriate "-a*" or "-ap*" options.
+I_BT4383: Generate memory library file / memory constraint file.
+	bus1-auto.MLIB
+	bus1-auto.MCNT
+I_BT5514: 1 address decoders (RW1) to access to array signal 'SplitStat'.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+W_BT1511: Signal ave8_MA_SEL_data_phase having multiple assignment with concatenated nmux (dmux) at state ST1_01.
+ [Action] There is no problem if it is intended.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+W_BT1511: Signal HSEL_sort_SA_data_phase having multiple assignment with concatenated nmux (dmux) at state ST1_01.
+ [Action] There is no problem if it is intended.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+W_BT1511: Signal HSEL_dfc_SA_data_phase having multiple assignment with concatenated nmux (dmux) at state ST1_01.
+ [Action] There is no problem if it is intended.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+W_BT1511: Signal HSEL_DefaultSlave_data_phase having multiple assignment with concatenated nmux (dmux) at state ST1_01.
+ [Action] There is no problem if it is intended.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+W_BT1511: Signal HRESP_DefaultSlave having multiple assignment with concatenated nmux (dmux) at state ST1_01.
+ [Action] There is no problem if it is intended.
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+	[Source Lines]
+	237(../../bus1.bdl): /* Cyber ciphertext
+I_BT1190: The following ERROR/WARNING/INFO/TIPS exist.
+	 7 warning      exist
+	16 information  exist
+	---> SEE bus1.err FILE for DETAILS

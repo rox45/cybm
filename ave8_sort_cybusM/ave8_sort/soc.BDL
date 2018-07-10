@@ -1,0 +1,106 @@
+/* soc.BDL.dir/top/soc_E.BDL */
+defmod ave8_MA {
+    clock         bus1_HCLK/* Cyber clock_edge = pos */;
+    reset         bus1_HRESETn/* Cyber reset_mode = async, reset_active = low */;
+    out   unsigned ter(0:1)  ave8_MA_bus1_CBM_read_req;
+    out   unsigned ter(0:1)  ave8_MA_bus1_CBM_write_req;
+    out   unsigned ter(2..0)  ave8_MA_bus1_CBM_burst;
+    out   unsigned ter(31..0)  ave8_MA_bus1_CBM_addr;
+    out   unsigned ter(10..0)  ave8_MA_bus1_CBM_length;
+    out   unsigned ter(2..0)  ave8_MA_bus1_CBM_size;
+    out   unsigned ter(0:1)  ave8_MA_bus1_CBM_lock;
+    out   unsigned ter(31..0)  ave8_MA_bus1_CBM_write_data;
+    in    unsigned ter(31..0)  ave8_MA_bus1_CBM_read_data;
+    in    unsigned ter(0:1)  ave8_MA_bus1_CBM_command_busy;
+    in    unsigned ter(0:1)  ave8_MA_bus1_CBM_data_ready;
+    in    unsigned ter(0:1)  ave8_MA_bus1_CBM_error;
+    in    unsigned ter(10..0)  ave8_MA_bus1_CBM_count;
+    in    unsigned ter(0:8)  in0;
+    out   unsigned ter(0:8)  out0;
+} INST_ave8_MA;
+
+defmod sort_SA {
+    clock         bus1_HCLK/* Cyber clock_edge = pos */;
+    reset         bus1_HRESETn/* Cyber reset_mode = async, reset_active = low */;
+    out   unsigned ter(0..0)  sort_SA_bus1_CBM_busy;
+    out   unsigned ter(0..0)  sort_SA_bus1_CBM_error;
+    out   unsigned ter(0..0)  sort_SA_bus1_CBM_retry;
+    out   unsigned ter(0..0)  sort_SA_bus1_CBM_split;
+    out   unsigned ter(31..0)  sort_SA_bus1_CBM_read_data;
+    in    unsigned ter(0..0)  sort_SA_bus1_CBM_read_req;
+    in    unsigned ter(0..0)  sort_SA_bus1_CBM_write_req;
+    in    unsigned ter(31..0)  sort_SA_bus1_CBM_addr;
+    in    unsigned ter(2..0)  sort_SA_bus1_CBM_size;
+    in    unsigned ter(31..0)  sort_SA_bus1_CBM_write_data;
+    out   unsigned ter(7..0)  out_sorted;
+} INST_sort_SA;
+
+
+clock         bus1_HCLK/* Cyber clock_edge = pos */;
+reset         bus1_HRESETn/* Cyber reset_active = low, reset_mode = async */;
+out  unsigned ter(0:1)  ave8_MA_bus1_CBM_read_req;
+out  unsigned ter(0:1)  ave8_MA_bus1_CBM_write_req;
+out  unsigned ter(2..0)  ave8_MA_bus1_CBM_burst;
+out  unsigned ter(31..0)  ave8_MA_bus1_CBM_addr;
+out  unsigned ter(10..0)  ave8_MA_bus1_CBM_length;
+out  unsigned ter(2..0)  ave8_MA_bus1_CBM_size;
+out  unsigned ter(0:1)  ave8_MA_bus1_CBM_lock;
+out  unsigned ter(31..0)  ave8_MA_bus1_CBM_write_data;
+in   unsigned ter(31..0)  ave8_MA_bus1_CBM_read_data;
+in   unsigned ter(0:1)  ave8_MA_bus1_CBM_command_busy;
+in   unsigned ter(0:1)  ave8_MA_bus1_CBM_data_ready;
+in   unsigned ter(0:1)  ave8_MA_bus1_CBM_error;
+in   unsigned ter(10..0)  ave8_MA_bus1_CBM_count;
+in   unsigned ter(0:8)  in0;
+out  unsigned ter(0:8)  out0;
+out  unsigned ter(0..0)  sort_SA_bus1_CBM_busy;
+out  unsigned ter(0..0)  sort_SA_bus1_CBM_error;
+out  unsigned ter(0..0)  sort_SA_bus1_CBM_retry;
+out  unsigned ter(0..0)  sort_SA_bus1_CBM_split;
+out  unsigned ter(31..0)  sort_SA_bus1_CBM_read_data;
+in   unsigned ter(0..0)  sort_SA_bus1_CBM_read_req;
+in   unsigned ter(0..0)  sort_SA_bus1_CBM_write_req;
+in   unsigned ter(31..0)  sort_SA_bus1_CBM_addr;
+in   unsigned ter(2..0)  sort_SA_bus1_CBM_size;
+in   unsigned ter(31..0)  sort_SA_bus1_CBM_write_data;
+out  unsigned ter(7..0)  out_sorted;
+    
+
+process
+top()
+{
+
+
+ST1_01 :
+    INST_ave8_MA.bus1_HCLK ::= bus1_HCLK;
+    INST_ave8_MA.bus1_HRESETn ::= bus1_HRESETn;
+    ave8_MA_bus1_CBM_read_req(0:1) ::= INST_ave8_MA.ave8_MA_bus1_CBM_read_req(0:1);
+    ave8_MA_bus1_CBM_write_req(0:1) ::= INST_ave8_MA.ave8_MA_bus1_CBM_write_req(0:1);
+    ave8_MA_bus1_CBM_burst(2..0) ::= INST_ave8_MA.ave8_MA_bus1_CBM_burst(2..0);
+    ave8_MA_bus1_CBM_addr(31..0) ::= INST_ave8_MA.ave8_MA_bus1_CBM_addr(31..0);
+    ave8_MA_bus1_CBM_length(10..0) ::= INST_ave8_MA.ave8_MA_bus1_CBM_length(10..0);
+    ave8_MA_bus1_CBM_size(2..0) ::= INST_ave8_MA.ave8_MA_bus1_CBM_size(2..0);
+    ave8_MA_bus1_CBM_lock(0:1) ::= INST_ave8_MA.ave8_MA_bus1_CBM_lock(0:1);
+    ave8_MA_bus1_CBM_write_data(31..0) ::= INST_ave8_MA.ave8_MA_bus1_CBM_write_data(31..0);
+    INST_ave8_MA.ave8_MA_bus1_CBM_read_data(31..0) ::= ave8_MA_bus1_CBM_read_data(31..0);
+    INST_ave8_MA.ave8_MA_bus1_CBM_command_busy(0:1) ::= ave8_MA_bus1_CBM_command_busy(0:1);
+    INST_ave8_MA.ave8_MA_bus1_CBM_data_ready(0:1) ::= ave8_MA_bus1_CBM_data_ready(0:1);
+    INST_ave8_MA.ave8_MA_bus1_CBM_error(0:1) ::= ave8_MA_bus1_CBM_error(0:1);
+    INST_ave8_MA.ave8_MA_bus1_CBM_count(10..0) ::= ave8_MA_bus1_CBM_count(10..0);
+    INST_ave8_MA.in0(0:8) ::= in0(0:8);
+    out0(0:8) ::= INST_ave8_MA.out0(0:8);
+    INST_sort_SA.bus1_HCLK ::= bus1_HCLK;
+    INST_sort_SA.bus1_HRESETn ::= bus1_HRESETn;
+    sort_SA_bus1_CBM_busy(0..0) ::= INST_sort_SA.sort_SA_bus1_CBM_busy(0..0);
+    sort_SA_bus1_CBM_error(0..0) ::= INST_sort_SA.sort_SA_bus1_CBM_error(0..0);
+    sort_SA_bus1_CBM_retry(0..0) ::= INST_sort_SA.sort_SA_bus1_CBM_retry(0..0);
+    sort_SA_bus1_CBM_split(0..0) ::= INST_sort_SA.sort_SA_bus1_CBM_split(0..0);
+    sort_SA_bus1_CBM_read_data(31..0) ::= INST_sort_SA.sort_SA_bus1_CBM_read_data(31..0);
+    INST_sort_SA.sort_SA_bus1_CBM_read_req(0..0) ::= sort_SA_bus1_CBM_read_req(0..0);
+    INST_sort_SA.sort_SA_bus1_CBM_write_req(0..0) ::= sort_SA_bus1_CBM_write_req(0..0);
+    INST_sort_SA.sort_SA_bus1_CBM_addr(31..0) ::= sort_SA_bus1_CBM_addr(31..0);
+    INST_sort_SA.sort_SA_bus1_CBM_size(2..0) ::= sort_SA_bus1_CBM_size(2..0);
+    INST_sort_SA.sort_SA_bus1_CBM_write_data(31..0) ::= sort_SA_bus1_CBM_write_data(31..0);
+    out_sorted(7..0) ::= INST_sort_SA.out_sorted(7..0);
+    goto ST1_01;
+}

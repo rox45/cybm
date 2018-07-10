@@ -1,0 +1,21 @@
+LSInfo_version: 1.05
+
+iff_filename: "bsort_E.IFF"
+rtl_filename: "bsort_E.v"
+
+timestamp_0: 20150130150022_32634_84947
+timestamp_5: 20150130150024_32640_05678
+timestamp_9: 20150130150024_32640_65178
+timestamp_C: 20150130150024_32640_06960
+timestamp_E: 20150130150024_32640_72823
+timestamp_V: 20150130150026_32645_41205
+
+lang: verilog
+
+gated_clock_register: EXIST
+
+stall_register: NONE
+
+module_name: sort_SA
+
+syn_tool: DC

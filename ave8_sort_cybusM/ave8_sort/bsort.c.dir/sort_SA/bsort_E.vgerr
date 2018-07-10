@@ -1,0 +1,11 @@
+Copyright (C) 1988-2013 NEC Corporation. All rights reserved.
+veriloggen version : 6.15  Tue Jun  4 11:57:34 JST 2013
+         (BIF version : 3.15t)
+         (LICflex version : 1.50 cylmd)
+         (GEN COMMON version : 2.40)
+options : veriloggen -EE bsort_E.IFF
+bdlpars options :  -EE -I../.. -I/eda/bin/cwb/cyber_540/LINUX/include ../../bsort.c
+bdltran options :  -EE -c1000 -s -EE -lb /eda/bin/cwb/cyber/lib/asic_45.BLIB -lfl /eda/bin/cwb/cyber/lib/asic_45.FLIB -lfc bsort-auto.FCNT bsort.IFF 
+N_GH0000: Verilog file generated: (bsort_E.v)
+N_GH0011: LSInfo file generated: (bsort_E.v.LSInfo)
+veriloggen finished successfully.

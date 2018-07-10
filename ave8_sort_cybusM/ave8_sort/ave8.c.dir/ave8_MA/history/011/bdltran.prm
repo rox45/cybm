@@ -1,0 +1,1 @@
+  -c1000 -s -Zresource_fcnt=USE -Zresource_mcnt=GENERATE -Zscheduling_block=non-transparent -Zdup_reset=YES -Zreset_state=AUTO -EE -lb "C:/Program Files (x86)/cyber/5.52/packages/asic_45.BLIB" -lfl "C:/Program Files (x86)/cyber/5.52/packages/asic_45.FLIB" +lfl ave8-auto.FLIB -lfc ave8-auto.FCNT -o-I

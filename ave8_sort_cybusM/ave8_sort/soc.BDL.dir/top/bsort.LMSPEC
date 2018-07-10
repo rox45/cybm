@@ -1,0 +1,41 @@
+#@VERSION{2.00}
+#@CNT{sort_SA}
+#@KIND{BASIC_OPERATOR}
+#@CLK 1000
+#@UNIT 1/100ns
+@PROCESS{
+	NAME	sort_SA
+#	KIND
+#	LIMIT
+#	BITWIDTH
+#	DELAY
+	AREA	5042
+	AREA_REG	1596
+	AREA_COMB	3446
+	AREA_FU	442
+	AREA_MUX	2910
+	AREA_DEC	14
+	AREA_MISC	80
+	AREA_MEM	0
+	NET	3970
+	PIN_PAIR	12270
+#	SPECULATION
+#	COMMENT
+	DEFMOD {
+		clock                    bus1_HCLK        /* c, bus1_HCLK, @clock_period = 10ns, clock_edge = pos */;
+		reset                    bus1_HRESETn     /* r, bus1_HRESETn, reset_mode = async, reset_active = low */;
+		out   unsigned ter(0..0) sort_SA_bus1_CBM_busy /* glo, sort_SA_bus1_CBM_busy */;
+		out   unsigned ter(0..0) sort_SA_bus1_CBM_error /* glo, sort_SA_bus1_CBM_error */;
+		out   unsigned ter(0..0) sort_SA_bus1_CBM_retry /* glo, sort_SA_bus1_CBM_retry */;
+		out   unsigned ter(0..0) sort_SA_bus1_CBM_split /* glo, sort_SA_bus1_CBM_split */;
+		out   unsigned ter(31..0) sort_SA_bus1_CBM_read_data /* glo, sort_SA_bus1_CBM_read_data */;
+		in    unsigned ter(0..0) sort_SA_bus1_CBM_read_req /* glo, sort_SA_bus1_CBM_read_req */;
+		in    unsigned ter(0..0) sort_SA_bus1_CBM_write_req /* glo, sort_SA_bus1_CBM_write_req */;
+		in    unsigned ter(31..0) sort_SA_bus1_CBM_addr /* glo, sort_SA_bus1_CBM_addr */;
+		in    unsigned ter(2..0) sort_SA_bus1_CBM_size /* glo, sort_SA_bus1_CBM_size */;
+		in    unsigned ter(31..0) sort_SA_bus1_CBM_write_data /* glo, sort_SA_bus1_CBM_write_data */;
+		out   unsigned ter(7..0) out_sorted       /* glo, out_sorted */;
+	}
+}
+#@HASH{893ac08d9fe8c0ad61e71ab1a98d2318}
+#@END{sort_SA}

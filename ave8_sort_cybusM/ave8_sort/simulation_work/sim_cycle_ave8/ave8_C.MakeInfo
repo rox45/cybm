@@ -1,0 +1,13 @@
+# cmscgen version : 6.74
+# options : -EE -input=random:cycle -b10 -file_out=cycle -dump=VCD -dump_signal=PORT:BDL -org_type=pin -enum_int=NO -out_dir=. -file cmscgen_file.ave8_MA.txt 
+# checksum : 0000024b370a884157b3d0386f912b5b924707b0b94d16c2
+# timestamp_C : 20170419111232_57596_19877
+Option  	-EE -input=random:cycle -b10 -file_out=cycle -dump=VCD -dump_signal=PORT:BDL -org_type=pin -enum_int=NO -out_dir=. -file cmscgen_file.ave8_MA.txt 
+signed_flag	mixsigned
+random_flag	YES
+macro	NO
+src_file	ave8_C.cpp
+header_file	ave8_C.h
+carry_flag	ON
+file_path	.
+debug_model	NO
